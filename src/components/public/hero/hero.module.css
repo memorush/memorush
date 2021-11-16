@@ -1,8 +1,74 @@
 .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "info hand";
+
   padding-top: 60px;
-  height: 700px;
+  background-image: url('https://images.unsplash.com/photo-1568715684971-9ac138754ab9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1465&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: var(--primary-color);
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px black;
 }
 
 .hand {
-  /* background-image: url("/logo192.png"); */
+  grid-template: hand;
+  position: relative;
+}
+
+.hand img {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+}
+
+.info {
+  grid-template: info;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: start;
+  font-size: 1.1rem;
+  padding: 50px;
+}
+
+.buttonContainer {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.button {
+  display: flex;
+  height: 4rem;
+  padding: 1rem;
+  font-size: 2rem;
+  border: 1px solid white;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 722px) {
+  .button {
+    font-size: 1.2rem;
+  }
 }
