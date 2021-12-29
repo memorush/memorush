@@ -1,0 +1,75 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 2fr;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title h1{
+  position: relative;
+  padding: 30px;
+}
+
+.info {
+  /* FIXME ЗАменить на grid */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.featuresBox {
+  margin: 5px;
+  text-align: center;
+  width: 400px;
+}
+
+.featuresBox i {
+  color: greenyellow;
+  font-size: 3rem;
+}
+
+.bbTopLeft {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+}
+
+.bbTopRight {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+.bbBottomLeft {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+}
+
+.bbBottomRight {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+}
