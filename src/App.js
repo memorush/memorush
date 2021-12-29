@@ -5,14 +5,16 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect
 } from "react-router-dom";
 
 function App() {
   return (
     <Router>
       <Switch >
-        <Route path="/" exact={true} component={Main} />
+        <Route path="/main" component={Main} />
         <Route path="/private" component={Private} />
+        <Redirect to={"/main"} />
       </Switch>
     </Router>
   );

@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 import {
   toggle
-} from '../../../redux/features/sidebar-slice';
+} from '../../../redux/features/sidebar/sidebar-slice';
 
 import style from './header.module.css';
 
