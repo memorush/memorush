@@ -1,25 +1,24 @@
-import style from './hero.module.css';
-import Roll from 'react-reveal/Roll';
+import styles from './hero.module.css';
+import image from '../../../images/hero/ipad-hand.png';
+import Button from '../../common/button/button.component';
 
 export default function Hero() {
   return (
-    <div className={style.container}>
-      <Roll left>
-        <div className={style.info}>
-          <h1>It's Amazing</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          <div className={style.buttonContainer}>
-            <div className={style.button}>
-              <p><i className="fab fa-android"></i>Play Store</p>
-            </div>
-            <div className={style.button}>
-              <p><i class="fab fa-apple"></i>App Store</p>
-            </div>
-          </div>
+    <div className={styles.container}>
+      <div className={styles.info}>
+        <div className={styles.title}>
+          It`s amazing! Learn Everywhere absolute for Free!
         </div>
-      </Roll>
-      <div className={style.hand}>
-        <img src="https://technext.github.io/polo/HTML/assets/img/iphone_hand.png" alt="" srcset="" />
+        <div className={styles.subTitle}>
+          Download our application and learn various languages or another new words!
+        </div>
+        <div className={styles.buttonContainer}>
+          <Button name={"Play Market"} style={{marginRight: '20px'}}/>
+          <Button name={"App Store"} />
+        </div>
+      </div>
+      <div className={styles.image}>
+        <img src={image} alt="hands with phone" srcset="" />
       </div>
     </div>
   )

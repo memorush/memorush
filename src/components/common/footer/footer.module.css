@@ -1,4 +1,44 @@
 .container {
-  background-color: rgb(16,40,38);
-  color: white
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  color: black;
+}
+
+.container ul li {
+  list-style-type: none;
+}
+
+.upper {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.bottom {
+  padding: 50px;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 5px;
+  grid-template-areas: 
+  ""
+  "time";
+  box-shadow: 1px 1px 5px silver;
+  color: white;
+  background-color: var(--primary-bg-color);
+}
+
+.social {
+  display: grid;
+  /* FIXME Подумать еще над этим */
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+}
+
+.social i {
+  font-size: 3rem;
+}
+
+.time {
+  padding-top: 50px;
 }

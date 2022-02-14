@@ -1,10 +1,9 @@
 .container {
   position: fixed;
-  width: 300px;
+  width: 250px;
   height: 100vh;
   top: 0;
-  right: -300px;
-  background-color: var(--primary-color);
+  right: -250px;
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
@@ -20,11 +19,12 @@
 .open {
   top: 0;
   right: 0;
-  background-color: rgba(0,59,50,0.9);
+  background-color: var(--primary-color);
 }
 
-.menuItem {
-
+.menuItem a {
+  color: white;
+  text-decoration: none;
 }
 
 .closeBtn {

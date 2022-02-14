@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  padding: 50px;
+  padding-top: 70px;
+  justify-items: center;
+  align-items: center;
+  font-family: 'Vast Shadow', cursive;
+  font-size: 2rem;
+  text-align: center;
+}

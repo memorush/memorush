@@ -1,49 +1,16 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "logo nav";
-
-  position: fixed;
-  width: 100%;
-  height: 60px;
-  color: white;
-  font-family: 'Playfair Display', serif;
-  transition: 0.5s ease;
-  z-index: 1000;
+  grid-template-areas: "logo navItemContainer nav";
+  justify-items: center;
+  padding: 25px;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
 }
 
-.scrolled {
-  background-color: rgb(21,43,41);
-  height: 80px;
-}
-
-.logo {
-  grid-area: logo;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 50px;
-  font-size: 3rem;
-  text-shadow: 2px 1px 1px black;
-}
-
-.nav {
-  grid-area: nav;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 50px;
-
-  font-size: 2rem;
-}
-
-.nav i {
-  transition: 0.5s ease;
-}
-
-.nav i:hover {
-  transform: rotate(90deg);
+.navItemContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
 }

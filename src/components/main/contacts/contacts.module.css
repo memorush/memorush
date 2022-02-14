@@ -1,13 +1,8 @@
 .container {
-  background-image: url('https://images.unsplash.com/photo-1478860409698-8707f313ee8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80');
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
-  background-blend-mode: overlay;
-  background-color: var(--primary-color);
-  /* TODO Поправить это */
-
   color: white;
+  background-color: var(--primary-bg-color);
+  padding: 50px 0;
 }
 
 .title {
@@ -21,71 +16,6 @@
   padding: 30px;
 }
 
-.bbTopLeft {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: 0;
-    left: 0;
-    border-top: 1px solid white;
-    border-left: 1px solid white;
-}
-
-.bbTopRight {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 0;
-  right: 0;
-  border-top: 1px solid white;
-  border-right: 1px solid white;
-}
-
-.bbBottomLeft {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid white;
-  border-left: 1px solid white;
-}
-
-.bbBottomRight {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  bottom: 0;
-  right: 0;
-  border-bottom: 1px solid white;
-  border-right: 1px solid white;
-}
-
-.inputContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  height: 80px;
-  border: 5px solid var(--primary-color);
-  border-radius: 10px;
-}
-
-.inputContainer input {
-  width: 90%;
-  height: 100%;
-  font-size: 3rem;
-  outline: none;
-}
-
-.inputContainer button {
-  width: 10%;
-  height: 100%;
-  outline: none;
-  border: none;
-  background-color: var(--primary-color);
-}
-
 .info {
   display: flex;
   flex-wrap: wrap;
@@ -96,9 +26,8 @@
 
 .contactContainer {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.2rem;
+  display: grid;
+  gap: 20px;
 }
 
 .contact i {
@@ -106,7 +35,6 @@
   border-radius: 50%;
   padding: 10px;
   border: 1px solid white;
-  box-shadow: 2px 1px 1px silver;
 }
 
 .contact:hover {
@@ -115,8 +43,9 @@
 
 .formContainer {
   flex: 2;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  justify-items: center;
+  gap: 20px;
 }
 
 .formContainer * {
@@ -124,7 +53,23 @@
 }
 
 .formContainer input {
-  font-size: 2rem;
+  box-sizing: border-box;
+  margin: 0;
+  font: inherit;
+  font-family: inherit;
+  display: block;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  padding: 10px 12px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  height: auto;
+  width: 100%;
 }
 
 .formContainer input[type=text] {
@@ -139,15 +84,30 @@
 
 
 .formContainer .button {
-  display: flex;
-  height: 4rem;
-  padding: 1rem;
-  font-size: 2rem;
-  background-color: white;
-  border: 1px solid white;
-  justify-content: center;
-  align-items: center;
-  transition: 0.2s ease;
+  box-sizing: border-box;
+  margin: 0;
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  font-family: inherit;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  user-select: none;
+  border-radius: 4px;
+  background: #f0ad4e;
+  border: 0;
+  padding: 12px 30px;
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 .button:hover {

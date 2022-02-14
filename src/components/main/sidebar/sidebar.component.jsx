@@ -23,7 +23,7 @@ export default function Sidebar() {
         <Link to={"/main/registration"}>Registration</Link>
       </div>
       <div className={style.menuItem}>Sign Up</div>
-      <div className={style.menuItem} onClick={() => dispatch(toggle())}><i class="fas fa-door-open"></i>Exit</div>
+      <div className={style.menuItem} onClick={() => dispatch(toggle())}>Close</div>
     </div>
   )
 }

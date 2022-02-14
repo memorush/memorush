@@ -1,75 +1,61 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 2fr;
+  padding-bottom: 50px;
 }
 
-.title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.infoContainer {
+  display: grid;
+  gap: 5%;
+  justify-items: center;
 }
 
-.title h1{
-  position: relative;
-  padding: 30px;
-}
-
-.info {
-  /* FIXME ЗАменить на grid */
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.featuresBox {
-  margin: 5px;
+.infoContainer h1 {
   text-align: center;
-  width: 400px;
+  box-sizing: border-box;
+  line-height: 1.1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  color: #95a5a6;
+  font-weight: 400;
+  font-size: 20px;
 }
 
-.featuresBox i {
-  color: greenyellow;
-  font-size: 3rem;
+.infoContainer p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 0 10px;
+  line-height: 28px;
+  margin-bottom: 25px;
+  font-size: 16px;
 }
 
-.bbTopLeft {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: 0;
-    left: 0;
-    border-top: 1px solid #000;
-    border-left: 1px solid #000;
+.link i {
+  text-align: center;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 8px;
+  color: #3498db;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+} 
+
+.infoContainer img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
 }
 
-.bbTopRight {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 0;
-  right: 0;
-  border-top: 1px solid #000;
-  border-right: 1px solid #000;
-}
-
-.bbBottomLeft {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid #000;
-  border-left: 1px solid #000;
-}
-
-.bbBottomRight {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  bottom: 0;
-  right: 0;
-  border-bottom: 1px solid #000;
-  border-right: 1px solid #000;
+.socialContainer {
+  display: flex;
 }

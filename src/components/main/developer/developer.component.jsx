@@ -1,33 +1,32 @@
-import style from './developer.module.css';
-
-import Roll from 'react-reveal/Roll';
+import styles from './developer.module.css';
+import Title from '../../common/title/title.component';
+import SubTitle from '../../common/subTitle/subTitle.component';
+import face from '../../../images/developer/face.png';
 
 export default function Developer() {
   return (
-    <div className={style.container}>
-      <Roll left>
-        <div className={style.title}>
-          <h1>
-            <span className={style.bbTopLeft}></span>
-            <span className={style.bbTopRight}></span>
-            Developer
-            <span className={style.bbBottomLeft}></span>
-            <span className={style.bbBottomRight}></span>
-          </h1>
-        </div>
-      </Roll>
-      <Roll right>
-        <div className={style.info}>
-          <div className={style.featuresBox}>
-            <i className="fas fa-sync"></i>
-            <h1>Data Sync</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae exercitationem quis totam accusantium obcaecati minus dicta, aperiam dolor eveniet! Nesciunt, temporibus. Et ad asperiores, illo autem consectetur inventore perferendis eveniet?</p>
-            <ul className="team-social">
-              <li className="wow animated fadeInLeft facebook animated" ><a href="#"><i className="fab fa-github"></i></a></li>
-            </ul>
+    <div className={styles.container}>
+      <Title name={"Developer"} />
+      <SubTitle name={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, "} />
+      <div className={styles.infoContainer}>
+        <img src={face} alt="" srcset="" />
+        <h1>Matthey Brave</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, fugit.</p>
+        <div className={styles.socialContainer}>
+          <div className={styles.link}>
+            <i className="fab fa-facebook"></i>
+          </div>
+          <div className={styles.link}>
+            <i className="fab fa-twitter"></i>
+          </div>
+          <div className={styles.link}>
+            <i className="fab fa-google"></i>
+          </div>
+          <div className={styles.link}>
+            <i className="fab fa-github"></i>
           </div>
         </div>
-      </Roll>
+      </div>
     </div>
   )
 }

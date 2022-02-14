@@ -1,8 +1,0 @@
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 700px 1fr auto auto 1fr 1fr;
-
-  position: relative;
-  overflow: hidden;
-}
