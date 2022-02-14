@@ -35,19 +35,9 @@
 }
 
 .link i {
-  text-align: center;
-  font-size: 16px;
-  box-sizing: border-box;
+  font-size: 1.2rem;
   margin: 8px;
   color: #3498db;
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
 } 
 
 .infoContainer img {

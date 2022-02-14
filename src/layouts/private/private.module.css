@@ -1,19 +1,5 @@
 .container {
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: minmax(auto, 100vh);
-  grid-template-areas: 
-  "sidebar content"  
-  ;
+  grid-template-columns: 1fr;
   background-color: #EFEFEF;
 }
-
-.sidebar {
-  grid-area: sidebar;
-}
-
-.content {
-  grid-area: content;
-  border: 1px sole black;
-}
-

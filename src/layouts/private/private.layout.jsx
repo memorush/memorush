@@ -1,16 +1,14 @@
 import Content from "../../components/private/content/content.component";
-import Sidebar from "../../components/private/sidebar/sidebar.component";
+import NavHeader from '../../components/private/nav-header/nav-header.component';
+import Footer from '../../components/common/footer/footer.component';
 import styles from './private.module.css';
 
 const Private = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.sidebar}>
-        <Sidebar />
-      </div>
-      <div className={styles.content}>
-        <Content />
-      </div>
+      <NavHeader />
+      <Content />
+      <Footer />
     </div>
   )
 }

@@ -1,22 +1,33 @@
-import {
-  Route
-} from "react-router-dom";
-import CardList from "../card-list/card-list.component";
-import Settings from "../settings/settings.component";
-import Study from "../study/study.component";
-import Statistic from "../statistic/statistic.component";
-import EditCards from "../edit-cards/edit-cards.component";
-
 import styles from './content.module.css';
+import CardList from '../card-list/card-list.component';
+import {
+  Route,
+  Link
+} from 'react-router-dom';
+import Button from '../../common/button/button.component';
 
 const Content = () => {
   return (
     <div className={styles.container}>
-      <Route path={"/private/card-list"} component={CardList} />
-      <Route path={"/private/edit-cards"} component={EditCards} />
-      <Route path={"/private/study"} component={Study} />
-      <Route path={"/private/statistic"} component={Statistic} />
-      <Route path={"/private/settings"} component={Settings} />
+      <div className={styles.nav}>
+        <Link to={"/private/flash-cards"}>
+          <i className="fas fa-file-alt"></i>
+          <Button name={"FlashCards"} style={{width: '120px'}} />
+        </Link>
+        <Link to={"/private/study"}>
+          <i className="fas fa-graduation-cap"></i>
+          <Button name={"Study"} style={{width: '120px'}}/>
+        </Link>
+        <Link to={"/private/settings"}>
+          <i className="fas fa-cogs"></i>
+          <Button name={"Settings"} style={{width: '120px'}}/>
+        </Link>
+      </div>
+      <div className={styles.dashboard}>
+        <Route path={"/private/flash-cards"} component={CardList} />
+        <Route path={"/private/study"} component={CardList} />
+        <Route path={"/private/settings"} component={CardList} />
+      </div>
     </div>
   )
 }

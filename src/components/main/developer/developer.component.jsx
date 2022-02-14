@@ -20,7 +20,7 @@ export default function Developer() {
             <i className="fab fa-twitter"></i>
           </div>
           <div className={styles.link}>
-            <i className="fab fa-google"></i>
+            <i class="fab fa-google-plus"></i>
           </div>
           <div className={styles.link}>
             <i className="fab fa-github"></i>
