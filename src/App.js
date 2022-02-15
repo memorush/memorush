@@ -1,5 +1,6 @@
 import Main from './layouts/main/main.layout';
 import Private from './layouts/private/private.layout';
+import ProtectedRoute from './wrapper/ProtectedRoute';
 
 import {
   BrowserRouter as Router,
@@ -13,7 +14,7 @@ function App() {
     <Router>
       <Switch >
         <Route path="/main" component={Main} />
-        <Route path="/private" component={Private} />
+        <ProtectedRoute path="/private" component={Private} />
         <Redirect to={"/main"} />
       </Switch>
     </Router>

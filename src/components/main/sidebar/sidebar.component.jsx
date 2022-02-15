@@ -17,7 +17,7 @@ export default function Sidebar() {
   return (
     <div className={cn(style.container, isOpen ? style.open : '')}>
       <div className={style.menuItem}>
-        <Link to={"/private"}>Sign In</Link>
+        <Link to={"/main/sign-in"}>Sign In</Link>
       </div>
       <div className={style.menuItem}>
         <Link to={"/main/registration"}>Registration</Link>
