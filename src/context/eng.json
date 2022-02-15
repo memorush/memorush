@@ -1,0 +1,84 @@
+{
+  "socialNavPanel": {
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "contacts": "Contacts",
+      "policy": "Privacy policy"
+    }
+  },
+  "logoPanel": {
+    "title": "Engineer Blog",
+    "subtitle": "In simple terms about complex and not very things"
+  },
+  "navPAnel": {
+    "about": "About",
+    "projects": "Projects",
+    "contacts": "Contacts",
+    "posts": "Posts"
+  },
+  "hero": {
+    "subTitle": "I write about things that interest me",
+    "title": "Notes on cuffs",
+    "text": "If you can't explain it to a six year old, you don't understand it yourself - Albert Einstein",
+    "button": "See more"
+  },
+  "columnWidgets": {
+    "about": "About Me",
+    "writeMe": "Write Me",
+    "github": "GitHub"
+  },
+  "aboutMe": {
+    "columnTitle": "About Me",
+    "fio": "Dubovitsky Yury",
+    "about": "lorem10",
+    "button": "Read More"
+  },
+  "postList": {
+    "columnTitle": "Latest Post"
+  },
+  "subscribe": {
+    "title": "SUBSCRIBE TO OUR NEWSLETTER",
+    "subTitle": "Subscribe to our newsletter and receive new recipes in your inbox.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "button": "Subscribe"
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Enter your request...",
+    "button": "Search"
+  },
+  "postListItem": {
+    "button": "Continue reading"
+  },
+  "statistic": {
+    "categoriesTitle": "Categories",
+    "mostPopularTitle": "Most Popular"
+  },
+  "footer": {
+    "home": "home",
+    "about": "about",
+    "contacts": "contacts",
+    "policy": "policy",
+    "copyright": "COPYRIGHT and DESIGNED BY Y.Dubovitsky ©"
+  },
+  "sidebar": {
+    "greetings": "Hello",
+    "dashboard": "Dashboard",
+    "logout": "Logout",
+    "login": "Please, login",
+    "loginBtn": "Login!"
+  },
+  "signIn": {
+    "error": "User not found!",
+    "signIn": "Sign In",
+    "userName": "Username",
+    "password": "Password",
+    "cancel": "Cancel",
+    "hello": "Hello, Friend!",
+    "text": "Register to gain access to all the features of the blog",
+    "signUp": "Sign Up"
+  }
+}
