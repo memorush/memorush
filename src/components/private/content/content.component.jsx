@@ -1,5 +1,7 @@
 import styles from './content.module.css';
 import CardList from '../card-list/card-list.component';
+import Study from '../study/study.component';
+import Settings from '../settings/settings.component';
 import {
   Route,
   Link
@@ -26,8 +28,8 @@ const Content = () => {
       </div>
       <div className={styles.dashboard}>
         <Route path={"/private/flash-cards"} component={CardList} />
-        <Route path={"/private/study"} component={CardList} />
-        <Route path={"/private/settings"} component={CardList} />
+        <Route path={"/private/study"} component={Study} />
+        <Route path={"/private/settings"} component={Settings} />
       </div>
     </div>
   )

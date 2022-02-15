@@ -41,3 +41,16 @@ export default cardSlice.reducer;
 // -------------------------------------- Selectors --------------------------------------
 
 export const cardEntitySelector = state => state.card.cardEntity;
+export const cardByIdSelector = (state, id) => state.card.cardEntity.find(card => id === card.id);
+//TODO Переделать! Сделать мемоизированным и механизм фильтрации изменить!
+export const cardEntityByFavoriteAndLearnedSelector = (state, favorite, learned) => {
+  const favoriteCards = state.card.cardEntity.filter(card => {
+    return card.favorite === favorite
+  });
+  const learnedCards = state.card.cardEntity.filter(card => {
+    return card.learned === learned
+  });
+  if((favorite === true) && (learned === false)) return favoriteCards;
+  if((favorite === false) && (learned === true)) return learnedCards;
+  return state.card.cardEntity;
+}
