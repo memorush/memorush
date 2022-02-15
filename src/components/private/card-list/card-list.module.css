@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas: "settings" "cardContainer";
+  justify-items: center;
+  align-items: center;
+}
+
+.settings {
+  grid-area: settings;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.radioContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cardContainer {
+  grid-area: cardContainer;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
