@@ -50,7 +50,20 @@ export const cardEntityByFavoriteAndLearnedSelector = (state, favorite, learned)
   const learnedCards = state.card.cardEntity.filter(card => {
     return card.learned === learned
   });
-  if((favorite === true) && (learned === false)) return favoriteCards;
-  if((favorite === false) && (learned === true)) return learnedCards;
+  if ((favorite === true) && (learned === false)) return favoriteCards;
+  if ((favorite === false) && (learned === true)) return learnedCards;
   return state.card.cardEntity;
+}
+
+//TODO Сделать более универсальным
+export const getSortedCardByCardSetSelector = state => {
+  const sorted = state.card.cardEntity.reduce((result, card) => {
+    result[card.cardSet.id] = {
+      ...result[card.cardSet.id],
+      [card.id]: card
+    }
+    return result;
+  }, {});
+
+  return sorted;
 }
