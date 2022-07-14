@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Vast+Shadow&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 * {
   margin: 0;
@@ -8,17 +7,18 @@
 
 :root {
   --primary-bg-color: #3498DB;
-  --secondary-bg-color: #F2F2F2;
+  --secondary-bg-color: white;
   --primary-text-color: white;
   --secondary-text-color: black;
   --third-text-color: #95A5A6;
 }
 
 body {
-  font-family: -apple-system, 'Manrope', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
+  margin: 0;
+  padding: 0;
+  font-family: 'Cormorant Garamond', serif, 'Manrope', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  /* font-family: 'Lato', sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--secondary-bg-color);
