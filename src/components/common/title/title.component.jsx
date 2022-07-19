@@ -5,7 +5,8 @@ const Title = ({ name, style }) => {
     <div
       className={styles.container}
       style={{ ...style }}
-    >{name}
+    >
+      <h2>{name}</h2>
     </div>
   )
 }

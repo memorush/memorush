@@ -1,25 +1,38 @@
 import styles from './hero.module.css';
-import image from '../../../images/hero/ipad-hand.png';
 import Button from '../../common/button/button.component';
 
-export default function Hero() {
+const Hero = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.info}>
-        <div className={styles.title}>
-          It`s amazing! Learn Everywhere absolute for Free!
+      <div className={styles.navigation}>
+        <div className={styles.logo}>Flashcards</div>
+        <div className={styles.navItemContainer}>
+          <div className={styles.navItem}>Home</div>
+          <div className={styles.navItem}>Features</div>
+          <div className={styles.navItem}>Gallery</div>
+          <div className={styles.navItem}>Contacts</div>
+          <div className={styles.navItem}>Developer</div>
+          <div className={styles.navItem}>Subscribe</div>
+          <div className={styles.navItem}>Testimonial</div>
         </div>
-        <div className={styles.subTitle}>
-          Download our application and learn various languages or another new words!
-        </div>
-        <div className={styles.buttonContainer}>
-          <Button name={"Play Market"} style={{marginRight: '20px'}}/>
-          <Button name={"App Store"} />
+        <div className={styles.sideBar}>
+          <i className="fas fa-bars"></i>
         </div>
       </div>
-      <div className={styles.image}>
-        <img src={image} alt="hands with phone" srcset="" />
+      <div className={styles.info}>
+        <div className={styles.title}>
+          <h1>It`s amazing! Learn Everywhere absolute for Free!</h1>
+        </div>
+        <div className={styles.subTitle}>
+          <p>Download our application and learn various languages or another new words!</p>
+        </div>
+        <div className={styles.buttonContainer}>
+          <Button name={"Play Market"} />
+          <Button name={"App Store"} />
+        </div>
       </div>
     </div>
   )
 }
+
+export default Hero;

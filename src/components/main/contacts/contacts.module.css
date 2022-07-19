@@ -1,7 +1,7 @@
 .container {
   background-position: center;
   color: white;
-  background-color: var(--primary-bg-color);
+  background-color: #232323;
   padding: 50px 0;
 }
 

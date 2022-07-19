@@ -1,6 +1,45 @@
 .container {
-  color: white;
   display: grid;
-  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  background-color: #161616;
+  color: white;
   padding: 50px;
+}
+
+.column {
+  display: grid;
+  grid-template-rows: min-content min-content max-content;
+  gap: 20px;
+}
+
+.column.info {
+  display: grid;
+  grid-template-rows: min-content auto;
+}
+
+.header {
+  display: grid;
+  gap: 20px;
+}
+
+.header .line {
+  width: 50%;
+  height: 1px;
+  background-color: #008ED6;
+}
+
+.column h1 {
+  font-size: 4rem;
+}
+
+.points {
+  display: grid;
+}
+
+.point {
+  display: grid;
+  gap: 5%;
+  grid-template-columns: min-content max-content;
+  align-items: center;
+  justify-items: center;
 }

@@ -26,7 +26,7 @@
   "time";
   box-shadow: 1px 1px 5px silver;
   color: white;
-  background-color: var(--primary-bg-color);
+  background-color: #161616;
 }
 
 .social {

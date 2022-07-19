@@ -6,7 +6,7 @@ const Button = ({ name, style, handler, children }) => {
       className={styles.container}
       style={{ ...style }}
       onClick={handler}
-    >{name}
+    ><h4>{name}</h4>
     </div>
   )
 }

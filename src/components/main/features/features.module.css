@@ -1,53 +1,74 @@
 .container {
+  background-color: #232323;
+  color: white;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 5%;
-  padding: 50px;
-  text-align: center;
+  align-items: center;
+  justify-items: center;
+  gap: 50px;
+  padding: 0 5%;
 }
 
-.info {
+.header {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+
+.header h1 {
+  font-size: 4rem;
+}
+
+.header .line {
+  width: 50%;
+  height: 1px;
+  background-color: #008ED6;
+}
+
+.features {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  align-items: center;
-  gap: 10%;
 }
 
-.featuresBox {
+.column {
   display: grid;
-  justify-items: center;
+}
+
+.featureContainer {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  text-align: right;
+  grid-template-areas: "featureHeader featureIcon" "featureDescription featureIcon";
+  justify-items: end;
+}
+
+.end .featureContainer {
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: "featureIcon featureHeader" "featureIcon featureDescription";
+  text-align: left;
+  justify-items: start;
+}
+
+.featureHeader {
+  grid-area: featureHeader;
+  font-size: 2rem;
+  color: #008ED6;
+}
+
+.featureIcon {
+  grid-area: featureIcon;
+  width: 40px;
+  display: grid;
   align-items: center;
-  grid-template-rows: auto min-content 1fr;
+  justify-items: center;
+  height: 40px;
+  border: 2px solid;
+  border-color: #008ED6;
+  color: #008ED6;
+  border-radius: 50%;
 }
 
-.featuresBox h1 {
-  text-align: center;
-  box-sizing: border-box;
-  line-height: 1.1;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-family: 'Lato', sans-serif;
-  color: #95a5a6;
-  font-weight: 400;
-  font-size: 20px;
-}
-
-.featuresBox img {
-  width: 200px;
-  height: 200px;
-  font-size: 3rem;
-}
-
-.featuresBox p {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  color: #555;
-  -webkit-font-smoothing: antialiased;
-  text-align: center;
-  box-sizing: border-box;
-  margin: 0 0 10px;
-  line-height: 28px;
-  margin-bottom: 25px;
-  font-size: 16px;
+.featureDescription {
+  grid-area: featureDescription;
 }

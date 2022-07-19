@@ -1,31 +1,89 @@
-import style from './features.module.css';
-import Title from '../../common/title/title.component';
-import SubTitle from '../../common/subTitle/subTitle.component';
-import Hr from '../../common/hr/hr.component';
-import browser from '../../../images/features/browser.png';
-import sunc from '../../../images/features/sunc.png';
-import notes from '../../../images/features/notes.png';
+import styles from './features.module.css';
+import cn from 'classnames';
+import phoneImage from "../../../images/features/ipad-hand.png";
 
 export default function Features() {
   return (
-    <div className={style.container}>
-      <Title name={"Features"} />
-      <SubTitle name={"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae exercitationem quis totam"} />
-      <div className={style.info}>
-        <div className={style.featuresBox}>
-          <img src={sunc} alt="" />
-          <h1>Data Sync</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae exercitationem quis totam accusantium obcaecati minus dicta, aperiam dolor eveniet! Nesciunt, temporibus. Et ad asperiores, illo autem consectetur inventore perferendis eveniet?</p>
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <h1>Amazing Features</h1>
+        <div className={styles.line}/>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, quae!</p>
+        <div className={styles.line}/>
+      </div>
+      <div className={styles.features}>
+        <div className={cn(styles.column, styles.start)}>
+          <div className={styles.featureContainer}>
+            <div className={styles.featureHeader}>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+            <div className={styles.featureIcon}>
+              <i className="fas fa-sync"></i>
+            </div>
+            <div className={styles.featureDescription}>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit vel suscipit vero expedita rerum ut repudiandae, delectus quam molestias ex voluptatibus natus architecto dolore velit asperiores reiciendis quod id.</p>
+            </div>
+          </div>
+          <div className={styles.featureContainer}>
+            <div className={styles.featureHeader}>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+            <div className={styles.featureIcon}>
+              <i className="fas fa-sync"></i>
+            </div>
+            <div className={styles.featureDescription}>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit vel suscipit vero expedita rerum ut repudiandae, delectus quam molestias ex voluptatibus natus architecto dolore velit asperiores reiciendis quod id.</p>
+            </div>
+          </div>
+          <div className={styles.featureContainer}>
+            <div className={styles.featureHeader}>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+            <div className={styles.featureIcon}>
+              <i className="fas fa-sync"></i>
+            </div>
+            <div className={styles.featureDescription}>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit vel suscipit vero expedita rerum ut repudiandae, delectus quam molestias ex voluptatibus natus architecto dolore velit asperiores reiciendis quod id.</p>
+            </div>
+          </div>
         </div>
-        <div className={style.featuresBox}>
-          <img src={browser} alt="" srcset="" />
-          <h1>Browser Compatibility</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae exercitationem quis totam accusantium obcaecati minus dicta, aperiam dolor eveniet! Nesciunt, temporibus. Et ad asperiores, illo autem consectetur inventore perferendis eveniet?</p>
+        <div className={cn(styles.column, styles.middle)}>
+          <img src={phoneImage} alt="" srcset="" />
         </div>
-        <div className={style.featuresBox}>
-          <img src={notes} alt="" />
-          <h1>Gather Your Cards</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae exercitationem quis totam accusantium obcaecati minus dicta, aperiam dolor eveniet! Nesciunt, temporibus. Et ad asperiores, illo autem consectetur inventore perferendis eveniet?</p>
+        <div className={cn(styles.column, styles.end)}>
+          <div className={styles.featureContainer}>
+            <div className={styles.featureHeader}>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+            <div className={styles.featureIcon}>
+              <i className="fas fa-sync"></i>
+            </div>
+            <div className={styles.featureDescription}>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit vel suscipit vero expedita rerum ut repudiandae, delectus quam molestias ex voluptatibus natus architecto dolore velit asperiores reiciendis quod id.</p>
+            </div>
+          </div>
+          <div className={styles.featureContainer}>
+            <div className={styles.featureHeader}>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+            <div className={styles.featureIcon}>
+              <i className="fas fa-sync"></i>
+            </div>
+            <div className={styles.featureDescription}>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit vel suscipit vero expedita rerum ut repudiandae, delectus quam molestias ex voluptatibus natus architecto dolore velit asperiores reiciendis quod id.</p>
+            </div>
+          </div>
+          <div className={styles.featureContainer}>
+            <div className={styles.featureHeader}>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+            <div className={styles.featureIcon}>
+              <i className="fas fa-sync"></i>
+            </div>
+            <div className={styles.featureDescription}>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit vel suscipit vero expedita rerum ut repudiandae, delectus quam molestias ex voluptatibus natus architecto dolore velit asperiores reiciendis quod id.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
