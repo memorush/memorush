@@ -1,53 +1,54 @@
 .container {
-  display: grid;
-  gap: 1rem;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 1px 2px 3px 4px silver;
-  padding: 1rem;
-  position: relative;
-  text-align: center;
-  /* TODO FIXME */
-  margin: 2.5%;
+	position: relative;
+	display: grid;
+	gap: 1rem;
+	padding: 1rem;
+
+	/* TODO FIXME */
+	margin: 2.5%;
+	text-align: center;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 1px 2px 3px 4px silver;
 }
 
 .iconContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: absolute;
-  gap: 10px;
-  padding: 5px;
-  top: 0;
-  right: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	padding: 5px;
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: bold;
+	font-size: 2rem;
+	font-weight: bold;
 }
 
 .description {
-  font-style: italic;
-  color: silver;
+	font-style: italic;
+	color: silver;
 }
 
 .learned {
-  transform: rotate(45deg);
-  font-family: 'Marck Script', cursive;
-  font-weight: bold;
-  position: absolute;
-  color: red;
-  font-size: 3.5rem;
-  top: 25%;
-  left: 25%;
-  z-index: 100;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	z-index: 100;
+	font-family: "Marck Script", cursive;
+	font-size: 3.5rem;
+	font-weight: bold;
+	color: red;
+	transform: rotate(45deg);
 }
 
 .isActive {
-  color: red;
+	color: red;
 }
 
 .textThrough {
-  text-decoration: line-through;
-  opacity: 0.8;
+	text-decoration: line-through;
+	opacity: 0.8;
 }

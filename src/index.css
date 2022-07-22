@@ -1,30 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap";
 
 * {
-  margin: 0;
-  padding: 0;
+	padding: 0;
+	margin: 0;
 }
 
 :root {
-  --primary-bg-color: #9179BA;
-  --secondary-bg-color: #F0EDF5;
-  --primary-text-color: white;
-  --secondary-text-color: black;
-  --third-text-color: #95A5A6;
+	--primary-bg-color: #9179ba;
+	--secondary-bg-color: #f0edf5;
+	--primary-text-color: white;
+	--secondary-text-color: black;
+	--third-text-color: #95a5a6;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Cormorant Garamond', serif, 'Manrope', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--secondary-bg-color);
+	padding: 0;
+	margin: 0;
+	font-family:
+		"Cormorant Garamond",
+		serif,
+		"Manrope",
+		sans-serif,
+		"Segoe UI",
+		"Roboto",
+		"Oxygen",
+		"Ubuntu",
+		"Cantarell",
+		"Fira Sans",
+		"Droid Sans",
+		"Helvetica Neue",
+		sans-serif;
+	background-color: var(--secondary-bg-color);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family:
+		"source-code-pro",
+		"Menlo",
+		"Monaco",
+		"Consolas",
+		"Courier New",
+		monospace;
 }

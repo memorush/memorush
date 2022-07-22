@@ -1,11 +1,11 @@
 .container {
-  text-align: center;
-  box-sizing: border-box;
-  line-height: 1.1;
-  font-weight: 300;
-  font-size: 40px;
+	box-sizing: border-box;
+	font-size: 40px;
+	font-weight: 300;
+	line-height: 1.1;
+	text-align: center;
 }
 
 .container h2 {
-  font-weight: lighter;
+	font-weight: lighter;
 }

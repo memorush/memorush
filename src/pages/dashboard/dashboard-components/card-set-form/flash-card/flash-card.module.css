@@ -1,14 +1,14 @@
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
 }
 
 .side {
-  display: grid;
-  grid-template-rows: min-content max-content;
+	display: grid;
+	grid-template-rows: min-content max-content;
 }
 
 .side textarea {
-  min-height: 200px;
+	min-height: 200px;
 }

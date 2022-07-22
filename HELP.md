@@ -5,3 +5,6 @@ https://stackoverflow.com/questions/70499543/create-react-app-creates-this-ifram
 # react-folder-structure
 https://www.robinwieruch.de/react-folder-structure/
 https://www.freecodecamp.org/news/a-better-way-to-structure-react-projects/
+
+# Stylelint (npx stylelint "**/*.{css,scss}" --fix)
+https://github.com/stormwarning/stylelint-config-recess-order

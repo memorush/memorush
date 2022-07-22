@@ -1,74 +1,74 @@
 .container {
-  background-color: #232323;
-  color: white;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  gap: 50px;
-  padding: 0 5%;
+	display: grid;
+	gap: 50px;
+	align-items: center;
+	justify-items: center;
+	padding: 0 5%;
+	color: white;
+	background-color: #232323;
 }
 
 .header {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  gap: 20px;
+	display: grid;
+	gap: 20px;
+	align-items: center;
+	justify-items: center;
 }
 
 .header h1 {
-  font-size: 4rem;
+	font-size: 4rem;
 }
 
 .header .line {
-  width: 50%;
-  height: 1px;
-  background-color: #008ED6;
+	width: 50%;
+	height: 1px;
+	background-color: #008ed6;
 }
 
 .features {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 .column {
-  display: grid;
+	display: grid;
 }
 
 .featureContainer {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-template-rows: 1fr 3fr;
-  text-align: right;
-  grid-template-areas: "featureHeader featureIcon" "featureDescription featureIcon";
-  justify-items: end;
+	display: grid;
+	grid-template-areas: "featureHeader featureIcon" "featureDescription featureIcon";
+	grid-template-rows: 1fr 3fr;
+	grid-template-columns: 4fr 1fr;
+	justify-items: end;
+	text-align: right;
 }
 
 .end .featureContainer {
-  grid-template-columns: 1fr 4fr;
-  grid-template-areas: "featureIcon featureHeader" "featureIcon featureDescription";
-  text-align: left;
-  justify-items: start;
+	grid-template-areas: "featureIcon featureHeader" "featureIcon featureDescription";
+	grid-template-columns: 1fr 4fr;
+	justify-items: start;
+	text-align: left;
 }
 
 .featureHeader {
-  grid-area: featureHeader;
-  font-size: 2rem;
-  color: #008ED6;
+	grid-area: featureHeader;
+	font-size: 2rem;
+	color: #008ed6;
 }
 
 .featureIcon {
-  grid-area: featureIcon;
-  width: 40px;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  height: 40px;
-  border: 2px solid;
-  border-color: #008ED6;
-  color: #008ED6;
-  border-radius: 50%;
+	display: grid;
+	grid-area: featureIcon;
+	align-items: center;
+	justify-items: center;
+	width: 40px;
+	height: 40px;
+	color: #008ed6;
+	border: 2px solid;
+	border-color: #008ed6;
+	border-radius: 50%;
 }
 
 .featureDescription {
-  grid-area: featureDescription;
+	grid-area: featureDescription;
 }
