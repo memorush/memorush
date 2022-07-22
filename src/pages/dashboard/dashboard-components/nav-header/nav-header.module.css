@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  background-color: #161616;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  padding: 20px 50px;
+  box-shadow: 2px 2px 2px silver;
+}
+
+.logo {
+  display: grid;
+  justify-items: start;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  display: grid;
+  justify-items: end;
+}

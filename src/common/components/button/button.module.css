@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  min-width: 100px;
+  display: block;
+  color: white;
+  font-size: 14px;
+  font-family: "montserrat";
+  text-decoration: none;
+  background-color: #007accc0;
+  border-radius: 5px;
+  padding: 14px 20px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.container::before{
+  background: #41da48;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+.container::before{
+  width: 0%;
+  height: 100%;
+}
+
+.container:hover::before{
+  width: 100%;
+}
+
+.container p {
+  text-decoration: none;
+}
+
+.container:hover {
+  opacity: 0.95;
+}
+
+.container:active {
+  transform: scale(0.98);
+}

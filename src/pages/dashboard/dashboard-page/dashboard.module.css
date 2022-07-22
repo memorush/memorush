@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+}
+
+.content {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: 1fr 5fr;
+  box-shadow: 1px 1px 1px silver;
+}
+
+.navigation {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  gap: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+}
+
+.dashboard {
+  display: grid;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px silver;
+}

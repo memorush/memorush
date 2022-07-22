@@ -3,8 +3,13 @@ import fetchDataService from "../../../service/fetchDataService";
 
 // -------------------------------------- AsyncThunk --------------------------------------
 
-export const getCards = createAsyncThunk('card/get', async (data) => {
-  const response = await fetchDataService('GET', '/api/v1/card/all', data);
+export const getAllCardSets = createAsyncThunk('card/getAllCardSets', async () => {
+  const response = await fetchDataService('GET', '/api/v1/card-set/all');
+  return response.data;
+})
+
+export const createNewCardSet = createAsyncThunk('card/create', async (data) => {
+  const response = await fetchDataService('POST', '/api/v1/card-set/add', data);
   return response.data;
 })
 
@@ -22,14 +27,25 @@ const cardSlice = createSlice({
   reducers: {},
   extraReducers(builder) {
     builder
-      .addCase(getCards.pending, (state) => {
+      .addCase(getAllCardSets.pending, (state) => {
         state.status = 'loading'
       })
-      .addCase(getCards.fulfilled, (state, action) => {
+      .addCase(getAllCardSets.fulfilled, (state, action) => {
         state.status = 'succeeded'
         state.cardEntity = action.payload;
       })
-      .addCase(getCards.rejected, (state, action) => {
+      .addCase(getAllCardSets.rejected, (state, action) => {
+        state.status = 'failed'
+        state.error = action.error.message
+      })
+      // Add new card set
+      .addCase(createNewCardSet.pending, (state) => {
+        state.status = 'loading'
+      })
+      .addCase(createNewCardSet.fulfilled, (state, action) => {
+        state.status = 'succeeded'
+      })
+      .addCase(createNewCardSet.rejected, (state, action) => {
         state.status = 'failed'
         state.error = action.error.message
       })
