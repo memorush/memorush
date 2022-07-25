@@ -1,20 +1,18 @@
 import styles from './flash-card.module.css';
-import { useState } from 'react';
 
-const FlashCard = ({ handler, id }) => {
-
-  const [data, setData] = useState({});
+const FlashCard = ({ cardSetEntity, setCardSetEntity, id }) => {
 
   const onChangeHandler = (e, id) => {
-    setData({
-      ...data,
-      [e.target.name]: e.target.value
-    }
-    )
-    handler({
-      id: id,
-      data: data
-    });
+    setCardSetEntity({
+      ...cardSetEntity,
+      flashCardArray: {
+        ...cardSetEntity.flashCardArray,
+        [id]: {
+          ...cardSetEntity.flashCardArray[id],
+          [e.target.name]: e.target.value
+        }
+      }
+    })
   }
 
   return (

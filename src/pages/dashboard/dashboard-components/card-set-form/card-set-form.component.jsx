@@ -1,58 +1,47 @@
 import styles from './card-set-from.module.css';
-import { useRef, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { createNewCardSet } from '../../../../redux/features/card/cardSlice';
+import { useRef, useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  createNewCardSet,
+  cardByIdSelector
+} from '../../../../redux/features/card/cardSlice';
 import FlashCard from './flash-card/flash-card.component';
 import Button from '../../../../common/components/button/button.component';
+import { useSearchParams } from 'react-router-dom';
 
-const initCardSetEntity = {
-    flashCardsData: []
-  }
+const INIT_CARD_SET_STATE = {
+  title: "",
+  tags: "",
+  description: "",
+  flashCardArray: {}
+}
 
-//TODO Упростить логику и поправить баг при заполнении полей!
 const CardSetForm = () => {
 
   const dispatch = useDispatch();
   const flashCardContainerRef = useRef();
 
+  const [searchParams] = useSearchParams();
+  const cardSetId = searchParams.get('id');
+  const cardSetById = useSelector(state => cardByIdSelector(state, cardSetId));
 
-  // Data for card set: {title: "Name of set", flashCardData: [{frontSide: "...", backSide: "..."}, {frontSide...: "..."}}]}
-  const [cardSetEntity, setCardSetEntity] = useState(initCardSetEntity);
-  // Data from each Flash Card = {id: data} => {1: {frontSide: "...", backSide: "..."}}
-  const [flashCardData, setFlashCardData] = useState({});
-  // Array of view component
-  const [flashCardElementArray, setFlashCardElementArray] = useState([
-    <FlashCard
-      key={0}
-      id={0}
-      handler={flashCardDataHandler} />
-  ]);
-
-  function flashCardDataHandler(object) {
-    setFlashCardData({
-      ...flashCardData,
-      [object.id]: object.data
-    })
-  }
+  const [cardSetEntity, setCardSetEntity] = useState(INIT_CARD_SET_STATE);
 
   const cardSetEntityHandler = (e) => {
     setCardSetEntity({
       ...cardSetEntity,
-      [e.target.name]: e.target.value,
-      flashCardsData: Object.values(flashCardData)
+      [e.target.name]: e.target.value
     })
   };
 
-  // This method adds new FlashCard component to DOM
-  const addNewFlashCardElement = () => {
-    setFlashCardElementArray([
-      ...flashCardElementArray,
-      <FlashCard
-        key={flashCardElementArray.length}
-        id={flashCardElementArray.length}
-        handler={flashCardDataHandler} />
-    ]
-    );
+  const addFlashCardElement = () => {
+    setCardSetEntity({
+      ...cardSetEntity,
+      flashCardArray: {
+        ...cardSetEntity.flashCardArray,
+        [Object.keys(cardSetEntity.flashCardArray).length]: {}
+      }
+    })
   }
 
   return (
@@ -61,26 +50,41 @@ const CardSetForm = () => {
         <div className={styles.setColumn}>
           <h1>Create a New flashCard Set</h1>
           <label htmlFor='title'>Title</label>
-          <input type="text" name="title" onChange={cardSetEntityHandler} />
-
+          <input
+            type="text"
+            name="title"
+            onChange={cardSetEntityHandler} value={cardSetEntity.title} />
           <label htmlFor='tags'>Tags(OPTIONAL, COMMA SEPARATED)</label>
-          <input type="text" name="tags" onChange={cardSetEntityHandler} />
+          <input
+            type="text"
+            name="tags"
+            onChange={cardSetEntityHandler} />
         </div>
         <div className={styles.setColumn}>
           <label htmlFor='description'>Description</label>
-          <textarea placeholder="description" name="description" onChange={cardSetEntityHandler}></textarea>
+          <textarea
+            placeholder="description"
+            name="description"
+            onChange={cardSetEntityHandler}></textarea>
         </div>
       </div>
       <div className={styles.flashCards}>
         <h1>Create flashCards</h1>
-        <Button handler={addNewFlashCardElement} name="Add a new card" />
+        <Button handler={addFlashCardElement} name="Add a new card" />
         <div className={styles.flashCardContainer} ref={flashCardContainerRef}>
-          {flashCardElementArray.map(el => el)}
+          {Object.keys(cardSetEntity.flashCardArray).map(id => (
+            <FlashCard
+              id={id}
+              key={id}
+              cardSetEntity={cardSetEntity}
+              setCardSetEntity={setCardSetEntity}
+            />
+          ))}
         </div>
       </div>
       <div className={styles.buttons}>
         <Button name="Create Set" handler={() => dispatch(createNewCardSet(cardSetEntity))} />
-        <Button name="Cancel" handler={() => setCardSetEntity(initCardSetEntity)}/>
+        <Button name="Cancel" handler={() => setCardSetEntity(INIT_CARD_SET_STATE)} />
       </div>
     </div>
   )
