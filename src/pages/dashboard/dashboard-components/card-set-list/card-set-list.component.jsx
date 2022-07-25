@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '../../../../common/components/button/button.component';
-import { Link } from 'react-router-dom';
 import {
-  cardEntitySelector,
-  getAllCardSets
+  cardEntitySelector, deleteCardSet, getAllCardSets
 } from '../../../../redux/features/card/cardSlice';
 import styles from './card-set-list.module.css';
 
@@ -12,6 +11,7 @@ const CardSetList = () => {
 
   const dispatch = useDispatch();
   const cardEntity = useSelector(cardEntitySelector);
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getAllCardSets());
@@ -28,9 +28,20 @@ const CardSetList = () => {
           <td>{cardSet.cardList.length}</td>
           <td>{cardSet.folder}</td>
           <td>{cardSet.isFavorite}</td>
-          <td>Tools</td>
+          <td className={styles.toolsContainer}>
+            <i className="fas fa-edit"
+              onClick={() => navigate(`edit?id=${cardSet.id}`)}
+            >
+            </i>
+            <i className="fas fa-trash"
+              onClick={() => dispatch(deleteCardSet(cardSet.id))}
+            >
+            </i>
+            <i className="fas fa-heart"></i>
+          </td>
         </tr>
-      ))}
+      ))
+      }
     </>
   )
 

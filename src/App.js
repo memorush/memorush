@@ -29,6 +29,7 @@ function App() {
           <Route path="dashboard" element={<DashboardPage />}>
             <Route path="card-set" element={<CardSetList />} />
             <Route path="card-set/create" element={<CardSetForm />} />
+            <Route path="card-set/edit" element={<CardSetForm />} />
             <Route path="card-set/folders" element={<CardSetForm />} />
             <Route path="card-set/favorites" element={<CardSetForm />} />
             <Route path="card-set/recently" element={<CardSetForm />} />

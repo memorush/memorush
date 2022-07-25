@@ -9,7 +9,26 @@ export const getAllCardSets = createAsyncThunk('card/getAllCardSets', async () =
 })
 
 export const createNewCardSet = createAsyncThunk('card/create', async (data) => {
-  const response = await fetchDataService('POST', '/api/v1/card-set/add', data);
+  const body = {
+    ...data,
+    flashCardArray: Object.values(data.flashCardArray)
+  }
+  const response = await fetchDataService('POST', '/api/v1/card-set/add', body);
+  return response.data;
+})
+
+export const updateCardSet = createAsyncThunk('card/update', async (data) => {
+  const { cardSetId, cardSetEntity } = data;
+  const body = {
+    ...cardSetEntity,
+    flashCardArray: Object.values(cardSetEntity.flashCardArray)
+  }
+  const response = await fetchDataService('PUT', `/api/v1/card-set/update/${cardSetId}`, body);
+  return response.data;
+})
+
+export const deleteCardSet = createAsyncThunk('card/delete', async (id) => {
+  const response = await fetchDataService('DELETE', `/api/v1/card-set/delete/${id}`);
   return response.data;
 })
 
@@ -57,7 +76,7 @@ export default cardSlice.reducer;
 // -------------------------------------- Selectors --------------------------------------
 
 export const cardEntitySelector = state => state.card.cardEntity;
-export const cardByIdSelector = (state, id) => state.card.cardEntity.find(card => id === card.id);
+export const cardByIdSelector = (state, id) => state.card.cardEntity.find(card => id == card.id);
 //TODO Переделать! Сделать мемоизированным и механизм фильтрации изменить!
 export const cardEntityByFavoriteAndLearnedSelector = (state, favorite, learned) => {
   const favoriteCards = state.card.cardEntity.filter(card => {

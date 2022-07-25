@@ -19,15 +19,27 @@ const FlashCard = ({ cardSetEntity, setCardSetEntity, id }) => {
     <div className={styles.container}>
       <div className={styles.side}>
         <label htmlFor='frontSide'>Front Side</label>
-        <textarea onChange={(e) => onChangeHandler(e, id)} placeholder="Front Side" name="frontSide"></textarea>
+        <textarea
+          onChange={(e) => onChangeHandler(e, id)}
+          name="frontSide"
+          value={cardSetEntity.flashCardArray[id].frontSide}
+        ></textarea>
       </div>
       <div className={styles.side}>
         <label htmlFor='backSide'>Back Side</label>
-        <textarea onChange={(e) => onChangeHandler(e, id)} placeholder="Back Side" name="backSide"></textarea>
+        <textarea
+          onChange={(e) => onChangeHandler(e, id)}
+          name="backSide"
+          value={cardSetEntity.flashCardArray[id].backSide}
+        ></textarea>
       </div>
       <div className={styles.side}>
         <label htmlFor='hint'>Hint</label>
-        <textarea onChange={(e) => onChangeHandler(e, id)} placeholder="Hint" name="hint"></textarea>
+        <textarea
+          onChange={(e) => onChangeHandler(e, id)}
+          name="hint"
+          value={cardSetEntity.flashCardArray[id].hint}
+        ></textarea>
       </div>
     </div>
   )
