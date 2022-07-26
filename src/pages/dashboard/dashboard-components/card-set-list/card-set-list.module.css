@@ -21,6 +21,7 @@
 	text-align: center;
 	border-collapse: collapse;
 	border: 1px solid #ddd;
+	font-size: 1.2rem;
 }
 
 table th {
@@ -33,6 +34,12 @@ table th {
 table td {
 	padding: 5px;
 	border: 1px solid #ddd;
+}
+
+.cardSetTitle {
+	cursor: pointer;
+	font-size: 1.5rem;
+	font-weight: bold;
 }
 
 .toolsContainer {

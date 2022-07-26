@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  gap: 20px;
+}
+
+.actionButtons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.flashCards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}

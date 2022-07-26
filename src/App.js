@@ -7,6 +7,7 @@ import CardSetForm from "./pages/dashboard/dashboard-components/card-set-form/ca
 import SignIn from "./pages/main/main-components/sign-in/sign-in.component";
 import SignUp from "./pages/main/main-components/sign-up/sign-up";
 import NotFound from "./pages/not-found/not-found.page";
+import LearnCards from "./pages/dashboard/dashboard-components/learn-cards/learn-cards.component";
 import {
   Routes,
   Route,
@@ -29,6 +30,7 @@ function App() {
           <Route path="dashboard" element={<DashboardPage />}>
             <Route path="card-set" element={<CardSetList />} />
             <Route path="card-set/create" element={<CardSetForm />} />
+            <Route path="card-set/learn" element={<LearnCards />} />
             <Route path="card-set/edit" element={<CardSetForm />} />
             <Route path="card-set/folders" element={<CardSetForm />} />
             <Route path="card-set/favorites" element={<CardSetForm />} />

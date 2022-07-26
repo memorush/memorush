@@ -21,7 +21,12 @@ const CardSetList = () => {
     <>
       {cardEntity.map((cardSet, idx) => (
         <tr key={idx}>
-          <td>{cardSet.name}</td>
+          <td
+            className={styles.cardSetTitle}
+            onClick={() => navigate(`learn?id=${cardSet.id}`)}
+          >
+            {cardSet.name}
+          </td>
           <td>{cardSet.description}</td>
           <td>{cardSet.createdAt}</td>
           <td>{cardSet.updatedAt}</td>
