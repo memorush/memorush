@@ -16,7 +16,7 @@ export default function Contacts() {
             <h3><i className="fab fa-github"></i>Git-Hub</h3>
           </div>
           <div className={style.contact}>
-            <h3><i class="fas fa-location-arrow"></i>Moscow, Russia</h3>
+            <h3><i class="fab fa-telegram-plane"></i>Moscow, Russia</h3>
           </div>
         </div>
         <div className={style.formContainer}>
