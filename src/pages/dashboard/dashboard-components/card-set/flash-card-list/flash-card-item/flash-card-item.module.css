@@ -1,13 +1,13 @@
 .container {
   display: grid;
-  box-shadow: 1px 1px 1px 1px silver;
-  border-radius: 10px;
-  justify-items: center;
   align-items: center;
+  justify-items: center;
   padding: 10%;
-  transition: 0.3s ease;
-  background-color: whitesmoke;
   font-size: 3rem;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px silver;
+  transition: 0.3s ease;
 }
 
 .turn {

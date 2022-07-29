@@ -6,9 +6,9 @@ const Screenshots = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>Screenshots</h1>
+        <h1>Скриншоты</h1>
         <div className={styles.line} />
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus laudantium ipsa saepe cum ullam fuga repellat, ab at atque.</p>
+        <p>Красивый и современный дизайн</p>
         <div className={styles.line} />
       </div>
       <div className={styles.slides}>

@@ -1,7 +1,7 @@
 .container {
   display: grid;
-  padding: 10%;
   gap: 20px;
+  padding: 10%;
 }
 
 .container ul li {

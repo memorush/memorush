@@ -5,9 +5,9 @@ const Download = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>Download App on</h1>
+        <h1>Установите приложение</h1>
         <div className={styles.line} />
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus laudantium ipsa saepe cum ullam fuga repellat, ab at atque.</p>
+        <p>Установите наше приложение и начните учиться прямо сейчас!</p>
         <div className={styles.line} />
       </div>
       <div className={styles.buttonContainer}>

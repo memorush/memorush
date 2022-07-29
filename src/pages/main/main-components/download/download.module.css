@@ -1,7 +1,6 @@
 .container {
 	position: relative;
 	display: grid;
-	grid-template-rows: 1fr 2fr;
 	align-items: center;
 	justify-items: center;
 	min-height: 500px;
@@ -36,7 +35,6 @@
 
 .buttonContainer {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
 	gap: 10%;
 	align-items: center;
 	justify-items: center;

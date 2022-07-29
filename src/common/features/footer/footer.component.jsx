@@ -8,35 +8,30 @@ const Footer = () => {
       <div className={cn(style.upper)}>
         <div className={cn(style.tutotarial)}>
           <ul>
-            <li><h3>Discover</h3></li>
-            <li>Create Flashcards</li>
-            <li>Mobile App</li>
+            <li><h3>Начать</h3></li>
+            <li>Давайте приступим</li>
+            <li>Мобильное приложение</li>
           </ul>
         </div>
         <div className={cn(style.hosting)}>
           <ul>
-            <li><h3>Company</h3></li>
-            <li>About Us</li>
+            <li><h3>О проекте</h3></li>
+            <li>О создателе</li>
             <li>FAQ</li>
-            <li>Privacy Policy</li>
+            <li>Политика конфиденциальности</li>
           </ul>
         </div>
       </div>
       <div className={cn(style.bottom)}>
         <ul>
-          <li>Home</li>
-          <li>Feature</li>
-          <li>Gallery</li>
+          <li>Домой</li>
+          <li>Особенности</li>
+          <li>Галерея</li>
         </ul>
         <ul>
-          <li>Contacts</li>
-          <li>Developer</li>
-          <li>Testimonial</li>
-        </ul>
-        <ul>
-          <li>Terms and Conditions</li>
-          <li>Privacy Policy</li>
-          <li>Support Policy</li>
+          <li>Контакты</li>
+          <li>О разработке</li>
+          <li>Отзывы</li>
         </ul>
         <div className={style.social}>
           <div><i class="fab fa-telegram"></i></div>
@@ -46,7 +41,7 @@ const Footer = () => {
           <div><i class="fab fa-blogger"></i></div>
         </div>
         <div className={cn(style.time)}>
-          <p>© 2021–{new Date().getFullYear()}, MemoRush, official site</p>
+          <p>© 2021–{new Date().getFullYear()}, MemoRush, официальный сайт</p>
         </div>
       </div>
     </div>

@@ -6,44 +6,44 @@ export default function Features() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>Amazing Features</h1>
+        <h1>Потрясающие особенности приложения</h1>
         <div className={styles.line}/>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, quae!</p>
+        <p>Основные преимущества при использовании данного сервиса</p>
         <div className={styles.line}/>
       </div>
       <div className={styles.features}>
         <div className={cn(styles.column, styles.start)}>
           <div className={styles.featureContainer}>
             <div className={styles.featureHeader}>
-              <p>Lorem, ipsum dolor.</p>
+              <p>Совместимость</p>
             </div>
             <div className={styles.featureIcon}>
               <i className="fas fa-sync"></i>
             </div>
             <div className={styles.featureDescription}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit vel suscipit vero expedita rerum ut repudiandae, delectus quam molestias ex voluptatibus natus architecto dolore velit asperiores reiciendis quod id.</p>
+              <p>Удобно работать с различными типами смартфонов/ планшетов.</p>
             </div>
           </div>
           <div className={styles.featureContainer}>
             <div className={styles.featureHeader}>
-              <p>Lorem, ipsum dolor.</p>
+              <p>Поддержка, обслуживание</p>
             </div>
             <div className={styles.featureIcon}>
               <i className="fas fa-sync"></i>
             </div>
             <div className={styles.featureDescription}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit vel suscipit vero expedita rerum ut repudiandae, delectus quam molestias ex voluptatibus natus architecto dolore velit asperiores reiciendis quod id.</p>
+              <p>Регулярные обновления и обратная связь</p>
             </div>
           </div>
           <div className={styles.featureContainer}>
             <div className={styles.featureHeader}>
-              <p>Lorem, ipsum dolor.</p>
+              <p>Адаптивность</p>
             </div>
             <div className={styles.featureIcon}>
               <i className="fas fa-sync"></i>
             </div>
             <div className={styles.featureDescription}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit vel suscipit vero expedita rerum ut repudiandae, delectus quam molestias ex voluptatibus natus architecto dolore velit asperiores reiciendis quod id.</p>
+              <p>Приложение адаптируется под ваше персональное устойство</p>
             </div>
           </div>
         </div>
@@ -53,35 +53,35 @@ export default function Features() {
         <div className={cn(styles.column, styles.end)}>
           <div className={styles.featureContainer}>
             <div className={styles.featureHeader}>
-              <p>Lorem, ipsum dolor.</p>
+              <p>Облачное хранение данных</p>
             </div>
             <div className={styles.featureIcon}>
               <i className="fas fa-sync"></i>
             </div>
             <div className={styles.featureDescription}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit vel suscipit vero expedita rerum ut repudiandae, delectus quam molestias ex voluptatibus natus architecto dolore velit asperiores reiciendis quod id.</p>
+              <p>Все ваши данные хранятся в облаке и вы их никогда не потеряете</p>
             </div>
           </div>
           <div className={styles.featureContainer}>
             <div className={styles.featureHeader}>
-              <p>Lorem, ipsum dolor.</p>
+              <p>Автономный доступ</p>
             </div>
             <div className={styles.featureIcon}>
               <i className="fas fa-sync"></i>
             </div>
             <div className={styles.featureDescription}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit vel suscipit vero expedita rerum ut repudiandae, delectus quam molestias ex voluptatibus natus architecto dolore velit asperiores reiciendis quod id.</p>
+              <p>Работает без выхода в интернет</p>
             </div>
           </div>
           <div className={styles.featureContainer}>
             <div className={styles.featureHeader}>
-              <p>Lorem, ipsum dolor.</p>
+              <p>Интуитивно понятный интерфейс</p>
             </div>
             <div className={styles.featureIcon}>
               <i className="fas fa-sync"></i>
             </div>
             <div className={styles.featureDescription}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit vel suscipit vero expedita rerum ut repudiandae, delectus quam molestias ex voluptatibus natus architecto dolore velit asperiores reiciendis quod id.</p>
+              <p>Ничего лишнего. Ничто не будет вас отвлекать от учебы!</p>
             </div>
           </div>
         </div>

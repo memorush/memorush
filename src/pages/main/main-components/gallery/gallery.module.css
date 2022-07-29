@@ -1,6 +1,6 @@
 .container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	padding: 50px;
 	color: white;
 	background-color: #161616;
@@ -10,6 +10,8 @@
 	display: grid;
 	grid-template-rows: min-content min-content max-content;
 	gap: 20px;
+	align-items: center;
+	justify-items: center;
 }
 
 .column.info {
@@ -34,12 +36,14 @@
 
 .points {
 	display: grid;
+	width: 100%;
 }
 
 .point {
 	display: grid;
 	grid-template-columns: min-content max-content;
-	gap: 5%;
+	gap: 10%;
 	align-items: center;
 	justify-items: center;
+	font-size: 1.2rem;
 }

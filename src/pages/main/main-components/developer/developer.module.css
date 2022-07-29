@@ -27,19 +27,16 @@
 
 .skills {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .skill {
 	display: grid;
+	gap: 20px;
 	justify-items: center;
 	text-align: center;
 }
 
 .skill i {
-	width: 200px;
-	height: 200px;
 	font-size: 5rem;
-	border: 5px solid #008ed6;
-	border-radius: 10%;
 }
