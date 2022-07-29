@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  gap: 20px;
+}
+
+.learningViewContainer {
+  display: grid;
+  gap: 20px;
+}
+
+.buttonsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-items: center;
+}

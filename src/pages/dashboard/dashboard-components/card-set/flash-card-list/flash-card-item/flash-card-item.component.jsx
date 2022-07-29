@@ -28,7 +28,7 @@ const FlashCardItem = ({ card }) => {
       onClick={switchCardSideHandler}
     >
       <div className={styles.cardItem}>
-        <h1>{isFrontSide ? card.frontSide : card.backSide}</h1>
+        <h1>{isFrontSide ? card?.frontSide : card?.backSide}</h1>
       </div>
     </div>
   )

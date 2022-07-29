@@ -23,7 +23,7 @@ const CardSetList = () => {
         <tr key={idx}>
           <td
             className={styles.cardSetTitle}
-            onClick={() => navigate(`learn?id=${cardSet.id}`)}
+            onClick={() => navigate(`${cardSet.id}/list`)}
           >
             {cardSet.name}
           </td>
@@ -35,7 +35,7 @@ const CardSetList = () => {
           <td>{cardSet.isFavorite}</td>
           <td className={styles.toolsContainer}>
             <i className="fas fa-edit"
-              onClick={() => navigate(`edit?id=${cardSet.id}`)}
+              onClick={() => navigate(`/dashboard/card-set-edit?id=${cardSet.id}`)}
             >
             </i>
             <i className="fas fa-trash"
@@ -53,16 +53,16 @@ const CardSetList = () => {
   return (
     <div className={styles.container}>
       <div className={styles.navigation}>
-        <Link to={"/dashboard/card-set/create"}>
+        <Link to={"/dashboard/card-set-create"}>
           <Button name="Create new Set" />
         </Link>
-        <Link to={"/dashboard/card-set/folders"}>
+        <Link to={"/dashboard/card-set-folders"}>
           <Button name="folders" />
         </Link>
-        <Link to={"/dashboard/card-set/favorites"}>
+        <Link to={"/dashboard/card-set-favorites"}>
           <Button name="favorites" />
         </Link>
-        <Link to={"/dashboard/card-set/recently"}>
+        <Link to={"/dashboard/card-set-recently"}>
           <Button name="recently" />
         </Link>
       </div>

@@ -7,13 +7,15 @@ import CardSetForm from "./pages/dashboard/dashboard-components/card-set-form/ca
 import SignIn from "./pages/main/main-components/sign-in/sign-in.component";
 import SignUp from "./pages/main/main-components/sign-up/sign-up";
 import NotFound from "./pages/not-found/not-found.page";
-import LearnCards from "./pages/dashboard/dashboard-components/learn-cards/learn-cards.component";
+import CardSet from "./pages/dashboard/dashboard-components/card-set/card-set.component";
+import CardMemorize from "./pages/dashboard/dashboard-components/card-set/card-memorize/card-memorize.component";
 import {
   Routes,
   Route,
   BrowserRouter,
   Navigate
 } from "react-router-dom";
+import FlashCardList from "./pages/dashboard/dashboard-components/card-set/flash-card-list/flash-card-list.component";
 
 function App() {
   return (
@@ -28,13 +30,16 @@ function App() {
             <Route path="*" element={<Navigate to="page-not-found" replace />} />
           </Route>
           <Route path="dashboard" element={<DashboardPage />}>
-            <Route path="card-set" element={<CardSetList />} />
-            <Route path="card-set/create" element={<CardSetForm />} />
-            <Route path="card-set/learn" element={<LearnCards />} />
-            <Route path="card-set/edit" element={<CardSetForm />} />
-            <Route path="card-set/folders" element={<CardSetForm />} />
-            <Route path="card-set/favorites" element={<CardSetForm />} />
-            <Route path="card-set/recently" element={<CardSetForm />} />
+            <Route path="card-set-list" element={<CardSetList />} />
+            <Route path="card-set-list/:cardSetId" element={<CardSet />}>
+              <Route path="list" element={<FlashCardList />} />
+              <Route path="memorize" element={<CardMemorize />} />
+            </Route>
+            <Route path="card-set-create" element={<CardSetForm />} />
+            <Route path="card-set-edit" element={<CardSetForm />} />
+            <Route path="card-set-folders" element={<CardSetForm />} />
+            <Route path="card-set-favorites" element={<CardSetForm />} />
+            <Route path="card-set-recently" element={<CardSetForm />} />
             <Route path="settings" element={<Settings />} />
             <Route path="page-not-found" element={<NotFound />} />
             <Route path="*" element={<Navigate to="page-not-found" replace />} />

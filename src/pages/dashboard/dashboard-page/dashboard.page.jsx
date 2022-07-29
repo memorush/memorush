@@ -9,7 +9,7 @@ const Dashboard = () => {
       <NavHeader />
       <div className={styles.content}>
         <div className={styles.navigation}>
-          <Link to={"/dashboard/card-set"}>
+          <Link to={"/dashboard/card-set-list"}>
             <Button name={"Card Set"} />
           </Link>
           <Link to={"/dashboard/settings"}>
