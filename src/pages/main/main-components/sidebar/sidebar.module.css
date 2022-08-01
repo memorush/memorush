@@ -6,15 +6,15 @@
   position: fixed;
   top: 0;
   right: -100px;
-  transition: 1s ease;
-  width: 150px;
-  background-color: white;
-  height: 100vh;
-  background-image: linear-gradient(#232323, #161616, #18BBF1);
-  box-shadow: 1px 1px 1px 1px #098ED6;
   z-index: 1000;
-  opacity: 0.8;
+  width: 150px;
+  height: 100vh;
   color: white;
+  background-color: white;
+  background-image: linear-gradient(#232323, #161616, #18BBF1);
+  box-shadow: 0 2px 4px rgba(192, 192, 192, 0.4);
+  opacity: 0.8;
+  transition: 1s ease;
 }
 
 .open {
@@ -28,18 +28,18 @@
 }
 
 .title {
-  border-bottom: 1px solid #098ED6;
+  box-shadow: 0 2px 4px rgba(192, 192, 192, 0.4);
 }
 
 .row {
-  cursor: pointer;
   display: grid;
-  width: 100%;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-items: center;
+  width: 100%;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .row:hover {
@@ -55,5 +55,5 @@
 }
 
 .account {
-  border-top: 1px solid silver;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }

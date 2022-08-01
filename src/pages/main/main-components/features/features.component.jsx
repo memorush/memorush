@@ -4,7 +4,7 @@ import phoneImage from "../../main-images/features/ipad-hand.png";
 
 export default function Features() {
   return (
-    <div className={styles.container}>
+    <div id="features" className={styles.container}>
       <div className={styles.header}>
         <h1>Потрясающие особенности приложения</h1>
         <div className={styles.line}/>

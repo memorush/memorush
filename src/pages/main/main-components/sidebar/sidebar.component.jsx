@@ -21,7 +21,7 @@ const Sidebar = () => {
             <i class="fas fa-brain"></i>
             <p>Memorush</p>
           </Link>
-          <Link to="/dashboard" className={styles.row}>
+          <Link to="/dashboard/card-set-list" className={styles.row}>
             <i className="fas fa-home"></i>
             <p>Панель управления</p>
           </Link>

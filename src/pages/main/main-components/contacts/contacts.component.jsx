@@ -5,7 +5,7 @@ import Title from '../../../../common/components/title/title.component';
 
 export default function Contacts() {
   return (
-    <div className={style.container}>
+    <div id="contacts" className={style.container}>
       <Title name="Обратная связь" style={{ color: 'white' }} />
       <div className={style.info}>
         <div className={style.contactContainer}>

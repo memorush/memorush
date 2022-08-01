@@ -1,10 +1,9 @@
 import styles from './developer.module.css';
-import cn from 'classnames';
 
 const Developer = () => {
 
   return (
-    <div className={styles.container}>
+    <div id="developer" className={styles.container}>
       <div className={styles.header}>
         <h1>О технологии разработки</h1>
         <div className={styles.line} />

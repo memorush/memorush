@@ -3,7 +3,7 @@ import Button from '../../../../common/components/button/button.component';
 
 const Download = () => {
   return (
-    <div className={styles.container}>
+    <div id="download" className={styles.container}>
       <div className={styles.header}>
         <h1>Установите приложение</h1>
         <div className={styles.line} />

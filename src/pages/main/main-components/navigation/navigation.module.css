@@ -1,22 +1,38 @@
 .container {
-  display: grid;
-  grid-template-areas: "logo navItemContainer";
-  grid-template-rows: 1fr;
-  grid-template-columns: 2fr 5fr;
-  justify-items: center;
-  justify-items: center;
-  color: var(--primary-text-color);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: 900;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: "center";
+  justify-items: center;
   width: 100%;
   padding: 25px 0;
+  color: var(--primary-text-color);
+  transition: 0.3s ease;
+}
+
+.scrolled {
+  padding: 5px 0;
+  background-color: #232323;
+  box-shadow: 0 2px 4px rgba(192, 192, 192, 0.4);
 }
 
 .navItemContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 10px;
-  justify-items: center;
+  align-items: center;
+  justify-items: left;
   width: 100%;
+}
+
+.navItem {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navItem:hover {
+  color: #18BBF1
 }

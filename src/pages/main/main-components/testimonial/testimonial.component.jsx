@@ -2,7 +2,7 @@ import styles from './testimonial.module.css';
 
 const Testimonial = () => {
   return (
-    <div className={styles.container}>
+    <div id="testimonial" className={styles.container}>
 
     </div>
   )

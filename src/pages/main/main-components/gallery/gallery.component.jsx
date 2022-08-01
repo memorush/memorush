@@ -5,7 +5,7 @@ import slide1 from '../../main-images/galery/slide1.png';
 const Gallery = () => {
 
   return (
-    <div className={styles.container}>
+    <div id="gallery" className={styles.container}>
       <div className={styles.column}>
         <img src={slide1} alt="" srcset="" />
       </div>
