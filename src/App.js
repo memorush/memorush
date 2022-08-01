@@ -4,8 +4,6 @@ import DashboardPage from "./pages/dashboard/dashboard-page/dashboard.page";
 import CardSetList from "./pages/dashboard/dashboard-components/card-set-list/card-set-list.component";
 import Settings from "./pages/dashboard/dashboard-components/settings/settings.component";
 import CardSetForm from "./pages/dashboard/dashboard-components/card-set-form/card-set-form.component";
-import SignIn from "./pages/main/main-components/sign-in/sign-in.component";
-import SignUp from "./pages/main/main-components/sign-up/sign-up";
 import NotFound from "./pages/not-found/not-found.page";
 import CardSet from "./pages/dashboard/dashboard-components/card-set/card-set.component";
 import CardMemorize from "./pages/dashboard/dashboard-components/card-set/card-memorize/card-memorize.component";
@@ -24,8 +22,6 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<MainPage />} />
           <Route path="main" element={<MainPage />}>
-            <Route path="registration" element={<SignUp />} />
-            <Route path="sign-in" element={<SignIn />} />
             <Route path="page-not-found" element={<NotFound />} />
             <Route path="*" element={<Navigate to="page-not-found" replace />} />
           </Route>

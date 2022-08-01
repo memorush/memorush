@@ -1,7 +1,8 @@
 .container {
 	display: grid;
-	min-height: 100vh;
+	min-height: 90vh;
 	padding: 25px 0;
+	padding-top: 100px;
 	text-shadow: 1px 1px 2px black;
 	background-color: rgb(110 110 110);
 	background-image: url("https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=628&q=80");
@@ -9,29 +10,14 @@
 	background-position: top;
 	background-size: cover;
 	background-blend-mode: multiply;
-}
-
-.navigation {
-	display: grid;
-	grid-template-areas: "logo navItemContainer nav";
-	grid-template-rows: 1fr;
-	grid-template-columns: 2fr 5fr 1fr;
 	justify-items: center;
-	justify-items: center;
-	color: var(--primary-text-color);
-}
-
-.navItemContainer {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, 100px);
-	gap: 10px;
-	justify-items: center;
-	width: 100%;
+	align-items: center;
 }
 
 .info {
 	display: grid;
 	justify-items: center;
+	grid-template-rows: 3fr 1fr;
 	padding: 0 20%;
 	color: white;
 	text-align: center;
@@ -42,7 +28,7 @@
 }
 
 .info .subTitle p {
-	font-size: 1.3rem;
+	font-size: 2rem;
 }
 
 .buttonContainer {

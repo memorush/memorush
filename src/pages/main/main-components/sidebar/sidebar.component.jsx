@@ -1,29 +1,50 @@
-import cn from 'classname';
-import style from './sidebar.module.css';
-
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './sidebar.module.css';
 import { Link } from 'react-router-dom';
 
-import { useSelector, useDispatch } from 'react-redux'
-import {
-  toggle,
-  sidebar
-} from '../../../../redux/features/sidebar/sidebar-slice';
+const Sidebar = () => {
 
-export default function Sidebar() {
+  const [isOpen, setIsOpen] = useState(false);
 
-  const dispatch = useDispatch();
-  const { isOpen } = useSelector(sidebar);
+  const toggleSidebarHandler = () => {
+    setIsOpen(!isOpen);
+  }
 
   return (
-    <div className={cn(style.container, isOpen ? style.open : '')}>
-      <div className={style.menuItem}>
-        <Link to={"/main/sign-in"}>Sign In</Link>
+    <div className={styles.container}>
+      <div className={cn(styles.sidebar, isOpen ? styles.open : null)}>
+        <div className={styles.menu}>
+          <Link
+            to="/main"
+            className={cn(styles.row, styles.title)}>
+            <i class="fas fa-brain"></i>
+            <p>Memorush</p>
+          </Link>
+          <Link to="/dashboard" className={styles.row}>
+            <i className="fas fa-home"></i>
+            <p>Панель управления</p>
+          </Link>
+          <div className={styles.row}>
+            <i class="fas fa-sign-in-alt"></i>
+            <p>Войти</p>
+          </div>
+          <div className={styles.row}>
+            <i class="fas fa-sign-out-alt"></i>
+            <p>Выйти</p>
+          </div>
+          <div onClick={toggleSidebarHandler} className={styles.row}>
+            <i class="fas fa-toggle-on"></i>
+            <p>{isOpen ? "Закрыть" : "Открыть"}</p>
+          </div>
+          <div className={cn(styles.row, styles.account)}>
+            <i className="fas fa-user-circle"></i>
+            <p>Аккаунт</p>
+          </div>
+        </div>
       </div>
-      <div className={style.menuItem}>
-        <Link to={"/main/registration"}>Registration</Link>
-      </div>
-      <div className={style.menuItem}>Sign Up</div>
-      <div className={style.menuItem} onClick={() => dispatch(toggle())}>Close</div>
     </div>
   )
 }
+
+export default Sidebar;
