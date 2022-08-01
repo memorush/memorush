@@ -25,10 +25,10 @@ const Sidebar = () => {
             <i className="fas fa-home"></i>
             <p>Панель управления</p>
           </Link>
-          <div className={styles.row}>
+          <Link to="/main/auth" className={styles.row}>
             <i class="fas fa-sign-in-alt"></i>
             <p>Войти</p>
-          </div>
+          </Link>
           <div className={styles.row}>
             <i class="fas fa-sign-out-alt"></i>
             <p>Выйти</p>

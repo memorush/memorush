@@ -14,6 +14,7 @@ import {
   Navigate
 } from "react-router-dom";
 import FlashCardList from "./pages/dashboard/dashboard-components/card-set/flash-card-list/flash-card-list.component";
+import AuthForm from "./pages/main/main-components/auth-form/auth-form.component";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<MainPage />} />
           <Route path="main" element={<MainPage />}>
+            <Route path="auth" element={<AuthForm />} />
             <Route path="page-not-found" element={<NotFound />} />
             <Route path="*" element={<Navigate to="page-not-found" replace />} />
           </Route>
