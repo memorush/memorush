@@ -28,9 +28,9 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    nullifyIsUserExists: {
+    invalidateLoggedInUser: {
       reducer(state) {
-        state.error = null;
+        return initialState;
       }
     }
   },
@@ -61,7 +61,7 @@ const authSlice = createSlice({
   }
 })
 
-export const { nullifyIsUserExists } = authSlice.actions;
+export const { invalidateLoggedInUser } = authSlice.actions;
 
 export default authSlice.reducer;
 
