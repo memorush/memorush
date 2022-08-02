@@ -1,0 +1,21 @@
+.signInForm {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.inputContainer {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.input {
+  height: 50px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid silver;
+  border-radius: 10px;
+}

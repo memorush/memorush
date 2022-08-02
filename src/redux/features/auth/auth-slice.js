@@ -40,7 +40,7 @@ const authSlice = createSlice({
         state.status = 'loading'
       })
       .addCase(registration.fulfilled, (state, action) => {
-        state.status = 'succeeded'
+        state.status = 'register'
         state.authEntity = action.payload;
       })
       .addCase(registration.rejected, (state, action) => {
@@ -51,7 +51,7 @@ const authSlice = createSlice({
         state.status = 'loading'
       })
       .addCase(login.fulfilled, (state, action) => {
-        state.status = 'succeeded'
+        state.status = 'login'
         state.authEntity = action.payload;
       })
       .addCase(login.rejected, (state, action) => {
@@ -69,3 +69,5 @@ export default authSlice.reducer;
 
 export const authSelector = state => state.auth;
 export const selectUserIsExist = state => state.auth.error ? true : false;
+export const authStatusSelector = state => state.auth.status;
+export const authErrorSelector = state => state.auth.error;

@@ -1,0 +1,34 @@
+.registerForm {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.inputContainer {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.input {
+  height: 50px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid silver;
+  border-radius: 10px;
+}
+
+.validationContainer p {
+  color: rgb(255, 0, 0);
+}
+
+@media (max-height: 360px) {
+  .input {
+    height: 40px;
+  }
+  .inputContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
