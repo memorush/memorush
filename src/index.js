@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import LangContextProvider from './context/LangContext';
+import LangContextProvider from './context/lang/LangContext';
 import store from './redux/store';
 
 ReactDOM.render(
