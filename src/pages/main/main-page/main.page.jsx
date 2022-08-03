@@ -1,4 +1,5 @@
 import React from 'react';
+import Reveal from 'react-reveal/Reveal';
 import {
   Outlet
 } from 'react-router-dom';
@@ -13,20 +14,31 @@ import Screenshots from '../main-components/screenshots/screenshots.component';
 import Testimonial from '../main-components/testimonial/testimonial.component';
 import styles from './main.module.css';
 
-const Main = () => {
+const wrapElementWithReveal = (elementArray) => (
+  elementArray.map(element => (
+    <Reveal>
+      {element}
+    </Reveal>
+  ))
+)
 
+const ElementArray = [
+  <Hero />,
+  <Features />,
+  <Gallery />,
+  <Testimonial />,
+  <Screenshots />,
+  <Download />,
+  <Developer />,
+  <Contacts />,
+];
+
+const Main = () => {
   return (
     <div className={styles.container}>
       <Outlet />
       <Navigation />
-      <Hero />
-      <Features />
-      <Gallery />
-      <Testimonial />
-      <Screenshots />
-      <Download />
-      <Developer />
-      <Contacts />
+      {wrapElementWithReveal(ElementArray)}
     </div>
   )
 }
