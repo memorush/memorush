@@ -28,6 +28,20 @@ const POPUP_PROPERTIES = {
       color: "white",
       backgroundColor: "#4BE066"
     }
+  },
+  updateUserDataUpdated: {
+    message: "User data successfully updated",
+    styles: {
+      color: "white",
+      backgroundColor: "#4BE066"
+    }
+  },
+  updateUserDataRejected: {
+    message: "User data updating error",
+    styles: {
+      color: "white",
+      backgroundColor: "red"
+    }
   }
 }
 
@@ -49,6 +63,14 @@ const PopupMiddleware = ({ dispatch, getState }) => next => action => {
     }
     case 'card/delete/fulfilled': {
       dispatch(showPopup(POPUP_PROPERTIES.cardDeleteFulfilled));
+      break;
+    }
+    case 'auth/updateUserData/updated': {
+      dispatch(showPopup(POPUP_PROPERTIES.updateUserDataUpdated));
+      break;
+    }
+    case 'auth/updateUserData/rejected': {
+      dispatch(showPopup(POPUP_PROPERTIES.updateUserDataRejected));
       break;
     }
     default: break;

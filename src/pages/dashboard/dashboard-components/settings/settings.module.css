@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  gap: 20px;
+}
+
+.container input {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 2rem;
+  padding: 1rem;
+  background-color: #eee;
+  border: none;
+  border-radius: 10px;
+}

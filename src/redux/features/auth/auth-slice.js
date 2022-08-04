@@ -13,6 +13,11 @@ export const login = createAsyncThunk('auth/login', async (data) => {
   return response.data;
 });
 
+export const updateUserData = createAsyncThunk('auth/updateUserData', async (data) => {
+  const response = await fetchDataService('PUT', '/api/v1/user/updateUserData', data);
+  return response.data;
+});
+
 // -------------------------------------- Slice --------------------------------------
 
 const initialState = {
@@ -36,6 +41,7 @@ const authSlice = createSlice({
   },
   extraReducers(builder) {
     builder
+      //! Registration
       .addCase(registration.pending, (state) => {
         state.status = 'loading'
       })
@@ -47,6 +53,7 @@ const authSlice = createSlice({
         state.status = 'failed'
         state.error = action.error.message
       })
+      //! Login
       .addCase(login.pending, (state) => {
         state.status = 'loading'
       })
@@ -57,6 +64,16 @@ const authSlice = createSlice({
       .addCase(login.rejected, (state, action) => {
         state.status = 'failed'
         state.error = action.error.message
+      })
+      //! Update user data
+      .addCase(updateUserData.pending, (state) => {
+        state.status = 'loading'
+      })
+      .addCase(updateUserData.fulfilled, (state, action) => {
+        state.status = 'updated'
+      })
+      .addCase(updateUserData.rejected, (state, action) => {
+        state.status = 'failed'
       })
   }
 })

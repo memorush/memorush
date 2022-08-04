@@ -20,6 +20,8 @@
 }
 
 .container p {
+  color: white;
+  text-shadow: 1px 1px 1px black;
   white-space: nowrap;
   font-size: 3rem;
 }
