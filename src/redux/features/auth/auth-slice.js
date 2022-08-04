@@ -69,5 +69,6 @@ export default authSlice.reducer;
 
 export const authSelector = state => state.auth;
 export const selectUserIsExist = state => state.auth.error ? true : false;
+export const authEntitySelector = state => state.auth.authEntity;
 export const authStatusSelector = state => state.auth.status;
 export const authErrorSelector = state => state.auth.error;

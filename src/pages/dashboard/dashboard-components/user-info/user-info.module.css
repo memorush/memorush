@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+.avatar {
+  box-shadow: 1px 1px 1px 1px silver;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 50px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.avatar i {
+  font-size: 3rem;
+}
+
+.container p {
+  white-space: nowrap;
+  font-size: 3rem;
+}

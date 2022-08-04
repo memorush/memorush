@@ -6,16 +6,34 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .content {
 	display: grid;
-	grid-template-columns: 1fr 5fr;
+	grid-template-areas: "userInfo userInfo" "workSpace workSpace";
 	gap: 20px;
-	padding: 20px;
-	box-shadow: 1px 1px 1px silver;
+	box-shadow: 1px 1px 2px 1px silver;
+	margin: 2% 5%;
+	background-color: whitesmoke;
+	border-radius: 20px;
+}
+
+.userInfo {
+	background: linear-gradient(219deg, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 19%, rgba(24,187,241,1) 100%);
+	padding: 2%;
+	grid-area: userInfo;
+}
+
+.workSpace {
+	display: grid;
+	grid-area: workSpace;
+	padding: 5%;
+	grid-template-areas: "navigation dashboard";
+	grid-template-columns: min-content auto;
 }
 
 .navigation {
 	display: grid;
+	grid-area: navigation;
 	grid-template-rows: min-content min-content;
 	gap: 20px;
+	padding: 20px;
 }
 
 .navigation a {
@@ -23,8 +41,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .dashboard {
-	display: grid;
 	padding: 20px;
+	grid-area: dashboard;
+	display: grid;
 	background-color: white;
 	border-radius: 10px;
 	box-shadow: 1px 1px 1px 1px silver;
