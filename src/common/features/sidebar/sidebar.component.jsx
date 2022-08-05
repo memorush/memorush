@@ -2,16 +2,27 @@ import { useState } from 'react';
 import cn from 'classnames';
 import styles from './sidebar.module.css';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { invalidateLoggedInUser } from '../../../../redux/features/auth/auth-slice';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { invalidateLoggedInUser, authEntitySelector } from '../../../redux/features/auth/auth-slice';
+
 
 const Sidebar = () => {
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
+  const { username } = useSelector(authEntitySelector);
 
   const toggleSidebarHandler = () => {
     setIsOpen(!isOpen);
+  }
+
+  const onLogoutHandler = () => {
+    if (username !== null || username.length > 0) {
+      dispatch(invalidateLoggedInUser());
+      navigate('main');
+    }
   }
 
   return (
@@ -33,7 +44,7 @@ const Sidebar = () => {
             <p>Войти</p>
           </Link>
           <div
-            onClick={() => dispatch(invalidateLoggedInUser())}
+            onClick={onLogoutHandler}
             className={styles.row}
           >
             <i class="fas fa-sign-out-alt"></i>
@@ -45,7 +56,7 @@ const Sidebar = () => {
           </div>
           <div className={cn(styles.row, styles.account)}>
             <i className="fas fa-user-circle"></i>
-            <p>Аккаунт</p>
+            <p>{username !== null  ? username : 'Аккаунт'}</p>
           </div>
         </div>
       </div>
