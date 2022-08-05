@@ -36,6 +36,13 @@ const POPUP_PROPERTIES = {
       backgroundColor: "#4BE066"
     }
   },
+  authRegistrationFulfilled: {
+    message: "Congratulation! You have registered successfully yet. Now, you can come in!",
+    styles: {
+      color: "white",
+      backgroundColor: "#4BE066"
+    }
+  },
   updateUserDataRejected: {
     message: "User data updating error",
     styles: {
@@ -71,6 +78,10 @@ const PopupMiddleware = ({ dispatch, getState }) => next => action => {
     }
     case 'auth/updateUserData/rejected': {
       dispatch(showPopup(POPUP_PROPERTIES.updateUserDataRejected));
+      break;
+    }
+    case 'auth/registration/fulfilled': {
+      dispatch(showPopup(POPUP_PROPERTIES.authRegistrationFulfilled));
       break;
     }
     default: break;
