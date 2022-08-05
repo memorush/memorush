@@ -74,7 +74,6 @@ const authSlice = createSlice({
       })
       .addCase(registration.fulfilled, (state, action) => {
         state.status = 'register'
-        state.authEntity = action.payload;
       })
       .addCase(registration.rejected, (state, action) => {
         state.status = 'failed'

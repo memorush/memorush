@@ -6,7 +6,7 @@ const RequireAuthRoute = () => {
   const location = useLocation();
   const { username, token } = useSelector(authEntitySelector);
 
-  if (username.length === 0 && token.length === 0) {
+  if (username == null && token == null) {
     return <Navigate to="/main/auth" state={{ from: location }} />;
   }
 
