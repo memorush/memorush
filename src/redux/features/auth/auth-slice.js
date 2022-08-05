@@ -1,20 +1,47 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import fetchDataService from "../../../service/fetchDataService";
+import { BASE_URL } from "../../const/url-endpoints.const";
 
 // -------------------------------------- AsyncThunk --------------------------------------
 
 export const registration = createAsyncThunk('auth/registration', async (data) => {
-  const response = await fetchDataService('POST', '/api/v1/user/registration', data);
+  const payload = {
+    method: 'POST',
+    url: `${BASE_URL}/api/v1/user/registration`,
+    data
+  }
+  const response = await fetchDataService(payload);
   return response.data;
 });
 
 export const login = createAsyncThunk('auth/login', async (data) => {
-  const response = await fetchDataService('POST', '/login', data);
+  const payload = {
+    method: 'POST',
+    url: `${BASE_URL}/login`,
+    data
+  }
+  const response = await fetchDataService(payload);
   return response.data;
 });
 
-export const updateUserData = createAsyncThunk('auth/updateUserData', async (data) => {
-  const response = await fetchDataService('PUT', '/api/v1/user/updateUserData', data);
+export const updateUserData = createAsyncThunk('auth/updateUserData', async (arg, { getState }) => {
+  const state = getState();
+  const token = state.auth.authEntity.token;
+
+  const payload = {
+    method: 'PUT',
+    url: `${BASE_URL}/api/v1/user/updateUserData`,
+    data: {
+      ...arg,
+      username: state.auth.authEntity.username
+    },
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': token
+    }
+  }
+  const response = await fetchDataService(payload);
   return response.data;
 });
 

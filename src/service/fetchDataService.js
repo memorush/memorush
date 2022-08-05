@@ -1,10 +1,11 @@
 import axios from "axios";
 
-const fetchDataService = async (method, path, data) => {
+const fetchDataService = async ({ method, url, data, headers }) => {
   const response = await axios({
-    method: method,
-    url: 'http://localhost:8080' + path,
-    data: data
+    method,
+    url,
+    data,
+    headers
   });
 
   return response;
