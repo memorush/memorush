@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
   gap: 20px;
   align-items: center;
 }
@@ -10,18 +10,18 @@
   display: grid;
   align-items: center;
   justify-items: center;
-  padding: 50px;
+  padding: 20px;
   border-radius: 50%;
   background-color: white;
 }
 
 .avatar i {
-  font-size: 3rem;
+  font-size: 20px;
 }
 
 .container p {
   color: white;
   text-shadow: 1px 1px 1px black;
   white-space: nowrap;
-  font-size: 3rem;
+  font-size: 2rem;
 }
