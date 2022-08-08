@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../../../../../../common/components/button/button.component';
 import congratulationImg from "../../../../../../images/congratulation.gif";
 
-const CongratulationComponent = ({ setIsStarted }) => {
+const CongratulationComponent = ({ setInitStateHandler }) => {
 
   const navigate = useNavigate();
 
@@ -13,8 +13,8 @@ const CongratulationComponent = ({ setIsStarted }) => {
         <h1>Congratulation! You learned all words!</h1>
         <Button
           name="Repeat Again"
-          style={{ backgroundColor: "#00FFA9" }}
-          handler={() => setIsStarted(false)}
+          color="#00FFA9"
+          handler={setInitStateHandler}
         />
         <Button
           name="Go to main card list"
