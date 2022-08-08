@@ -15,7 +15,9 @@ const INIT_CARD_SET_STATE = {
   title: "",
   tags: "",
   description: "",
-  flashCardArray: {}
+  flashCardArray: {
+    0: {}
+  }
 }
 
 const CardSetForm = () => {
@@ -61,32 +63,52 @@ const CardSetForm = () => {
     })
   }
 
+  const deleteCardElementHandler = (id) => {
+    delete cardSetEntity.flashCardArray[id];
+
+    setCardSetEntity({
+      ...cardSetEntity,
+      flashCardArray: {
+        ...cardSetEntity.flashCardArray
+      }
+    })
+  }
+
   const showActionButtonElements = () => (
     <div className={styles.buttons}>
       {cardSetId ?
         <>
           <Button
             name="Update Set"
-            handler={() => dispatch(updateCardSet({cardSetId, cardSetEntity}))}
+            color="#5CB85C"
+            handler={() => dispatch(updateCardSet({ cardSetId, cardSetEntity }))}
           />
           <Button
             name="Delete Set"
-            style={{ backgroundColor: 'red' }}
+            color="#D9534F"
             handler={() => dispatch(deleteCardSet(cardSetId))}
           />
         </>
         :
         <Button
           name="Create Set"
+          color="#5EBA7D"
           handler={() => dispatch(createNewCardSet(cardSetEntity))}
         />
       }
       <Button
+        handler={addFlashCardElement}
+        name="Add a new card" />
+      <Button
         name="Cancel"
+        style={{ color: "black" }}
+        color="#E4E8E9"
         handler={() => setCardSetEntity(INIT_CARD_SET_STATE)}
       />
     </div>
   )
+
+  console.log(cardSetEntity)
 
   return (
     <div className={styles.container}>
@@ -120,7 +142,6 @@ const CardSetForm = () => {
       </div>
       <div className={styles.flashCards}>
         <h1>Create flashCards</h1>
-        <Button handler={addFlashCardElement} name="Add a new card" />
         <div className={styles.flashCardContainer} ref={flashCardContainerRef}>
           {Object.keys(cardSetEntity.flashCardArray).map(id => (
             <FlashCard
@@ -128,6 +149,7 @@ const CardSetForm = () => {
               key={id}
               cardSetEntity={cardSetEntity}
               setCardSetEntity={setCardSetEntity}
+              deleteCardElementHandler={deleteCardElementHandler}
             />
           ))}
         </div>

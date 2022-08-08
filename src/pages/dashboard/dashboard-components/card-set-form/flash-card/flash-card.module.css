@@ -1,7 +1,22 @@
 .container {
 	display: grid;
+	position: relative;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 20px;
+	padding: 5%;
+	background-color: white;
+	border-radius: 20px;
+}
+
+.removeBtn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	transition: 0.3s ease;
+}
+
+.removeBtn:hover {
+	color: red
 }
 
 .side {

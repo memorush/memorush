@@ -1,6 +1,6 @@
 import styles from './flash-card.module.css';
 
-const FlashCard = ({ cardSetEntity, setCardSetEntity, id }) => {
+const FlashCard = ({ cardSetEntity, setCardSetEntity, deleteCardElementHandler, id }) => {
 
   const onChangeHandler = (e, id) => {
     setCardSetEntity({
@@ -17,6 +17,9 @@ const FlashCard = ({ cardSetEntity, setCardSetEntity, id }) => {
 
   return (
     <div className={styles.container}>
+      <div onClick={() => deleteCardElementHandler(id)} className={styles.removeBtn}>
+        <i className="fas fa-trash-alt"></i>
+      </div>
       <div className={styles.side}>
         <label htmlFor='frontSide'>Front Side</label>
         <textarea
