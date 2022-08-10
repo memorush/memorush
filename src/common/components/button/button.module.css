@@ -7,18 +7,17 @@
 	padding: 14px 20px;
 	overflow: hidden;
 	font-family: "montserrat";
-	font-size: 14px;
+	font-size: 1.1rem;
 	color: white;
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
 	text-transform: uppercase;
 	white-space: nowrap;
 	background-color: #18BBF1;
 	border: 1px solid rgb(255, 255, 255, 0);
 	border-radius: 5px;
 	transition: 1s all ease;
-	box-shadow: 1px 1px 1px silver;
+	box-shadow: 1px 1px 1px rgba(202, 202, 202, 0.774);
 }
 
 .container::before {
