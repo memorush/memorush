@@ -1,6 +1,7 @@
 import styles from './navigation.module.css';
 import cn from 'classnames';
 import { useState } from 'react';
+import { scrollToElementIdHandler } from '../../../../service/utilsService';
 
 const Navigation = () => {
 
@@ -16,13 +17,6 @@ const Navigation = () => {
     } else {
       setIsScrolled(false);
     }
-  }
-
-  const scrollToElementIdHandler = (elementId) => {
-    document.getElementById(elementId).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
   }
 
   return (

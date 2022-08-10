@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { scrollToElementIdHandler } from '../../../service/utilsService';
 
 import style from './footer.module.css';
 
@@ -9,14 +10,14 @@ const Footer = () => {
         <div className={cn(style.tutotarial)}>
           <ul>
             <li><h3>Начать</h3></li>
-            <li>Давайте приступим</li>
-            <li>Мобильное приложение</li>
+            <li onClick={() => scrollToElementIdHandler("hero")}>Давайте приступим</li>
+            <li onClick={() => scrollToElementIdHandler("hero")}>Мобильное приложение</li>
           </ul>
         </div>
         <div className={cn(style.hosting)}>
           <ul>
             <li><h3>О проекте</h3></li>
-            <li>О создателе</li>
+            <li>О технологии разработки</li>
             <li>FAQ</li>
             <li>Политика конфиденциальности</li>
           </ul>
@@ -41,7 +42,7 @@ const Footer = () => {
           <div><i class="fab fa-blogger"></i></div>
         </div>
         <div className={cn(style.time)}>
-          <p>© 2021–{new Date().getFullYear()}, MemoRush, официальный сайт</p>
+          <p>© 2021–{new Date().getFullYear()}, Memorush, официальный сайт</p>
         </div>
       </div>
     </div>
