@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Button from '../../../../../common/atomic-components/button/button.component';
 import {
-  cardByIdSelector
+  flashCardArrayFromCardSetWithIdSelector
 } from '../../../../../redux/features/card/cardSlice';
 import FlashCardItem from '../flash-card-list/flash-card-item/flash-card-item.component';
 import styles from './card-memorize.module.css';
@@ -19,8 +19,8 @@ const CardMemorize = () => {
   // Temp array with learned words
   let learned = [];
 
-  const cardById = useSelector(state => cardByIdSelector(state, cardSetId).cardList);
-  const [cards, setCards] = useState(cardById);
+  const flashCardArrayFromCardSetWithId = useSelector(state => flashCardArrayFromCardSetWithIdSelector(state, cardSetId));
+  const [cards, setCards] = useState(flashCardArrayFromCardSetWithId);
 
   const nextCardHandler = () => {
     currentPosition < (cards.length - 1) ? setCurrentPosition(currentPosition + 1) : setCurrentPosition(0);
@@ -28,7 +28,7 @@ const CardMemorize = () => {
 
   // Обнулить все значение!
   const setInitStateHandler = () => {
-    setCards(cardById);
+    setCards(flashCardArrayFromCardSetWithId);
     learned = [];
     setIsStarted(false);
   }

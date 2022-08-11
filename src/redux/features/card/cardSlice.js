@@ -81,6 +81,28 @@ export const deleteCardSet = createAsyncThunk('card/delete', async (id, { getSta
   return response.data;
 })
 
+export const setFavoriteCardSet = createAsyncThunk('card/setFavorite', async (id, { getState }) => {
+  const state = getState();
+  const token = state.auth.authEntity.token;
+  const card = state.card.cardEntity.find(card => card.id === id);
+
+  const payload = {
+    method: 'PUT',
+    url: `${BASE_URL}/api/v1/card-set/update/${id}`,
+    data: {
+      ...card,
+      isFavorite: !card.isFavorite
+    },
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': token
+    }
+  }
+  const response = await fetchDataService(payload);
+  return response.data;
+})
+
 // -------------------------------------- Slice --------------------------------------
 
 const initialState = {
@@ -117,6 +139,19 @@ const cardSlice = createSlice({
         state.status = 'failed'
         state.error = action.error.message
       })
+      // Add new card set
+      .addCase(setFavoriteCardSet.pending, (state) => {
+        state.status = 'loading'
+      })
+      .addCase(setFavoriteCardSet.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        const idx = state.cardEntity.findIndex(cardSet => cardSet.id === action.payload.id);
+        state.cardEntity[idx] = action.payload;
+      })
+      .addCase(setFavoriteCardSet.rejected, (state, action) => {
+        state.status = 'failed'
+        state.error = action.error.message
+      })
   }
 })
 
@@ -125,7 +160,8 @@ export default cardSlice.reducer;
 // -------------------------------------- Selectors --------------------------------------
 
 export const cardEntitySelector = state => state.card.cardEntity;
-export const cardByIdSelector = (state, id) => state.card.cardEntity.find(card => id == card.id);
+export const cardSetByIdSelector = (state, id) => state.card.cardEntity.find(card => id == card.id);
+export const flashCardArrayFromCardSetWithIdSelector = (state, id) => cardSetByIdSelector(state,id).flashCardArray; 
 //TODO Переделать! Сделать мемоизированным и механизм фильтрации изменить!
 export const cardEntityByFavoriteAndLearnedSelector = (state, favorite, learned) => {
   const favoriteCards = state.card.cardEntity.filter(card => {

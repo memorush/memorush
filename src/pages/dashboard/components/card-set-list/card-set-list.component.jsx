@@ -3,7 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import Button from '../../../../common/atomic-components/button/button.component';
 import {
-  cardEntitySelector, deleteCardSet, getAllCardSets
+  cardEntitySelector,
+  deleteCardSet,
+  getAllCardSets,
+  setFavoriteCardSet
 } from '../../../../redux/features/card/cardSlice';
 import styles from './card-set-list.module.css';
 
@@ -19,33 +22,47 @@ const CardSetList = () => {
 
   const showCardSetTable = () => (
     <>
-      {cardEntity.map((cardSet, idx) => (
-        <tr key={idx} className={styles.tr}>
-          <td
-            className={styles.cardSetTitle}
-            onClick={() => navigate(`${cardSet.id}/list`)}
-          >
-            {cardSet.name}
-          </td>
-          <td>{cardSet.description}</td>
-          <td>{cardSet.createdAt}</td>
-          <td>{cardSet.updatedAt}</td>
-          <td>{cardSet.cardList.length}</td>
-          <td>{cardSet.folder}</td>
-          <td>{cardSet.isFavorite}</td>
-          <td className={styles.toolsContainer}>
-            <i className="fas fa-edit"
-              onClick={() => navigate(`/dashboard/card-set-edit?id=${cardSet.id}`)}
+      {cardEntity.map((cardSet, idx) => {
+        const {
+          id,
+          description,
+          createdAt,
+          updatedAt,
+          flashCardArray,
+          folder,
+          isFavorite } = cardSet;
+        return (
+          <tr key={idx} className={styles.tr}>
+            <td
+              className={styles.cardSetTitle}
+              onClick={() => navigate(`${cardSet.id}/list`)}
             >
-            </i>
-            <i className="fas fa-trash"
-              onClick={() => dispatch(deleteCardSet(cardSet.id))}
-            >
-            </i>
-            <i className="fas fa-heart"></i>
-          </td>
-        </tr>
-      ))
+              {cardSet.name}
+            </td>
+            <td>{description}</td>
+            <td>{createdAt}</td>
+            <td>{updatedAt}</td>
+            <td>{flashCardArray.length}</td>
+            <td>{folder}</td>
+            <td>{isFavorite}</td>
+            <td className={styles.toolsContainer}>
+              <i className="fas fa-edit"
+                onClick={() => navigate(`/dashboard/card-set-edit?id=${id}`)}
+              >
+              </i>
+              <i className="fas fa-trash"
+                onClick={() => dispatch(deleteCardSet(id))}
+              >
+              </i>
+              <i className="fas fa-heart"
+                onClick={() => dispatch(setFavoriteCardSet(id))}
+                style={{ color: isFavorite ? "red" : null }}
+              >
+              </i>
+            </td>
+          </tr>
+        )
+      })
       }
     </>
   )

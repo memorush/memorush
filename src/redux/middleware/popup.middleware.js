@@ -49,6 +49,20 @@ const POPUP_PROPERTIES = {
       color: "white",
       backgroundColor: "red"
     }
+  },
+  setFavoriteFulfilled: {
+    message: "Favorite!",
+    styles: {
+      color: "white",
+      backgroundColor: "#4BE066"
+    }
+  },
+  updateCardSetFulfilled: {
+    message: "Cardset updated!",
+    styles: {
+      color: "white",
+      backgroundColor: "#4BE066"
+    }
   }
 }
 
@@ -70,6 +84,14 @@ const PopupMiddleware = ({ dispatch, getState }) => next => action => {
     }
     case 'card/delete/fulfilled': {
       dispatch(showPopup(POPUP_PROPERTIES.cardDeleteFulfilled));
+      break;
+    }
+    case 'card/setFavorite/fulfilled': {
+      dispatch(showPopup(POPUP_PROPERTIES.setFavoriteFulfilled));
+      break;
+    }
+    case 'card/update/fulfilled': {
+      dispatch(showPopup(POPUP_PROPERTIES.updateCardSetFulfilled));
       break;
     }
     case 'auth/updateUserData/updated': {

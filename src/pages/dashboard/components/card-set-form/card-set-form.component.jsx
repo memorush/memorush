@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   createNewCardSet,
-  cardByIdSelector,
+  cardSetByIdSelector,
   deleteCardSet,
   updateCardSet
 } from '../../../../redux/features/card/cardSlice';
@@ -32,16 +32,15 @@ const CardSetForm = () => {
   const [cardSetEntity, setCardSetEntity] = useState(INIT_CARD_SET_STATE);
 
   // Get data for card set with id = ...
-  const cardSetById = useSelector(state => cardByIdSelector(state, cardSetId));
+  const cardSetById = useSelector(state => cardSetByIdSelector(state, cardSetId));
 
   useEffect(() => {
-    console.log(cardSetById);
     if (cardSetId != null && cardSetById != null) {
       setCardSetEntity({
         title: cardSetById.name,
         tags: cardSetById.tags,
         description: cardSetById.description,
-        flashCardArray: { ...cardSetById.cardList }
+        flashCardArray: { ...cardSetById.flashCardArray }
       })
     }
   }, [])
@@ -107,8 +106,6 @@ const CardSetForm = () => {
       />
     </div>
   )
-
-  console.log(cardSetEntity)
 
   return (
     <div className={styles.container}>
