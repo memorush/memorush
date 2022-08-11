@@ -16,9 +16,10 @@
 
 .info {
 	display: grid;
+	gap: 50px;
 	grid-template-rows: 3fr 1fr;
 	justify-items: center;
-	padding: 0 20%;
+	padding: 0 15%;
 	color: white;
 	text-align: center;
 }
@@ -28,7 +29,7 @@
 }
 
 .info .subTitle p {
-	font-size: 2rem;
+	font-size: 1.7rem;
 }
 
 .buttonContainer {
