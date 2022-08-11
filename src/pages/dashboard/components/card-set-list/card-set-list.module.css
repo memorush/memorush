@@ -7,7 +7,7 @@
 
 .navigation {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 	gap: 20px;
 }
 
@@ -54,4 +54,9 @@ table td {
 
 .toolsContainer i:hover {
 	color: red;
+}
+
+.tr {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }

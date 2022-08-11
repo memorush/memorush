@@ -20,7 +20,7 @@ const CardSetList = () => {
   const showCardSetTable = () => (
     <>
       {cardEntity.map((cardSet, idx) => (
-        <tr key={idx}>
+        <tr key={idx} className={styles.tr}>
           <td
             className={styles.cardSetTitle}
             onClick={() => navigate(`${cardSet.id}/list`)}
@@ -68,7 +68,7 @@ const CardSetList = () => {
       </div>
       <table>
         <tbody>
-          <tr>
+          <tr className={styles.tr}>
             <th>Set Title</th>
             <th>Description</th>
             <th>Created</th>
