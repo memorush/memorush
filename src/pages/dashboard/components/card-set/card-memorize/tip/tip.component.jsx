@@ -4,7 +4,7 @@ import Button from '../../../../../../common/atomic-components/button/button.com
 const TipComponent = ({ setIsStarted }) => {
   return (
     <div className={styles.container}>
-      <h1>How does this work?</h1>
+      <h1>Как это работает?</h1>
       <ul>
         <li>Look at a card. When you are ready, click the "See Answer" button.</li>
         <li>You can see a backside of each card if click on it</li>
@@ -12,7 +12,7 @@ const TipComponent = ({ setIsStarted }) => {
         <li>When you will learn all cards, you will see congratulation popup</li>
         <li>In the end you can repeat one more time or return to main menu</li>
       </ul>
-      <Button name="Start learning" handler={() => setIsStarted(true)} />
+      <Button name="Начать учить слова" handler={() => setIsStarted(true)} />
     </div>
   )
 }

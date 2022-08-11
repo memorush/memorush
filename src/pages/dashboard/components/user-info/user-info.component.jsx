@@ -11,7 +11,7 @@ const UserInfo = () => {
       <div className={styles.avatar}>
         <i className="fas fa-user"></i>
       </div>
-      <p>Welcome, {username}!</p>
+      <p>Здравствуйте, {username}!</p>
     </div>
   )
 }

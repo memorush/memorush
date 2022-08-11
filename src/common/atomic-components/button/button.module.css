@@ -1,11 +1,8 @@
 .container {
 	position: relative;
 	display: block;
-	width: min-content;
-	min-width: 100px;
 	height: min-content;
 	padding: 14px 20px;
-	overflow: hidden;
 	font-family: "montserrat";
 	font-size: 1.1rem;
 	color: white;

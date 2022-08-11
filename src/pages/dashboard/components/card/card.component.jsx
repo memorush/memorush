@@ -16,7 +16,7 @@ const Card = ({ frontSide, backSide, learned, favorite }) => {
       onClick={turnAroundCard}
       className={cn(styles.container, learned ? styles.textThrough : '')}
     >
-      {learned ? <div className={styles.learned}>Learned!</div> : ''}
+      {learned ? <div className={styles.learned}>Выучено!</div> : ''}
       <div className={cn(styles.title)}>
         {isFrontSide ? frontSide : backSide}
       </div>

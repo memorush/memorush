@@ -15,10 +15,10 @@ const Dashboard = () => {
         <div className={styles.workSpace}>
           <div className={styles.navigation}>
             <Link to={"/dashboard/card-set-list"}>
-              <Button name={"Card Set"} />
+              <Button name={"Наборы"} />
             </Link>
             <Link to={"/dashboard/settings"}>
-              <Button name={"Settings"} />
+              <Button name={"Настройки"} />
             </Link>
           </div>
           <div className={styles.dashboard}>

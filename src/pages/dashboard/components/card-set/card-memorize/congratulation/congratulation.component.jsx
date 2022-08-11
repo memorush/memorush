@@ -10,14 +10,14 @@ const CongratulationComponent = ({ setInitStateHandler }) => {
   return (
     <div className={styles.congratulationContainer}>
       <div className={styles.congratulationActions}>
-        <h1>Congratulation! You learned all words!</h1>
+        <h1>Поздравляю! Вы выучили все слова!</h1>
         <Button
-          name="Repeat Again"
+          name="Повторить"
           color="#00FFA9"
           handler={setInitStateHandler}
         />
         <Button
-          name="Go to main card list"
+          name="Перейти в главное меню"
           handler={() => navigate(`/dashboard/card-set-list`)}
         />
       </div>

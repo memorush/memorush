@@ -78,28 +78,28 @@ const CardSetForm = () => {
       {cardSetId ?
         <>
           <Button
-            name="Update Set"
+            name="Обновить набор"
             color="#5CB85C"
             handler={() => dispatch(updateCardSet({ cardSetId, cardSetEntity }))}
           />
           <Button
-            name="Delete Set"
+            name="Удалить набор"
             color="#D9534F"
             handler={() => dispatch(deleteCardSet(cardSetId))}
           />
         </>
         :
         <Button
-          name="Create Set"
+          name="Создать набор"
           color="#5EBA7D"
           handler={() => dispatch(createNewCardSet(cardSetEntity))}
         />
       }
       <Button
         handler={addFlashCardElement}
-        name="Add a new card" />
+        name="Добавить карточку" />
       <Button
-        name="Cancel"
+        name="Отмена"
         style={{ color: "black" }}
         color="#E4E8E9"
         handler={() => setCardSetEntity(INIT_CARD_SET_STATE)}
@@ -111,15 +111,15 @@ const CardSetForm = () => {
     <div className={styles.container}>
       <div className={styles.set}>
         <div className={styles.setColumn}>
-          <h1>Create a New flashCard Set</h1>
-          <label htmlFor='title'>Title</label>
+          <h1>Создать новый набор карточек</h1>
+          <label htmlFor='title'>Название</label>
           <input
             type="text"
             name="title"
             onChange={cardSetEntityHandler}
             value={cardSetEntity.title}
           />
-          <label htmlFor='tags'>Tags(OPTIONAL, COMMA SEPARATED)</label>
+          <label htmlFor='tags'>Ключевые слова(Опционально)</label>
           <input
             type="text"
             name="tags"
@@ -128,7 +128,7 @@ const CardSetForm = () => {
           />
         </div>
         <div className={styles.setColumn}>
-          <label htmlFor='description'>Description</label>
+          <label htmlFor='description'>Описание</label>
           <textarea
             name="description"
             onChange={cardSetEntityHandler}
@@ -138,7 +138,7 @@ const CardSetForm = () => {
         </div>
       </div>
       <div className={styles.flashCards}>
-        <h1>Create flashCards</h1>
+        <h1>Создать карточки</h1>
         <div className={styles.flashCardContainer} ref={flashCardContainerRef}>
           {Object.keys(cardSetEntity.flashCardArray).map(id => (
             <FlashCard

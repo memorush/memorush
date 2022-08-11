@@ -22,19 +22,25 @@ const Settings = () => {
 
   return (
     <div className={styles.container}>
-      <label htmlFor='title'>Your password</label>
+      <label htmlFor='title'>Ваш пароль</label>
       <input
         type="password"
         name="password"
         onChange={onInputDataChangedHandler}
       />
-      <label htmlFor='title'>Your email</label>
+      <label htmlFor='title'>Введите пароль еще раз</label>
+      <input
+        type="password"
+        name="password2"
+        onChange={onInputDataChangedHandler}
+      />
+      <label htmlFor='title'>Ваш email</label>
       <input
         type="email"
         name="email"
         onChange={onInputDataChangedHandler}
       />
-      <Button name="Update Profile" handler={() => dispatch(updateUserData(userData))} />
+      <Button name="Обновить данные пользователя" handler={onUpdateDataHandler} />
     </div>
   )
 }

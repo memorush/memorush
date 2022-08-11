@@ -20,8 +20,11 @@ const FlashCard = ({ cardSetEntity, setCardSetEntity, deleteCardElementHandler, 
       <div onClick={() => deleteCardElementHandler(id)} className={styles.removeBtn}>
         <i className="fas fa-trash-alt"></i>
       </div>
+      <div className={styles.cardId}>
+        <p>{parseInt(id) + 1}</p>
+      </div>
       <div className={styles.side}>
-        <label htmlFor='frontSide'>Front Side</label>
+        <label htmlFor='frontSide'>Передняя сторона</label>
         <textarea
           onChange={(e) => onChangeHandler(e, id)}
           name="frontSide"
@@ -29,7 +32,7 @@ const FlashCard = ({ cardSetEntity, setCardSetEntity, deleteCardElementHandler, 
         ></textarea>
       </div>
       <div className={styles.side}>
-        <label htmlFor='backSide'>Back Side</label>
+        <label htmlFor='backSide'>Задняя сторона</label>
         <textarea
           onChange={(e) => onChangeHandler(e, id)}
           name="backSide"
@@ -37,7 +40,7 @@ const FlashCard = ({ cardSetEntity, setCardSetEntity, deleteCardElementHandler, 
         ></textarea>
       </div>
       <div className={styles.side}>
-        <label htmlFor='hint'>Hint</label>
+        <label htmlFor='hint'>Подсказка</label>
         <textarea
           onChange={(e) => onChangeHandler(e, id)}
           name="hint"

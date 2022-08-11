@@ -71,29 +71,29 @@ const CardSetList = () => {
     <div className={styles.container}>
       <div className={styles.navigation}>
         <Link to={"/dashboard/card-set-create"}>
-          <Button name="Create new Set" />
+          <Button name="Создать новый набор" />
         </Link>
         <Link to={"/dashboard/card-set-folders"}>
-          <Button name="folders" />
+          <Button name="Папки" />
         </Link>
         <Link to={"/dashboard/card-set-favorites"}>
-          <Button name="favorites" />
+          <Button name="Избранные" />
         </Link>
         <Link to={"/dashboard/card-set-recently"}>
-          <Button name="recently" />
+          <Button name="Последние созданные" />
         </Link>
       </div>
       <table>
         <tbody>
           <tr className={styles.tr}>
-            <th>Set Title</th>
-            <th>Description</th>
-            <th>Created</th>
-            <th>Updated</th>
-            <th>Card count</th>
-            <th>Folder</th>
-            <th>Favorite</th>
-            <th>Tools</th>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Создан</th>
+            <th>Обновлен</th>
+            <th>Количество карт</th>
+            <th>Папка</th>
+            <th>Любимый</th>
+            <th>Действия</th>
           </tr>
           {showCardSetTable()}
         </tbody>

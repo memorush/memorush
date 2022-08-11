@@ -56,12 +56,12 @@ const CardMemorize = () => {
       </div>
       <div className={styles.buttonsContainer}>
         <Button
-          name="I know it!"
+          name="Знаю это слово!"
           handler={knowCardActionHandler}
           color="#5CB85C"
         />
         <Button
-          name="I don`t know it."
+          name="Не знаю"
           handler={nextCardHandler}
           color="#D9534F"
         />

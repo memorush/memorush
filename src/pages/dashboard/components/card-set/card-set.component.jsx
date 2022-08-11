@@ -10,8 +10,8 @@ const CardSet = () => {
   return (
     <div className={styles.container}>
       <div className={styles.actionButtons}>
-        <Button name="Flashcards" handler={() => navigate(`list`)} />
-        <Button name="Memorize" handler={() => navigate(`memorize`)} />
+        <Button name="Карточки" handler={() => navigate(`list`)} />
+        <Button name="Учить!" handler={() => navigate(`memorize`)} />
       </div>
       <div className={styles.content}>
         <Outlet />
