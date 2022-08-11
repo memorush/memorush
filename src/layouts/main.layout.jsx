@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
-import Footer from '../common/features/footer/footer.component';
+import Footer from '../common/components/footer/footer.component';
 import styles from './main.module.css';
-import Sidebar from '../common/features/sidebar/sidebar.component';
-import Popup from '../common/features/popup/popup.component';
+import Sidebar from '../common/components/sidebar/sidebar.component';
+import Popup from '../common/components/popup/popup.component';
 
 const MainLayout = () => {
   return (

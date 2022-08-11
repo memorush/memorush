@@ -1,0 +1,27 @@
+.container {
+  display: grid;
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+  width: 200px;
+  padding: 50px;
+  text-align: center;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 1px 1px 1px silver;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name {
+
+}
+
+.profession {
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
