@@ -1,7 +1,7 @@
-import MainNavigation from "./navigation/main.navigation";
+import ApplicationRoutes from "./routes/Routes";
 
-function App() {
-  return <MainNavigation/>
-}
+const App = () => (
+  <ApplicationRoutes />
+)
 
 export default App;
