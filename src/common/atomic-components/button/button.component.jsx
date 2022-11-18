@@ -2,7 +2,7 @@ import styles from './button.module.css';
 
 const Button = ({ name, style, color, handler, children }) => {
   return (
-    <div
+    <div data-testid="button-atomic-component"
       className={styles.container}
       style={{ ...style, backgroundColor: color }}
       onClick={handler}
