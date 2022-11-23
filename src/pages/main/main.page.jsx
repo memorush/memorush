@@ -17,7 +17,6 @@ const ElementArray = [
   <Hero />,
   <Features />,
   <Gallery />,
-  <Testimonial />,
   <Screenshots />,
   <Download />,
   <Developer />,
