@@ -1,19 +1,22 @@
 import styles from './gallery.module.css';
 import cn from 'classnames'
 import slide1 from './images/slide1.png';
-import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
+import Title from '../../../../common/atomic-components/title/title.component';
 
 const Gallery = () => {
 
   return (
     <div id="gallery" className={styles.container}>
-      <Slide bottom>
+      <Fade cascade left>
         <div className={styles.column}>
           <img src={slide1} alt="" srcset="" />
         </div>
+      </Fade>
+      <Fade cascade right>
         <div className={cn(styles.column, styles.info)}>
           <div className={styles.header}>
-            <h1>Объясняем, почему это приложение лучшее!</h1>
+            <Title name="Объясняем, почему это приложение лучшее!" />
             <div className={styles.line}></div>
             <div className={styles.description}>
               <p>Наряду с основными особенностями...</p>
@@ -21,21 +24,12 @@ const Gallery = () => {
             <div className={styles.line}></div>
           </div>
           <div className={styles.points}>
-            <div className={styles.point}>
-              <i class="fas fa-money-bill-alt"></i>
-              <p>Вы ни за что не платите</p>
-            </div>
-            <div className={styles.point}>
-              <i class="fas fa-mobile-alt"></i>
-              <p>Поддерживает большинство устройств</p>
-            </div>
-            <div className={styles.point}>
-              <i className="fas fa-sync"></i>
-              <p>Учитесь через сайт или приложение</p>
-            </div>
+            <p>Вы ни за что не платите</p>
+            <p>Поддерживает большинство устройств</p>
+            <p>Учитесь через сайт или приложение</p>
           </div>
         </div>
-      </Slide>
+      </Fade>
     </div>
   )
 }

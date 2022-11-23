@@ -1,11 +1,11 @@
 import styles from './screenshots.module.css';
 import phone from '../gallery/images/slide1.png';
-import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 
 const Screenshots = () => {
   return (
     <div className={styles.container}>
-      <Slide bottom>
+      <Fade cascade bottom>
         <div className={styles.header}>
           <h1>Скриншоты</h1>
           <div className={styles.line} />
@@ -16,7 +16,7 @@ const Screenshots = () => {
           <img src={phone} alt="" srcset="" />
           <img src={phone} alt="" srcset="" />
         </div>
-      </Slide>
+      </Fade>
     </div>
   )
 }

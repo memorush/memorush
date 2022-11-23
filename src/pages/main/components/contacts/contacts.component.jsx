@@ -7,7 +7,7 @@ export default function Contacts() {
   return (
     <div id="contacts" className={style.container}>
       <Slide bottom>
-        <Title name="Обратная связь" style={{ color: 'white' }} />
+        <Title name="Обратная связь" style={{ textAlign: 'center' }} />
         <div className={style.info}>
           <div className={style.contactContainer}>
             <div className={style.contact}>

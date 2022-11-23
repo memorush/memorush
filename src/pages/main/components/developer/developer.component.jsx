@@ -1,5 +1,6 @@
 import styles from './developer.module.css';
 import Slide from 'react-reveal/Slide';
+import Title from '../../../../common/atomic-components/title/title.component';
 
 const Developer = () => {
 
@@ -7,7 +8,7 @@ const Developer = () => {
     <div id="developer" className={styles.container}>
       <Slide bottom>
         <div className={styles.header}>
-          <h1>О технологии разработки</h1>
+          <Title name="О технологии разработки" />
           <div className={styles.line} />
           <p>Краткое описание технологий, которые легли в основу данного проекта</p>
           <div className={styles.line} />

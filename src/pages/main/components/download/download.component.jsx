@@ -1,13 +1,14 @@
 import styles from './download.module.css';
 import Button from '../../../../common/atomic-components/button/button.component';
 import Slide from 'react-reveal/Slide';
+import Title from '../../../../common/atomic-components/title/title.component';
 
 const Download = () => {
   return (
     <div id="download" className={styles.container}>
       <Slide bottom>
         <div className={styles.header}>
-          <h1>Установите приложение</h1>
+          <Title name="Установите приложение" />
           <div className={styles.line} />
           <p>Установите наше приложение и начните учиться прямо сейчас!</p>
           <div className={styles.line} />

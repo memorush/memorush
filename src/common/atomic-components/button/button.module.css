@@ -3,17 +3,17 @@
 	display: block;
 	height: min-content;
 	padding: 14px 20px;
+	overflow: hidden;
 	font-family: "montserrat";
-	background-color: #2AA2DE;
 	font-size: 1.1rem;
 	color: white;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
 	white-space: nowrap;
+	background-color: #2AA2DE;
 	border-radius: 5px;
 	transition: 1s all ease;
-	overflow: hidden;
 }
 
 .container::before {

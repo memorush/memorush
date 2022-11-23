@@ -1,14 +1,15 @@
 import styles from './features.module.css';
 import cn from 'classnames';
 import phoneImage from "./images/ipad-hand.png";
-import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
+import Title from '../../../../common/atomic-components/title/title.component';
 
 export default function Features() {
   return (
     <div id="features" className={styles.container}>
-      <Slide bottom>
+      <Fade bottom cascade>
         <div className={styles.header}>
-          <h1>Потрясающие особенности приложения</h1>
+          <Title name="Потрясающие особенности приложения" />
           <div className={styles.line} />
           <p>Основные преимущества при использовании данного сервиса</p>
           <div className={styles.line} />
@@ -88,7 +89,7 @@ export default function Features() {
             </div>
           </div>
         </div>
-      </Slide>
+      </Fade>
     </div>
   )
 }
