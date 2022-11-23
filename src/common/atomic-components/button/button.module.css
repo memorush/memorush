@@ -4,17 +4,16 @@
 	height: min-content;
 	padding: 14px 20px;
 	font-family: "montserrat";
+	background-color: #2AA2DE;
 	font-size: 1.1rem;
 	color: white;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
 	white-space: nowrap;
-	background-color: #18BBF1;
-	border: 1px solid rgb(255, 255, 255, 0);
 	border-radius: 5px;
-	box-shadow: 1px 1px 1px rgba(202, 202, 202, 0.774);
 	transition: 1s all ease;
+	overflow: hidden;
 }
 
 .container::before {
@@ -44,7 +43,6 @@
 .container:hover {
 	color: black;
 	text-shadow: none;
-	border: 1px solid #18BBF1;
 	opacity: 0.95;
 }
 
