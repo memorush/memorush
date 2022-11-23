@@ -12,7 +12,7 @@ import Button from '../../../../common/atomic-components/button/button.component
 import { useSearchParams } from 'react-router-dom';
 
 const INIT_CARD_SET_STATE = {
-  title: "",
+  name: "",
   tags: "",
   description: "",
   flashCardArray: {
@@ -37,7 +37,7 @@ const CardSetForm = () => {
   useEffect(() => {
     if (cardSetId != null && cardSetById != null) {
       setCardSetEntity({
-        title: cardSetById.name,
+        name: cardSetById.name,
         tags: cardSetById.tags,
         description: cardSetById.description,
         flashCardArray: { ...cardSetById.flashCardArray }
@@ -115,9 +115,9 @@ const CardSetForm = () => {
           <label htmlFor='title'>Название</label>
           <input
             type="text"
-            name="title"
+            name="name"
             onChange={cardSetEntityHandler}
-            value={cardSetEntity.title}
+            value={cardSetEntity.name}
           />
           <label htmlFor='tags'>Ключевые слова(Опционально)</label>
           <input
