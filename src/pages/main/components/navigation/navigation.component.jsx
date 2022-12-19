@@ -21,7 +21,7 @@ const Navigation = () => {
 
   return (
     <div className={cn(styles.container, isScrolled ? styles.scrolled : null)}>
-      <div className={styles.logo}><i class="fas fa-brain"></i> Memorush</div>
+      <div className={styles.logo}><i className="fas fa-brain"></i> Memorush</div>
       <div className={styles.navItemContainer}>
         <div className={styles.navItem} onClick={() => scrollToElementIdHandler("hero")}>Домой</div>
         <div className={styles.navItem} onClick={() => scrollToElementIdHandler("features")}>Особенности</div>

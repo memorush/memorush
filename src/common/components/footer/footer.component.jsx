@@ -35,11 +35,11 @@ const Footer = () => {
           <li>Отзывы</li>
         </ul>
         <div className={style.social}>
-          <div><i class="fab fa-telegram"></i></div>
-          <div><i class="fab fa-vk"></i></div>
-          <div><i class="fab fa-instagram"></i></div>
-          <div><i class="fab fa-facebook"></i></div>
-          <div><i class="fab fa-blogger"></i></div>
+          <div><i className="fab fa-telegram"></i></div>
+          <div><i className="fab fa-vk"></i></div>
+          <div><i className="fab fa-instagram"></i></div>
+          <div><i className="fab fa-facebook"></i></div>
+          <div><i className="fab fa-blogger"></i></div>
         </div>
         <div className={cn(style.time)}>
           <p>© 2021–{new Date().getFullYear()}, Memorush, официальный сайт</p>

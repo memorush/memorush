@@ -15,15 +15,15 @@ const Developer = () => {
         </div>
         <div className={styles.skills}>
           <div className={styles.skill}>
-            <i class="fab fa-react"></i>
+            <i className="fab fa-react"></i>
             <p>Для разработки интерактивного интерфейса использовалась библиотека React</p>
           </div>
           <div className={styles.skill}>
-            <i class="fab fa-java"></i>
+            <i className="fab fa-java"></i>
             <p>Вся логика и серверная часть приложения написана на Java с применение Spring Framework</p>
           </div>
           <div className={styles.skill}>
-            <i class="fab fa-js"></i>
+            <i className="fab fa-js"></i>
             <p>Мобильное приложение написано с использованием React Native</p>
           </div>
         </div>

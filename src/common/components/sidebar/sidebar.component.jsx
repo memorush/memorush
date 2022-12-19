@@ -32,7 +32,7 @@ const Sidebar = () => {
           <Link
             to="/main"
             className={cn(styles.row, styles.title)}>
-            <i class="fas fa-brain"></i>
+            <i className="fas fa-brain"></i>
             <p>Memorush</p>
           </Link>
           <Link to="/dashboard/card-set-list" className={styles.row}>
@@ -40,18 +40,18 @@ const Sidebar = () => {
             <p>Панель управления</p>
           </Link>
           <Link to="/main/auth" className={styles.row}>
-            <i class="fas fa-sign-in-alt"></i>
+            <i className="fas fa-sign-in-alt"></i>
             <p>Войти</p>
           </Link>
           <div
             onClick={onLogoutHandler}
             className={styles.row}
           >
-            <i class="fas fa-sign-out-alt"></i>
+            <i className="fas fa-sign-out-alt"></i>
             <p>Выйти</p>
           </div>
           <div onClick={toggleSidebarHandler} className={styles.row}>
-            <i class="fas fa-toggle-on"></i>
+            <i className="fas fa-toggle-on"></i>
             <p>{isOpen ? "Закрыть" : "Открыть"}</p>
           </div>
           <div className={cn(styles.row, styles.account)}>

@@ -5,7 +5,7 @@ const NavHeader = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
-        <Link to={"/"}><i class="fas fa-brain"></i> Memorush</Link>
+        <Link to={"/"}><i className="fas fa-brain"></i> Memorush</Link>
       </div>
     </div>
   )

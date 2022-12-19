@@ -20,7 +20,7 @@ const Download = () => {
       </Slide>
       <div className={styles.downloadIcon}>
         <div className={styles.innerCircle}>
-          <i class="fas fa-download"></i>
+          <i className="fas fa-download"></i>
         </div>
       </div>
     </div>

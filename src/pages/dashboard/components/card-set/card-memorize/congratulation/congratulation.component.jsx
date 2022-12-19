@@ -21,7 +21,7 @@ const CongratulationComponent = ({ setInitStateHandler }) => {
           handler={() => navigate(`/dashboard/card-set-list`)}
         />
       </div>
-      <img className={styles.congratulationImg} src={congratulationImg} alt="" srcset="" />
+      <img className={styles.congratulationImg} src={congratulationImg} alt=""/>
     </div>
   )
 }

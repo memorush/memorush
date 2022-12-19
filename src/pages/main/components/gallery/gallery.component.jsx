@@ -10,7 +10,7 @@ const Gallery = () => {
     <div id="gallery" className={styles.container}>
       <Fade cascade left>
         <div className={styles.column}>
-          <img src={slide1} alt="" srcset="" />
+          <img src={slide1} alt=""/>
         </div>
       </Fade>
       <Fade cascade right>

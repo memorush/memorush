@@ -51,7 +51,7 @@ export default function Features() {
             </div>
           </div>
           <div className={cn(styles.column, styles.middle)}>
-            <img src={phoneImage} alt="" srcset="" />
+            <img src={phoneImage} alt=""/>
           </div>
           <div className={cn(styles.column, styles.end)}>
             <div className={styles.featureContainer}>
