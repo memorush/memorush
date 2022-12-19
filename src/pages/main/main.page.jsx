@@ -10,29 +10,20 @@ import Gallery from './components/gallery/gallery.component';
 import Hero from './components/hero/hero.component';
 import Navigation from './components/navigation/navigation.component';
 import Screenshots from './components/screenshots/screenshots.component';
-import Testimonial from './components/testimonial/testimonial.component';
 import styles from './main.module.css';
-
-const ElementArray = [
-  <Hero />,
-  <Features />,
-  <Gallery />,
-  <Screenshots />,
-  <Download />,
-  <Developer />,
-  <Contacts />,
-];
-
-const showElements = (elementArray) => (
-  elementArray.map(element => element)
-)
 
 const Main = () => {
   return (
     <div className={styles.container}>
       <Outlet />
       <Navigation />
-      {showElements(ElementArray)}
+      <Hero />
+      <Features />
+      <Gallery />
+      <Screenshots />
+      <Download />
+      <Developer />
+      <Contacts />
     </div>
   )
 }
