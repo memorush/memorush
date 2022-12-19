@@ -7,28 +7,43 @@ export default function Contacts() {
   return (
     <div id="contacts" className={style.container}>
       <Slide bottom>
-        <Title name="Обратная связь" style={{ textAlign: 'center' }} />
-        <div className={style.info}>
+        <Title name="Обратная связь" style={{ textAlign: 'center', color: "white" }} />
+      </Slide>
+      <div className={style.info}>
+        <Slide left cascade>
           <div className={style.contactContainer}>
-            <div className={style.contact}>
-              <h3><i className="fas fa-envelope-square"></i>Email</h3>
+            <div className={style.contactItem}>
+              <i className="fas fa-map-marker-alt"></i>
+              <h4>Адрес</h4>
+              <p>Россия, Москва</p>
             </div>
-            <div className={style.contact}>
-              <h3><i className="fab fa-github"></i>Git-Hub</h3>
+            <div className={style.contactItem}>
+              <i className="fas fa-phone"></i>
+              <h4>Phone</h4>
+              <p>-</p>
             </div>
-            <div className={style.contact}>
-              <h3><i className="fab fa-telegram-plane"></i>Telegram Link</h3>
+            <div className={style.contactItem}>
+              <i className="fas fa-envelope-open"></i>
+              <h4>Почта</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div className={style.contactItem}>
+              <i className="fab fa-internet-explorer"></i>
+              <h4>Вебсайт</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
+        </Slide>
+        <Slide right>
           <div className={style.formContainer}>
             <input type="text" placeholder="Ваше имя"></input>
             <input type="text" placeholder="Ваша почта"></input>
             <input type="text" placeholder="Тема письма"></input>
             <input type="textarea" placeholder="Ваше сообщение"></input>
-            <Button name="Отправить" style={{ width: '20%' }} />
+            <Button name="Отправить" />
           </div>
-        </div>
-      </Slide>
+        </Slide>
+      </div>
     </div>
   )
 }
