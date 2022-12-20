@@ -1,16 +1,25 @@
 .container {
   display: grid;
-  gap: 20px;
+  background-color: #F9F8F8;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 1px solid #DDD;
+}
+
+.containerTitle {
+  border-bottom: 1px solid #DDD;
+  padding: 2% 5%;
 }
 
 .actionButtons {
   display: grid;
+  padding: 2% 5%;
+  background-color: white;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
+  border-bottom: 1px solid #DDD;
 }
 
-.flashCards{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+.content {
+  padding: 5%;
 }
