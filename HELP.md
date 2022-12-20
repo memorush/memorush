@@ -20,3 +20,5 @@ https://gifer.com/ru/XVo7
 
 ### Free 3d icons
 https://icons8.com/icon/set/popular/3d-fluency
+
+https://www.svgrepo.com/vectors/books/
