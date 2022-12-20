@@ -2,17 +2,58 @@
 	display: grid;
 	grid-template-rows: max-content 1fr;
 	grid-template-columns: 1fr;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.header {
+	background-color: #F9F8F8;
+	padding: 2% 5%;
+	border-bottom: 1px solid #DDD;
+}
+
+.contentContainer {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
 	gap: 20px;
+}
+
+.menuContainer {
+	background-color: #F9F8F8;
+	padding: 5%;
+	border-right: 1px solid #DDD;
+}
+
+.dashboardContainer {
+	display: grid;
+	gap: 20px;
+	margin: 2%;
+	border: 1px solid #DDD;
+	border-radius: 10px;
 }
 
 .navigation {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-	gap: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 2%;
+	border-bottom: 1px solid #DDD;
+	gap: 10px;
 }
 
-.navigation a {
+.menuNavigation {
+	display: grid;
+	gap: 10px;
+}
+
+.navigation a,
+.menuNavigation a {
 	text-decoration: none;
+	width: min-content;
+}
+
+.tableContainer {
+	padding: 2%;
 }
 
 .container table {
@@ -21,7 +62,7 @@
 	font-size: 1.2rem;
 	text-align: center;
 	border-collapse: collapse;
-	border: 1px solid #ddd;
+	border: 1px solid #DDD;
 }
 
 table th {
@@ -58,5 +99,5 @@ table td {
 
 .tr {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
 }

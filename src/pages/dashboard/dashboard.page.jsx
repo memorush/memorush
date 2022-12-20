@@ -8,14 +8,6 @@ const Dashboard = () => {
     <div className={styles.container}>
       <NavHeader />
       <div className={styles.content}>
-        {/* <div className={styles.navigation}>
-            <Link to={"/dashboard/card-set-list"}>
-              <Button name={"Наборы"} />
-            </Link>
-            <Link to={"/dashboard/settings"}>
-              <Button name={"Настройки"} />
-            </Link>
-          </div> */}
         <Outlet />
       </div>
     </div>

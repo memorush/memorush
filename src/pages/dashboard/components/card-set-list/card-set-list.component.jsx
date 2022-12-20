@@ -69,35 +69,51 @@ const CardSetList = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.navigation}>
-        <Link to={"/dashboard/card-set-create"}>
-          <Button name="Создать новый набор" />
-        </Link>
-        <Link to={"/dashboard/card-set-folders"}>
-          <Button name="Папки" />
-        </Link>
-        <Link to={"/dashboard/card-set-favorites"}>
-          <Button name="Избранные" />
-        </Link>
-        <Link to={"/dashboard/card-set-recently"}>
-          <Button name="Последние созданные" />
-        </Link>
+      <div className={styles.header}>
+        <h1>Hello</h1>
       </div>
-      <table>
-        <tbody>
-          <tr className={styles.tr}>
-            <th>Название</th>
-            <th>Описание</th>
-            <th>Создан</th>
-            <th>Обновлен</th>
-            <th>Количество карт</th>
-            <th>Папка</th>
-            <th>Любимый</th>
-            <th>Действия</th>
-          </tr>
-          {showCardSetTable()}
-        </tbody>
-      </table>
+      <div className={styles.contentContainer}>
+        <div className={styles.menuContainer}>
+          <div className={styles.menuNavigation}>
+            <Link to={"/dashboard/card-set-list"}>
+              <Button name={"Наборы"} />
+            </Link>
+            <Link to={"/dashboard/settings"}>
+              <Button name={`Настройки `} />
+            </Link>
+          </div>
+        </div>
+        <div className={styles.dashboardContainer}>
+          <div className={styles.navigation}>
+            <Link to={"/dashboard/card-set-create"}>
+              <Button name="Создать набор" />
+            </Link>
+            <Link to={"/dashboard/card-set-folders"}>
+              <Button name="Папки" />
+            </Link>
+            <Link to={"/dashboard/card-set-favorites"}>
+              <Button name="Избранные" />
+            </Link>
+          </div>
+          <div className={styles.tableContainer}>
+            <table>
+              <tbody>
+                <tr className={styles.tr}>
+                  <th>Название</th>
+                  <th>Описание</th>
+                  <th>Создан</th>
+                  <th>Обновлен</th>
+                  <th>Количество карт</th>
+                  <th>Папка</th>
+                  <th>Любимый</th>
+                  <th>Действия</th>
+                </tr>
+                {showCardSetTable()}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
