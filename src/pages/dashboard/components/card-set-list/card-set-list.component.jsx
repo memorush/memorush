@@ -8,6 +8,7 @@ import {
   getAllCardSets,
   setFavoriteCardSet
 } from '../../../../redux/features/card/cardSlice';
+import { ReactComponent as UserSvg } from './svg/user-svgrepo-com.svg';
 import styles from './card-set-list.module.css';
 
 const CardSetList = () => {
@@ -70,7 +71,10 @@ const CardSetList = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>Hello</h1>
+        <div className={styles.userSvgContainer}>
+          <UserSvg />
+        </div>
+        <h1>Hello, user</h1>
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.menuContainer}>
