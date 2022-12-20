@@ -16,6 +16,11 @@
 	padding: 50px;
 }
 
+.svgContainer {
+	width: 100px;
+	height: 100px;
+}
+
 .bottom {
 	display: grid;
 	grid-template-areas:

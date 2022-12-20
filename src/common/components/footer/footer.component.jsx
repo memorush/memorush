@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { scrollToElementIdHandler } from '../../../service/utilsService';
+import { ReactComponent as CloverSvg } from './svg/clover-svgrepo-com.svg';
 
 import style from './footer.module.css';
 
@@ -7,6 +8,9 @@ const Footer = () => {
   return (
     <div className={cn(style.container)}>
       <div className={cn(style.upper)}>
+        <div className={style.svgContainer}>
+          <CloverSvg />
+        </div>
         <div className={cn(style.tutotarial)}>
           <ul>
             <li><h3>Начать</h3></li>
