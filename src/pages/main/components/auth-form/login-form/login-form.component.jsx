@@ -17,7 +17,7 @@ const LoginForm = () => {
 
   useEffect(() => {
     if (authStatus === 'login') {
-      navigate("/dashboard/card-set-list", { replace: true });
+      navigate("/dashboard/info", { replace: true });
     }
   }, [authStatus])
 

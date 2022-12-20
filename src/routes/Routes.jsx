@@ -11,6 +11,7 @@ import AuthForm from "../pages/main/components/auth-form/auth-form.component";
 import MainPage from "../pages/main/main.page";
 import NotFound from "../pages/not-found/not-found.page";
 import RequireAuthRoute from "../wrapper/RequireAuthRoute";
+import InfoComponent from "../pages/dashboard/components/info/info.component";
 
 const ApplicationRoutes = () => (
   <Routes>
@@ -24,6 +25,7 @@ const ApplicationRoutes = () => (
       </Route>
       <Route element={<RequireAuthRoute />}>
         <Route path="dashboard" element={<DashboardPage />}>
+          <Route path="info" element={<InfoComponent />} />
           <Route path="card-set-list" element={<CardSetList />} />
           <Route path="card-set-list/:cardSetId" element={<CardSet />}>
             <Route path="list" element={<FlashCardList />} />
