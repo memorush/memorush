@@ -6,9 +6,30 @@
   border: 1px solid #DDD;
 }
 
-.containerTitle {
+.containerHeader {
   border-bottom: 1px solid #DDD;
-  padding: 2% 5%;
+  padding: 2%;
+  display: grid;
+  gap: 20px;
+}
+
+.containerTitle {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  white-space: nowrap;
+  grid-template-columns: min-content min-content;
+}
+
+.svgContainer {
+	width: 70px;
+	height: 70px;
+}
+
+.mainInfo {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .actionButtons {

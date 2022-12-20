@@ -7,13 +7,24 @@
 
 .containerTitle {
   background-color: #F9F8F8;
-  padding: 2% 5%;
+  padding: 2%;
+  display: grid;
+	white-space: nowrap;
+	gap: 20px;
+	align-items: center;
+	grid-template-columns: min-content min-content;
   border-bottom:  1px solid #DDD;
+}
+
+.svgContainer {
+	width: 70px;
+	height: 70px;
 }
 
 .settingsContainer {
   background-color: white;
   display: grid;
+  font-size: 1.2rem;
   gap: 20px;
   padding: 2% 5%;
 }

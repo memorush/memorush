@@ -10,6 +10,7 @@ import {
 import FlashCard from './flash-card/flash-card.component';
 import Button from '../../../../common/atomic-components/button/button.component';
 import { useSearchParams } from 'react-router-dom';
+import { ReactComponent as PenSvg } from './svg/pen-svgrepo-com.svg';
 
 const INIT_CARD_SET_STATE = {
   name: "",
@@ -116,6 +117,9 @@ const CardSetForm = () => {
     <div className={styles.container}>
       <div className={styles.cardSetFormContainer}>
         <div className={styles.cardSetFormTitle}>
+          <div className={styles.svgContainer}>
+            <PenSvg />
+          </div>
           <h1>Создать новый набор карточек</h1>
         </div>
         <div className={styles.cardSetFormColumns}>

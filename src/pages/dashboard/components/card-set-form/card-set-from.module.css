@@ -14,8 +14,21 @@
 .newFlashCardTitle,
 .actionsTitle {
 	background-color: #F9F8F8;
-	padding: 2% 5%;
+	padding: 2%;
 	border-bottom:  1px solid #DDD;
+}
+
+.cardSetFormTitle {
+	display: grid;
+	white-space: nowrap;
+	gap: 20px;
+	align-items: center;
+	grid-template-columns: min-content min-content
+}
+
+.svgContainer {
+	width: 70px;
+	height: 70px;
 }
 
 .cardSetFormColumns {

@@ -3,6 +3,7 @@ import Button from '../../../../common/atomic-components/button/button.component
 import { updateUserData } from '../../../../redux/features/auth/auth-slice';
 import styles from './settings.module.css';
 import { useState } from 'react';
+import { ReactComponent as SettingsSvg } from './svg/settings-svgrepo-com.svg';
 
 const Settings = () => {
 
@@ -23,6 +24,9 @@ const Settings = () => {
   return (
     <div className={styles.container}>
       <div className={styles.containerTitle}>
+        <div className={styles.svgContainer}>
+          <SettingsSvg />
+        </div>
         <h1>Настройки пользователя</h1>
       </div>
       <div className={styles.settingsContainer}>
