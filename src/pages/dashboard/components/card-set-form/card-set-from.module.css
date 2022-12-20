@@ -1,30 +1,39 @@
 .container {
 	display: grid;
-	gap: 20px;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	overflow: hidden;
 }
 
-.container h1,
-label {
-	font-weight: bold;
-	text-transform: uppercase;
+.cardSetFormContainer {
+	background-color: white;
 }
 
-.set {
+.cardSetFormTitle,
+.importCardsDataTitle,
+.newFlashCardTitle,
+.actionsTitle {
+	background-color: #F9F8F8;
+	padding: 2% 5%;
+	border-bottom:  1px solid #DDD;
+}
+
+.cardSetFormColumns {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	padding: 2% 5%;
 	gap: 20px;
-	padding: 20px;
-	border-radius: 20px;
-	box-shadow: 1px 1px 1px 1px silver;
+	grid-template-columns: 1fr 1fr;
 }
 
-.setColumn {
+.cardSetFormColumnsRight,
+.cardSetFormColumnsLeft {
 	display: grid;
 	gap: 20px;
 	align-items: center;
+	background-color: white;
 }
 
-.setColumn input {
+.cardSetFormColumns input {
 	box-sizing: border-box;
 	width: 100%;
 	min-height: 2rem;
@@ -34,7 +43,7 @@ label {
 	border-radius: 10px;
 }
 
-.setColumn textarea {
+.cardSetFormColumns textarea {
 	box-sizing: border-box;
 	width: 100%;
 	height: 100%;
@@ -45,25 +54,38 @@ label {
 	border-radius: 10px;
 }
 
-.setColumn label {
+.cardSetFormColumns label {
 	font-size: 1.2rem;
 }
 
-.flashCards {
+.importCardsDataFormContainer {
+	background-color: white;
 	display: grid;
 	gap: 20px;
-	padding: 20px;
-	background-color: #ebebeb;
-	border-radius: 20px;
+}
+
+.importCardsDataForm {
+	display: grid;
+	padding: 2% 5%;
+	gap: 20px;
+	background-color: white;
+}
+
+.newFlashCardContainer {
+	display: grid;
+	gap: 20px;
+	background-color: #EBEBEB;
 	box-shadow: 1px 1px 1px 1px silver;
 }
 
-.flashCardContainer {
+.newFlashCardListContainer {
 	display: grid;
 	gap: 20px;
 }
 
-.buttons {
+.actionsButtons {
+	background-color: white;
+	padding: 5%;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	gap: 20px;

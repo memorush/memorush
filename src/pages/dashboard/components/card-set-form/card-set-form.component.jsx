@@ -74,72 +74,94 @@ const CardSetForm = () => {
   }
 
   const showActionButtonElements = () => (
-    <div className={styles.buttons}>
-      {cardSetId ?
-        <>
+    <div className={styles.actionsContainer}>
+      <div className={styles.actionsTitle}>
+        <h1>Закончить и создать набор</h1>
+      </div>
+      <div className={styles.actionsButtons}>
+        {cardSetId ?
+          <>
+            <Button
+              name="Обновить набор"
+              color="#5CB85C"
+              handler={() => dispatch(updateCardSet({ cardSetId, cardSetEntity }))}
+            />
+            <Button
+              name="Удалить набор"
+              color="#D9534F"
+              handler={() => dispatch(deleteCardSet(cardSetId))}
+            />
+          </>
+          :
           <Button
-            name="Обновить набор"
-            color="#5CB85C"
-            handler={() => dispatch(updateCardSet({ cardSetId, cardSetEntity }))}
+            name="Создать набор"
+            color="#5EBA7D"
+            handler={() => dispatch(createNewCardSet(cardSetEntity))}
           />
-          <Button
-            name="Удалить набор"
-            color="#D9534F"
-            handler={() => dispatch(deleteCardSet(cardSetId))}
-          />
-        </>
-        :
+        }
         <Button
-          name="Создать набор"
-          color="#5EBA7D"
-          handler={() => dispatch(createNewCardSet(cardSetEntity))}
+          handler={addFlashCardElement}
+          name="Добавить карточку" />
+        <Button
+          name="Отмена"
+          style={{ color: "black" }}
+          color="#E4E8E9"
+          handler={() => setCardSetEntity(INIT_CARD_SET_STATE)}
         />
-      }
-      <Button
-        handler={addFlashCardElement}
-        name="Добавить карточку" />
-      <Button
-        name="Отмена"
-        style={{ color: "black" }}
-        color="#E4E8E9"
-        handler={() => setCardSetEntity(INIT_CARD_SET_STATE)}
-      />
+      </div>
     </div>
   )
 
   return (
     <div className={styles.container}>
-      <div className={styles.set}>
-        <div className={styles.setColumn}>
+      <div className={styles.cardSetFormContainer}>
+        <div className={styles.cardSetFormTitle}>
           <h1>Создать новый набор карточек</h1>
-          <label htmlFor='title'>Название</label>
-          <input
-            type="text"
-            name="name"
-            onChange={cardSetEntityHandler}
-            value={cardSetEntity.name}
-          />
-          <label htmlFor='tags'>Ключевые слова(Опционально)</label>
-          <input
-            type="text"
-            name="tags"
-            onChange={cardSetEntityHandler}
-            value={cardSetEntity.tags}
-          />
         </div>
-        <div className={styles.setColumn}>
-          <label htmlFor='description'>Описание</label>
-          <textarea
-            name="description"
-            onChange={cardSetEntityHandler}
-            value={cardSetEntity.description}
-          >
-          </textarea>
+        <div className={styles.cardSetFormColumns}>
+          <div className={styles.cardSetFormColumnsRight}>
+            <div className={styles.form}></div>
+            <label htmlFor='title'>Название</label>
+            <input
+              type="text"
+              name="name"
+              onChange={cardSetEntityHandler}
+              value={cardSetEntity.name}
+            />
+            <label htmlFor='tags'>Ключевые слова(Опционально)</label>
+            <input
+              type="text"
+              name="tags"
+              onChange={cardSetEntityHandler}
+              value={cardSetEntity.tags}
+            />
+          </div>
+          <div className={styles.cardSetFormColumnsLeft}>
+            <label htmlFor='description'>Описание</label>
+            <textarea
+              name="description"
+              onChange={cardSetEntityHandler}
+              value={cardSetEntity.description}
+            >
+            </textarea>
+          </div>
         </div>
       </div>
-      <div className={styles.flashCards}>
-        <h1>Создать карточки</h1>
-        <div className={styles.flashCardContainer} ref={flashCardContainerRef}>
+      <div className={styles.importCardsDataContainer}>
+        <div className={styles.importCardsDataTitle}>
+          <h1>Импортироть набор карточек как json</h1>
+        </div>
+        <div className={styles.importCardsDataForm}>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi minima nulla porro est quo consequatur dicta, quis maiores eligendi atque?</p>
+          <input type="file" />
+          <button>Import</button>
+        </div>
+      </div>
+      <div className={styles.newFlashCardContainer}>
+        <div className={styles.newFlashCardTitle}>
+          <h1>Создать карточки</h1>
+        </div>
+        <div className={styles.newFlashCardListContainer} ref={flashCardContainerRef}>
           {Object.keys(cardSetEntity.flashCardArray).map(id => (
             <FlashCard
               id={id}
