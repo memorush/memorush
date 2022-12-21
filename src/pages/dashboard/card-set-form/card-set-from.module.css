@@ -9,13 +9,10 @@
 	background-color: white;
 }
 
-.cardSetFormTitle,
-.importCardsDataTitle,
-.newFlashCardTitle,
-.actionsTitle {
+.cardSetFormTitle {
 	padding: 2%;
 	background-color: #F9F8F8;
-	border-bottom:  1px solid #DDD;
+	border-bottom: 1px solid #DDD;
 }
 
 .cardSetFormTitle {
@@ -81,25 +78,5 @@
 	display: grid;
 	gap: 20px;
 	padding: 2% 5%;
-	background-color: white;
-}
-
-.newFlashCardContainer {
-	display: grid;
-	gap: 20px;
-	background-color: #EBEBEB;
-	box-shadow: 1px 1px 1px 1px silver;
-}
-
-.newFlashCardListContainer {
-	display: grid;
-	gap: 20px;
-}
-
-.actionsButtons {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-	gap: 20px;
-	padding: 5%;
 	background-color: white;
 }

@@ -1,0 +1,17 @@
+.container {
+	display: grid;
+	gap: 20px;
+	background-color: #EBEBEB;
+	box-shadow: 1px 1px 1px 1px silver;
+}
+
+.title {
+	padding: 2%;
+	background-color: #F9F8F8;
+	border-bottom:  1px solid #DDD;
+}
+
+.flashCardListContainer {
+	display: grid;
+	gap: 20px;
+}

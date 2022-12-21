@@ -1,16 +1,13 @@
-import styles from './card-set-from.module.css';
-import { useRef, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  createNewCardSet,
-  cardSetByIdSelector,
-  deleteCardSet,
-  updateCardSet
-} from '../../../redux/features/card/cardSlice';
-import FlashCardComponent from './components/flash-card/flash-card.component';
-import ButtonAtomicComponent from '../../../common/atomic-components/button/button.component';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
+import {
+  cardSetByIdSelector
+} from '../../../redux/features/card/cardSlice';
+import styles from './card-set-from.module.css';
+import ActionButtonsComponent from './components/action-buttons/action-buttons.component';
+import FlashCardFormComponent from './components/flash-card-form/flash-card-form.component';
+import ImportCardDataComponent from './components/import-card-data/import-card-data.component';
 import { ReactComponent as PenSvg } from './svg/pen-svgrepo-com.svg';
 
 const INIT_CARD_SET_STATE = {
@@ -24,10 +21,6 @@ const INIT_CARD_SET_STATE = {
 
 //TODO Упростить компонент, разбить на составляющие!
 const CardSetFormPage = () => {
-
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const flashCardContainerRef = useRef();
 
   // Search params fields
   const [searchParams] = useSearchParams();
@@ -65,61 +58,6 @@ const CardSetFormPage = () => {
       }
     })
   }
-
-  const deleteCardElementHandler = (id) => {
-    delete cardSetEntity.flashCardArray[id];
-
-    setCardSetEntity({
-      ...cardSetEntity,
-      flashCardArray: {
-        ...cardSetEntity.flashCardArray
-      }
-    })
-  }
-
-  const showActionButtonElements = () => (
-    <div className={styles.actionsContainer}>
-      <div className={styles.actionsTitle}>
-        <h1>Закончить и создать набор</h1>
-      </div>
-      <div className={styles.actionsButtons}>
-        {cardSetId ?
-          <>
-            <ButtonAtomicComponent
-              name="Обновить набор"
-              color="#5CB85C"
-              handler={() => dispatch(updateCardSet({ cardSetId, cardSetEntity }))}
-            />
-            <ButtonAtomicComponent
-              name="Удалить набор"
-              color="#D9534F"
-              handler={() => dispatch(deleteCardSet(cardSetId))}
-            />
-          </>
-          :
-          <ButtonAtomicComponent
-            name="Создать набор"
-            color="#5EBA7D"
-            handler={() => dispatch(createNewCardSet(cardSetEntity))}
-          />
-        }
-        <ButtonAtomicComponent
-          handler={addFlashCardElement}
-          color="orange"
-          name="Добавить карточку" />
-        <ButtonAtomicComponent
-          name="Отмена"
-          style={{ color: "black" }}
-          color="#E4E8E9"
-          handler={() => setCardSetEntity(INIT_CARD_SET_STATE)}
-        />
-        <ButtonAtomicComponent
-          name="Главное меню"
-          handler={() => navigate(`/dashboard/card-set-list`)}
-        />
-      </div>
-    </div>
-  )
 
   return (
     <div className={styles.container}>
@@ -159,33 +97,18 @@ const CardSetFormPage = () => {
           </div>
         </div>
       </div>
-      <div className={styles.importCardsDataContainer}>
-        <div className={styles.importCardsDataTitle}>
-          <h1>Импортироть набор карточек как json</h1>
-        </div>
-        <div className={styles.importCardsDataForm}>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi minima nulla porro est quo consequatur dicta, quis maiores eligendi atque?</p>
-          <input type="file" />
-          <button>Import</button>
-        </div>
-      </div>
-      <div className={styles.newFlashCardContainer}>
-        <div className={styles.newFlashCardTitle}>
-          <h1>Создать карточки</h1>
-        </div>
-        <div className={styles.newFlashCardListContainer} ref={flashCardContainerRef}>
-          {Object.keys(cardSetEntity.flashCardArray).map(id => (
-            <FlashCardComponent
-              id={id}
-              key={id}
-              cardSetEntity={cardSetEntity}
-              setCardSetEntity={setCardSetEntity}
-              deleteCardElementHandler={deleteCardElementHandler}
-            />
-          ))}
-        </div>
-      </div>
-      {showActionButtonElements()}
+      <ImportCardDataComponent />
+      <FlashCardFormComponent
+        cardSetEntity={cardSetEntity}
+        setCardSetEntity={setCardSetEntity}
+      />
+      <ActionButtonsComponent
+        cardSetId={cardSetId}
+        cardSetEntity={cardSetEntity}
+        setCardSetEntity={setCardSetEntity}
+        addFlashCardElement={addFlashCardElement}
+        INIT_CARD_SET_STATE={INIT_CARD_SET_STATE}
+      />
     </div>
   )
 }

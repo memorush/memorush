@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+}
+
+.title {
+  padding: 2%;
+  background-color: #F9F8F8;
+  border-bottom: 1px solid #DDD;
+}
+
+.actionsButtons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 5%;
+  background-color: white;
+}
