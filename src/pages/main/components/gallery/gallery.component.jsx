@@ -2,9 +2,9 @@ import styles from './gallery.module.css';
 import cn from 'classnames'
 import slide1 from './images/slide1.png';
 import Fade from 'react-reveal/Fade';
-import Title from '../../../../common/atomic-components/title/title.component';
+import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 
-const Gallery = () => {
+const GalleryComponent = () => {
 
   return (
     <div id="gallery" className={styles.container}>
@@ -16,7 +16,7 @@ const Gallery = () => {
       <Fade cascade right>
         <div className={cn(styles.column, styles.info)}>
           <div className={styles.header}>
-            <Title name="Объясняем, почему это приложение лучшее!" />
+            <TitleAtomicComponent name="Объясняем, почему это приложение лучшее!" />
             <div className={styles.line}></div>
             <div className={styles.description}>
               <p>Наряду с основными особенностями...</p>
@@ -34,4 +34,4 @@ const Gallery = () => {
   )
 }
 
-export default Gallery;
+export default GalleryComponent;

@@ -1,0 +1,47 @@
+.container {
+  display: grid;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.containerTitle {
+  display: grid;
+	grid-template-columns: min-content min-content;
+	gap: 20px;
+	align-items: center;
+  padding: 2%;
+	white-space: nowrap;
+  background-color: #F9F8F8;
+  border-bottom:  1px solid #DDD;
+}
+
+.svgContainer {
+	width: 70px;
+	height: 70px;
+}
+
+.settingsContainer {
+  display: grid;
+  gap: 20px;
+  padding: 2% 5%;
+  font-size: 1.2rem;
+  background-color: white;
+}
+
+.settingsContainer input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 2rem;
+  padding: 1rem;
+  margin: 0;
+  background-color: #eee;
+  border: none;
+  border-radius: 10px;
+}
+
+.actionButtons {
+  display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}

@@ -1,14 +1,14 @@
 import styles from './developer.module.css';
 import Slide from 'react-reveal/Slide';
-import Title from '../../../../common/atomic-components/title/title.component';
+import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 
-const Developer = () => {
+const DeveloperComponent = () => {
 
   return (
     <div id="developer" className={styles.container}>
       <Slide bottom>
         <div className={styles.header}>
-          <Title name="О технологии разработки" />
+          <TitleAtomicComponent name="О технологии разработки" />
           <div className={styles.line} />
           <p>Краткое описание технологий, которые легли в основу данного проекта</p>
           <div className={styles.line} />
@@ -32,4 +32,4 @@ const Developer = () => {
   )
 }
 
-export default Developer;
+export default DeveloperComponent;

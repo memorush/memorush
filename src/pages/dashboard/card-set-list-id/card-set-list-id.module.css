@@ -1,0 +1,46 @@
+.container {
+  display: grid;
+  background-color: #F9F8F8;
+  border: 1px solid #DDD;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.containerHeader {
+  display: grid;
+  gap: 20px;
+  padding: 2%;
+  border-bottom: 1px solid #DDD;
+}
+
+.containerTitle {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 20px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.svgContainer {
+	width: 70px;
+	height: 70px;
+}
+
+.mainInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.actionButtons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 2% 5%;
+  background-color: white;
+  border-bottom: 1px solid #DDD;
+}
+
+.content {
+  padding: 5%;
+}

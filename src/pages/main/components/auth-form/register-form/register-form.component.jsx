@@ -2,14 +2,14 @@ import styles from './register-form.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Button from '../../../../../common/atomic-components/button/button.component';
+import ButtonAtomicComponent from '../../../../../common/atomic-components/button/button.component';
 import {
   registration,
   authErrorSelector,
   authStatusSelector
 } from '../../../../../redux/features/auth/auth-slice';
 
-const RegisterForm = () => {
+const RegisterFormComponent = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -110,9 +110,9 @@ const RegisterForm = () => {
           placeholder='email' />
         {validationError !== null ? showValidationElement() : null}
       </div>
-      <Button handler={onRegisterFormHandler} name="Register" />
+      <ButtonAtomicComponent handler={onRegisterFormHandler} name="Register" />
     </div>
   )
 }
 
-export default RegisterForm;
+export default RegisterFormComponent;

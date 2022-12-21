@@ -2,13 +2,13 @@ import styles from './login-form.module.css';
 import { useNavigate } from 'react-router';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Button from '../../../../../common/atomic-components/button/button.component';
+import ButtonAtomicComponent from '../../../../../common/atomic-components/button/button.component';
 import {
   login,
   authStatusSelector
 } from '../../../../../redux/features/auth/auth-slice';
 
-const LoginForm = () => {
+const LoginFormComponent = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -50,7 +50,7 @@ const LoginForm = () => {
           onChange={formInputHandler}
           placeholder='password' />
       </div>
-      <Button handler={onLoginFormHandler} name="Log In" />
+      <ButtonAtomicComponent handler={onLoginFormHandler} name="Log In" />
       <div className={styles.forgotPassword}>
         <p>Forgot Password?</p>
       </div>
@@ -58,4 +58,4 @@ const LoginForm = () => {
   )
 }
 
-export default LoginForm;
+export default LoginFormComponent;

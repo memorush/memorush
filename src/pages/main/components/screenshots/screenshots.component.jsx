@@ -2,7 +2,7 @@ import styles from './screenshots.module.css';
 import phone from '../gallery/images/slide1.png';
 import Fade from 'react-reveal/Fade';
 
-const Screenshots = () => {
+const ScreenshotsComponent = () => {
   return (
     <div className={styles.container}>
       <Fade cascade bottom>
@@ -21,4 +21,4 @@ const Screenshots = () => {
   )
 }
 
-export default Screenshots;
+export default ScreenshotsComponent;

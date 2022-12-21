@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { invalidateLoggedInUser, authEntitySelector } from '../../../redux/features/auth/auth-slice';
 
 
-const Sidebar = () => {
+const SidebarComponent = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -64,4 +64,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar;
+export default SidebarComponent;

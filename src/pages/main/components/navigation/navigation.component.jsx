@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { useState } from 'react';
 import { scrollToElementIdHandler } from '../../../../service/utilsService';
 
-const Navigation = () => {
+const NavigationComponent = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -35,4 +35,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation;
+export default NavigationComponent;

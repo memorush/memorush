@@ -1,13 +1,13 @@
 import style from './contacts.module.css';
-import Button from '../../../../common/atomic-components/button/button.component';
-import Title from '../../../../common/atomic-components/title/title.component';
+import ButtonAtomicComponent from '../../../../common/atomic-components/button/button.component';
+import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 import Slide from 'react-reveal/Slide';
 
-export default function Contacts() {
+const ContactsComponent = () => {
   return (
     <div id="contacts" className={style.container}>
       <Slide bottom>
-        <Title name="Обратная связь" style={{ textAlign: 'center', color: "white" }} />
+        <TitleAtomicComponent name="Обратная связь" style={{ textAlign: 'center', color: "white" }} />
       </Slide>
       <div className={style.info}>
         <Slide left cascade>
@@ -40,10 +40,12 @@ export default function Contacts() {
             <input type="text" placeholder="Ваша почта"></input>
             <input type="text" placeholder="Тема письма"></input>
             <input type="textarea" placeholder="Ваше сообщение"></input>
-            <Button name="Отправить" />
+            <ButtonAtomicComponent name="Отправить" />
           </div>
         </Slide>
       </div>
     </div>
   )
-}
+};
+
+export default ContactsComponent;

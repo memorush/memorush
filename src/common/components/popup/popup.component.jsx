@@ -6,7 +6,7 @@ import { popupStateSelector, hidePopup } from '../../../redux/features/popup/pop
 
 const SHOW_TIME_POPUP = 4000;
 
-const Popup = () => {
+const PopupComponent = () => {
 
   const dispatch = useDispatch();
   const { isVisible, popupEntity } = useSelector(popupStateSelector);
@@ -29,4 +29,4 @@ const Popup = () => {
   )
 }
 
-export default Popup;
+export default PopupComponent;

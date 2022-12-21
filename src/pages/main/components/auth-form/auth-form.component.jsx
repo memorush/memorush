@@ -2,10 +2,10 @@ import cn from 'classnames';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './auth-form.module.css';
-import LoginForm from './login-form/login-form.component';
-import RegisterForm from './register-form/register-form.component';
+import LoginFormComponent from './login-form/login-form.component';
+import RegisterFormComponent from './register-form/register-form.component';
 
-const AuthForm = () => {
+const AuthFormComponent = () => {
 
   const [isLoginForm, setIsLoginForm] = useState(true);
 
@@ -29,10 +29,10 @@ const AuthForm = () => {
         </p>
       </div>
       <div className={styles.content}>
-        {isLoginForm ? <LoginForm /> : <RegisterForm />}
+        {isLoginForm ? <LoginFormComponent /> : <RegisterFormComponent />}
       </div>
     </div>
   )
 }
 
-export default AuthForm;
+export default AuthFormComponent;

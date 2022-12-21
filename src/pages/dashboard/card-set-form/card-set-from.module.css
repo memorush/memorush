@@ -1,0 +1,105 @@
+.container {
+	display: grid;
+	overflow: hidden;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+.cardSetFormContainer {
+	background-color: white;
+}
+
+.cardSetFormTitle,
+.importCardsDataTitle,
+.newFlashCardTitle,
+.actionsTitle {
+	padding: 2%;
+	background-color: #F9F8F8;
+	border-bottom:  1px solid #DDD;
+}
+
+.cardSetFormTitle {
+	display: grid;
+	grid-template-columns: min-content min-content;
+	gap: 20px;
+	align-items: center;
+	white-space: nowrap
+}
+
+.svgContainer {
+	width: 70px;
+	height: 70px;
+}
+
+.cardSetFormColumns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	padding: 2% 5%;
+}
+
+.cardSetFormColumnsRight,
+.cardSetFormColumnsLeft {
+	display: grid;
+	gap: 20px;
+	align-items: center;
+	background-color: white;
+}
+
+.cardSetFormColumns input {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 2rem;
+	padding: 1rem;
+	background-color: #eee;
+	border: none;
+	border-radius: 10px;
+}
+
+.cardSetFormColumns textarea {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	min-height: 100px;
+	padding: 1rem;
+	background-color: #eee;
+	border: none;
+	border-radius: 10px;
+}
+
+.cardSetFormColumns label {
+	font-size: 1.2rem;
+}
+
+.importCardsDataFormContainer {
+	display: grid;
+	gap: 20px;
+	background-color: white;
+}
+
+.importCardsDataForm {
+	display: grid;
+	gap: 20px;
+	padding: 2% 5%;
+	background-color: white;
+}
+
+.newFlashCardContainer {
+	display: grid;
+	gap: 20px;
+	background-color: #EBEBEB;
+	box-shadow: 1px 1px 1px 1px silver;
+}
+
+.newFlashCardListContainer {
+	display: grid;
+	gap: 20px;
+}
+
+.actionsButtons {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 20px;
+	padding: 5%;
+	background-color: white;
+}

@@ -4,7 +4,7 @@ import { ReactComponent as CloverSvg } from './svg/clover-svgrepo-com.svg';
 
 import style from './footer.module.css';
 
-const Footer = () => {
+const FooterComponent = () => {
   return (
     <div className={cn(style.container)}>
       <div className={cn(style.upper)}>
@@ -53,4 +53,4 @@ const Footer = () => {
   )
 }
 
-export default Footer;
+export default FooterComponent;

@@ -1,6 +1,6 @@
 import styles from './button.module.css';
 
-const Button = ({ name, style, color, handler, children }) => {
+const ButtonAtomicComponent = ({ name, style, color, handler, children }) => {
   return (
     <div data-testid="button-atomic-component"
       className={styles.container}
@@ -11,4 +11,4 @@ const Button = ({ name, style, color, handler, children }) => {
   )
 }
 
-export default Button;
+export default ButtonAtomicComponent;

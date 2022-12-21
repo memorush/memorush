@@ -1,6 +1,6 @@
 import styles from './title.module.css';
 
-const Title = ({ name, style }) => {
+const TitleAtomicComponent = ({ name, style }) => {
   return (
     <div
       className={styles.container}
@@ -11,4 +11,4 @@ const Title = ({ name, style }) => {
   )
 }
 
-export default Title;
+export default TitleAtomicComponent;

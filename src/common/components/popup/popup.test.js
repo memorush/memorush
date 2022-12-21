@@ -3,7 +3,7 @@ import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 import * as ReactRedux from 'react-redux'
 
-import Popup from "./popup.component";
+import PopupComponent from "./popup.component";
 
 
 let container = null;
@@ -32,7 +32,7 @@ it("should select null after timing out", () => {
     .mockReturnValue({ isVisible: true, popupEntity: {} })
 
   act(() => {
-    render(<Popup />, container);
+    render(<PopupComponent />, container);
   });
 
 });

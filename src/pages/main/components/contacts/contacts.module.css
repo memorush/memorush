@@ -1,17 +1,17 @@
 .container {
-	padding: 50px;
 	display: grid;
+	padding: 50px;
 	background-image: url("https://images.unsplash.com/photo-1586449480558-33ae22ffc60d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
 	background-attachment: fixed;
 }
 
 .info {
-	padding: 100px 0;
 	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	gap: 20px;
 	align-items: center;
 	justify-items: center;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	padding: 100px 0;
 }
 
 .contactContainer {
@@ -22,9 +22,9 @@
 
 .contactItem {
 	display: grid;
+	grid-template-areas: "i h4" "i p";
 	grid-template-columns: 1fr 7fr;
 	align-items: center;
-	grid-template-areas: "i h4" "i p";
 	text-shadow: 2px 2px black;
 }
 
@@ -33,9 +33,9 @@
 }
 
 .contactItem h4 {
-	text-transform: uppercase;
-	color: silver;
 	grid-area: h4;
+	color: silver;
+	text-transform: uppercase;
 }
 
 .contactItem p {
@@ -43,31 +43,31 @@
 }
 
 .formContainer {
-	gap: 20px;
-	background-color: white;
-	padding: 50px;
-	min-width: 50%;
-	border-radius: 10px;
 	display: grid;
+	gap: 20px;
+	min-width: 50%;
+	padding: 50px;
+	background-color: white;
+	border-radius: 10px;
 	opacity: 0.98;
 }
 
 .formContainer input {
 	box-sizing: border-box;
-	margin: 0;
-	font-family: inherit;
-	overflow: visible;
 	display: block;
 	width: 100%;
+	height: 52px;
 	padding: 0.375rem 0.75rem;
+	margin: 0;
+	overflow: visible;
+	font-family: inherit;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.5;
-	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-	height: 52px;
-	background: #fff;
 	color: #000;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 2px;
 	box-shadow: none !important;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	font-size: 16px;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }

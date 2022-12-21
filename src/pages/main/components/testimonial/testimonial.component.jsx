@@ -2,7 +2,7 @@ import styles from './testimonial.module.css';
 import CommentCardComponent from './comment-card/comment-card.component';
 import Fade from 'react-reveal/Fade';
 
-const Testimonial = () => {
+const TestimonialComponent = () => {
   return (
     <div id="testimonial" className={styles.container}>
       <Fade cascade bottom>
@@ -19,4 +19,4 @@ const Testimonial = () => {
   )
 }
 
-export default Testimonial;
+export default TestimonialComponent;

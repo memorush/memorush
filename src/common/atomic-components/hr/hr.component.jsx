@@ -1,9 +1,9 @@
 import styles from './hr.module.css';
 
-const Hr = () => {
+const HrAtomicComponent = () => {
   return (
     <div className={styles.container}></div>
   )
 }
 
-export default Hr;
+export default HrAtomicComponent;
