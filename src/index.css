@@ -40,3 +40,16 @@ code {
 body>iframe {
 	pointer-events: none;
 }
+
+body::-webkit-scrollbar {
+  width: 10px;               /* ширина всей полосы прокрутки */
+}
+
+body::-webkit-scrollbar-track {
+  background: #EFEFEF;        /* цвет зоны отслеживания */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1999C3;    /* цвет бегунка */
+  border-radius: 20px;       /* округлось бегунка */
+}
