@@ -21,3 +21,7 @@
 	display: grid;
 	justify-items: end;
 }
+
+.userContainer i {
+	cursor: pointer;
+}
