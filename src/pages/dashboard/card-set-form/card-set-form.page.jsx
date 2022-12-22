@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import {
   cardSetByIdSelector
-} from '../../../redux/features/card/cardSlice';
+} from '../../../redux/features/card-set/card-set.slice';
 import styles from './card-set-from.module.css';
 import ActionButtonsComponent from './components/action-buttons/action-buttons.component';
 import FlashCardFormComponent from './components/flash-card-form/flash-card-form.component';
@@ -25,10 +25,10 @@ const CardSetFormPage = () => {
   // Search params fields
   const [searchParams] = useSearchParams();
   const cardSetId = searchParams.get('id');
-  // Init state for card set
+  // Init state for card-set set
   const [cardSetEntity, setCardSetEntity] = useState(INIT_CARD_SET_STATE);
 
-  // Get data for card set with id = ...
+  // Get data for card-set set with id = ...
   const cardSetById = useSelector(state => cardSetByIdSelector(state, cardSetId));
 
   useEffect(() => {

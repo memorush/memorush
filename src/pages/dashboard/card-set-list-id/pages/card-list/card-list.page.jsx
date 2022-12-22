@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import {
   cardSetByIdSelector
-} from '../../../../../redux/features/card/cardSlice';
+} from '../../../../../redux/features/card-set/card-set.slice';
 import CardItem from './components/card-item/card-item.component';
 import styles from "./card-list.module.css";
 
@@ -10,7 +10,7 @@ const CardListPage = () => {
 
   const { cardSetId } = useParams();
 
-  // Get data for card set with id = ...
+  // Get data for card-set set with id = ...
   const cardSetById = useSelector(state => cardSetByIdSelector(state, cardSetId));
 
   const showFlashCardItems = () => (

@@ -3,18 +3,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import ButtonAtomicComponent from '../../../common/atomic-components/button/button.component';
 import {
-  cardEntitySelector,
+  cardSetEntitiesSelector,
   deleteCardSet,
   getAllCardSets,
   setFavoriteCardSet
-} from '../../../redux/features/card/cardSlice';
+} from '../../../redux/features/card-set/card-set.slice';
 import { ReactComponent as UserSvg } from './svg/user-svgrepo-com.svg';
 import styles from './card-set-list.module.css';
 
 const CardSetListPage = () => {
 
   const dispatch = useDispatch();
-  const cardEntity = useSelector(cardEntitySelector);
+  const cardSetEntities = useSelector(cardSetEntitiesSelector);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const CardSetListPage = () => {
 
   const showCardSetTable = () => (
     <>
-      {cardEntity.map((cardSet, idx) => {
+      {cardSetEntities.map((cardSet, idx) => {
         const {
           id,
           description,

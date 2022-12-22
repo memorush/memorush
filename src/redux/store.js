@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import PopupMiddleware from './middleware/popup.middleware';
 import { loadState, saveState } from '../service/localStorageService';
 import authReducer from './features/auth/auth-slice';
-import cardReducer from './features/card/cardSlice';
+import cardSetReducer from './features/card-set/card-set.slice';
 import popupReducer from './features/popup/popup-slice';
 
 const persistedState = loadState('auth');
@@ -10,7 +10,7 @@ const persistedState = loadState('auth');
 const store = configureStore({
   reducer: {
     auth: authReducer,
-    card: cardReducer,
+    cardSet: cardSetReducer,
     popup: popupReducer
   },
   preloadedState: {

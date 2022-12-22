@@ -78,19 +78,19 @@ const PopupMiddleware = ({ dispatch, getState }) => next => action => {
       dispatch(showPopup(POPUP_PROPERTIES.invalidateLoggedInUser));
       break;
     }
-    case 'card/create/fulfilled': {
+    case 'card-set/create/fulfilled': {
       dispatch(showPopup(POPUP_PROPERTIES.cardCreateFulfilled));
       break;
     }
-    case 'card/delete/fulfilled': {
+    case 'card-set/delete/fulfilled': {
       dispatch(showPopup(POPUP_PROPERTIES.cardDeleteFulfilled));
       break;
     }
-    case 'card/setFavorite/fulfilled': {
+    case 'card-set/setFavorite/fulfilled': {
       dispatch(showPopup(POPUP_PROPERTIES.setFavoriteFulfilled));
       break;
     }
-    case 'card/update/fulfilled': {
+    case 'card-set/update/fulfilled': {
       dispatch(showPopup(POPUP_PROPERTIES.updateCardSetFulfilled));
       break;
     }

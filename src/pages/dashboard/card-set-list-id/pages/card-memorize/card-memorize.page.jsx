@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import ButtonAtomicComponent from '../../../../../common/atomic-components/button/button.component';
 import {
   flashCardArrayFromCardSetWithIdSelector
-} from '../../../../../redux/features/card/cardSlice';
+} from '../../../../../redux/features/card-set/card-set.slice';
 import CardItem from '../card-list/components/card-item/card-item.component';
 import styles from './card-memorize.module.css';
 import CongratulationComponent from './components/congratulation/congratulation.component';
