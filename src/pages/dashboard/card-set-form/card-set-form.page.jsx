@@ -97,7 +97,7 @@ const CardSetFormPage = () => {
           </div>
         </div>
       </div>
-      <ImportCardDataComponent />
+      <ImportCardDataComponent setCardSetEntity={setCardSetEntity} cardSetEntity={cardSetEntity}/>
       <FlashCardFormComponent
         cardSetEntity={cardSetEntity}
         setCardSetEntity={setCardSetEntity}
