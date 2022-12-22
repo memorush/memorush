@@ -19,7 +19,7 @@ const CardListPage = () => {
 
   const showFlashCardItemsEl = (flashCardArray) => (
     flashCardArray.map(card => (
-      <CardItemComponent card={card} />
+      <CardItemComponent card={card} key={card.id} />
     ))
   )
 
