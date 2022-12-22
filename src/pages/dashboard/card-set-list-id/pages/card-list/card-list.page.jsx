@@ -15,10 +15,10 @@ const CardListPage = () => {
   const { cardSetId } = useParams();
 
   // Get data for card-set set with id = ...
-  const cardSetById = useSelector(state => cardSetByIdSelector(state, cardSetId));
+  const { flashCardArray } = useSelector(state => cardSetByIdSelector(state, cardSetId));
 
-  const showFlashCardItems = () => (
-    cardSetById.flashCardArray.map(card => (
+  const showFlashCardItemsEl = (flashCardArray) => (
+    flashCardArray.map(card => (
       <CardItem card={card} />
     ))
   )
@@ -32,7 +32,7 @@ const CardListPage = () => {
   }
 
   const saveCardSetHandler = () => {
-    saveCardSetToFile(JSON.stringify(cardSetById), `card-set-${cardSetId}.txt`, 'text/plain')
+    saveCardSetToFile(JSON.stringify(flashCardArray), `card-set-${cardSetId}.txt`, 'text/plain')
   }
 
   const printHandler = useReactToPrint({
@@ -46,8 +46,7 @@ const CardListPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.containerTitle}>
-        <h1>{cardSetId}</h1>
-        <h3>12 Cards in this Set</h3>
+        <h3><span>{flashCardArray.length}</span> Cards in this Set</h3>
       </div>
       <div className={styles.actionsButtons}>
         <p>Press on a card for turning on</p>
@@ -58,7 +57,7 @@ const CardListPage = () => {
         </div>
       </div>
       <div className={styles.cardsContainer} ref={printRef}>
-        {showFlashCardItems()}
+        {showFlashCardItemsEl(flashCardArray)}
       </div>
     </div>
   )
