@@ -5,7 +5,7 @@ import {
   cardSetByIdSelector
 } from '../../../../../redux/features/card-set/card-set.slice';
 import { useReactToPrint } from 'react-to-print';
-import CardItem from './components/card-item/card-item.component';
+import CardItemComponent from './components/card-item/card-item.component';
 import styles from "./card-list.module.css";
 
 const CardListPage = () => {
@@ -19,7 +19,7 @@ const CardListPage = () => {
 
   const showFlashCardItemsEl = (flashCardArray) => (
     flashCardArray.map(card => (
-      <CardItem card={card} />
+      <CardItemComponent card={card} />
     ))
   )
 

@@ -5,7 +5,7 @@ import ButtonAtomicComponent from '../../../../../common/atomic-components/butto
 import {
   flashCardArrayFromCardSetWithIdSelector
 } from '../../../../../redux/features/card-set/card-set.slice';
-import CardItem from '../card-list/components/card-item/card-item.component';
+import CardItemComponent from '../card-list/components/card-item/card-item.component';
 import styles from './card-memorize.module.css';
 import CongratulationComponent from './components/congratulation/congratulation.component';
 import TipComponent from './components/tip/tip.component';
@@ -49,7 +49,7 @@ const CardMemorizePage = () => {
       <div className={styles.workArea}>
         {cards.length !== 0
           ?
-          <CardItem card={cards[currentPosition]} />
+          <CardItemComponent card={cards[currentPosition]} />
           :
           <CongratulationComponent setInitStateHandler={setInitStateHandler} />
         }
