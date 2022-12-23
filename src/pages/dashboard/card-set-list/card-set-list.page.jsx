@@ -21,6 +21,12 @@ const CardSetListPage = () => {
     dispatch(getAllCardSets());
   }, []);
 
+  const trimTextForSpecificLength = (text, len) => {
+    if (text.length > 20) {
+      return text.substring(0, len) + "...";
+    }
+  }
+
   const showCardSetTable = () => (
     <>
       {cardSetEntities.map((cardSet, idx) => {
@@ -40,7 +46,7 @@ const CardSetListPage = () => {
             >
               {cardSet.name}
             </td>
-            <td>{description}</td>
+            <td>{trimTextForSpecificLength(description, 20)}</td>
             <td>{createdAt}</td>
             <td>{updatedAt}</td>
             <td>{flashCardArray.length}</td>
