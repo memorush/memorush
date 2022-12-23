@@ -1,8 +1,11 @@
 import styles from './info.module.css';
 import ButtonAtomicComponent from '../../../common/atomic-components/button/button.component';
 import { useNavigate } from 'react-router-dom';
-import { ReactComponent as FindSvg } from './svg/search.svg';
-import { ReactComponent as Books } from './svg/books.svg';
+import { ReactComponent as FindSvg } from './svg/loupe-search-svgrepo-com.svg';
+import { ReactComponent as BooksSvg } from './svg/books-svgrepo-com.svg'
+import { ReactComponent as AppleSvg } from './svg/apple-files-ios-svgrepo-com.svg'
+import { ReactComponent as AndroidSvg } from './svg/android-svgrepo-com (1).svg'
+import { ReactComponent as BrainSvg } from './svg/brain-svgrepo-com (1).svg'
 
 const InfoPage = () => {
 
@@ -11,16 +14,16 @@ const InfoPage = () => {
   const showCategoriesListElement = () => {
     return (
       <ul>
-        <li>Careers</li>
-        <li>Computers</li>
-        <li>Course Subjects</li>
-        <li>Education</li>
-        <li>Exam</li>
-        <li>Language</li>
-        <li>Law Enforcement</li>
-        <li>Medical</li>
-        <li>Military</li>
-        <li>All Subjects All Subjects</li>
+        <li>Карьера</li>
+        <li>Компьютеры</li>
+        <li>Образование</li>
+        <li>Экзамены</li>
+        <li>Языки</li>
+        <li>Закон и право</li>
+        <li>Медицина</li>
+        <li>Военное дело</li>
+        <li>Армия</li>
+        <li>... и многое другое</li>
       </ul>
     )
   }
@@ -31,28 +34,28 @@ const InfoPage = () => {
         <div className={styles.inputContainerSvg}>
           <FindSvg />
         </div>
-        <h1 className={styles.inputContainerTitle}>Find flashcards to study</h1>
+        <h1 className={styles.inputContainerTitle}>Найди готовые флеш-карточки</h1>
         <input className={styles.inputContainerInput} type="text" />
         <div className={styles.inputContainerButton}>
           {/* //TODO Дописать логику */}
-          <ButtonAtomicComponent name="Search"
-                                 handler={() => navigate("/dashboard/card-set-list")}
+          <ButtonAtomicComponent name="Искать"
+            handler={() => navigate("/dashboard/card-set-list")}
           />
         </div>
       </div>
       <div className={styles.separatorContainer}>
-        <h1>or</h1>
+        <h1>или</h1>
       </div>
       <div className={styles.createContainer}>
-        <div className={styles.createContainerSvg}>
-          <Books />
+        <div className={styles.booksContainerSvg}>
+          <BooksSvg />
         </div>
         <div className={styles.createContainerButton}>
-          <ButtonAtomicComponent name="Create flashcards"
-                                 handler={() => navigate("/dashboard/card-set-list")}
+          <ButtonAtomicComponent name="Создать флеш-карточки"
+            handler={() => navigate("/dashboard/card-set-list")}
           />
         </div>
-        <h1 className={styles.createContainerTitle}>Make your own cards</h1>
+        <h1 className={styles.createContainerTitle}>Создай свои собственные</h1>
       </div>
     </div>
   )
@@ -62,51 +65,54 @@ const InfoPage = () => {
       <div className={styles.usersStatContainer}>
         <div className={styles.usersStatItem}>
           <h3>3,372,913</h3>
-          <p>members</p>
+          <p>пользователей</p>
         </div>
         <div className={styles.usersStatItem}>
           <h3>31,372,913</h3>
-          <p>flashcards</p>
+          <p>флеш-карточек</p>
         </div>
         <div className={styles.usersStatItem}>
           <h3>31,372,913</h3>
-          <p>flashcards added this week</p>
+          <p>карточек добавлено за последний месяц</p>
         </div>
         <div className={styles.usersStatItem}>
           <h3>31,372,913</h3>
-          <p>flashcards added this week</p>
+          <p>пользователи поставили лайк</p>
         </div>
       </div>
       <div className={styles.descriptionContainer}>
         <div className={styles.rulesContainer}>
           <div className={styles.categoriesContainer}>
-            <h1>Browse By Category</h1>
+            <h1>Просмотр по категориям</h1>
             {showCategoriesListElement()}
           </div>
           <div className="">
-            <h1>The One-Stop Destination for Flashcards and Writing Help</h1>
-            <p>Find quality resources to help you understand concepts, learn important information, and turn in well-researched assignments at your fingertips! Bolster your flagging inspiration with Cram, where you’ll have access to thousands of essays and flashcards submitted by students just like you.</p>
+            <h1>Универсальное место для карточек и справки по написанию</h1>
+            <p>Находите качественную информацию, которая поможет вам разобраться в концепциях языка, изучайте слова и ваши собственные словосочетания в удобном итерактивном тренажере! Выйдите на новый уровень владения языком и вашей памятью с помощью Memorush, где у вас будет доступ к тысячам сочинений и карточек, присланных такими же учащимися, как и вы.</p>
           </div>
           <div className="">
-            <h1>Writing Tool</h1>
-            <p>Complete the last step of writing your essay by checking what you wrote in our all-in-one Writing Tool. Cram’s Writing Tool helps you detect grammar issues and accidental plagiarism. You can also add citations to your paper in MLS, APA, and Chicago styles. Take that step and turn your good paper into an excellent one that’s ready to be turned in.</p>
+            <h1>Инструмент для письма</h1>
+            <p>Запоминайте написание слов, старайтесь встречаться с ними часто. Проще всего это делать с помощью регулярного повторения, а в этом вам поможет Memorush</p>
           </div>
           <div className="">
-            <h1>Flashcards</h1>
-            <p>Having trouble preparing for tests and exams? Look no further. Besides essay homework help, Cram also helps you memorize all that hard-to-remember information with online flashcards so that you ace your exams!
-              You can even make your own set with our web-based flashcard maker and export them to any device. Better yet, share them with your friends and classmates. The handy Cram app (available on Google Play and the App Store) also allows you to do all this and more, on the go.</p>
+            <h1>Флеш-карточки</h1>
+            <p>Проблемы с подготовкой к тестам и экзаменам? У нас есть решение! Memorush поможет вам запомнить всю эту труднозапоминаемую информацию с помощью онлайн-карточек, чтобы вы лучше сдали экзамены!</p>
+            <p>Вы даже можете создать свой собственный набор с помощью нашего веб-создателя карточек и экспортировать их на любое устройство. А еще лучше, поделитесь ими со своими друзьями и одноклассниками. Удобное приложение Memorush (доступно в Google Play и App Store) также позволяет вам делать все это и многое другое на ходу.</p>
           </div>
         </div>
         <div className={styles.mobileContainer}>
           <div className="">
-            <h3>Popular Documents</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dignissimos animi ea eius tempora reiciendis delectus earum dicta perspiciatis iste explicabo, ab et cupiditate voluptatibus, culpa velit repellat? Id aspernatur eos impedit obcaecati minima molestias, velit perspiciatis cumque alias praesentium accusantium aut exercitationem ducimus aliquid dignissimos, culpa accusamus nesciunt sed?</p>
+            <h3>Популярные наборы</h3>
+            <p>Флэш-карты — невероятно полезный инструмент, помогающий запомнить все. Вы должны использовать их, независимо от того, учитесь ли вы программировать, готовитесь к экзамену или даже делаете публичные выступления.</p>
+            <p>Вы можете записывать факты и детали на карточки и использовать их в качестве подсказок. Или с помощью двусторонних карточек вы можете написать вопрос с одной стороны и ответ с другой, и у вас есть готовый поп-тест, чтобы проверить себя в любое время.</p>
+            <p>Но вам не нужно иметь реальный набор карточек и ручку; Ваш телефон может выполнять эту работу так же хорошо.</p>
           </div>
           <div className="">
-            <h3>Go Mobile</h3>
-            <p>Study on your phone by downloading the
-              Memorush app.
-              It’s free.</p>
+            <h3>Переходите в мобильное приложение</h3>
+            <p>Все ваши любимые слова всегда под рукой в вашем телефоне!</p>
+            <p>Скачайте приложение сейчас, это бесплатно!</p>
+            <AndroidSvg />
+            <AppleSvg />
           </div>
         </div>
       </div>
@@ -115,18 +121,34 @@ const InfoPage = () => {
 
   const showSearchExamplesContainer = () => (
     <div className={styles.searchExamplesContainer}>
-      <h1>Find example essays for every assignment</h1>
+      <h1>Найдите уже готовые наборы по ключевым словам</h1>
       <div className={styles.inputExamplesContainer}>
         <input type="text" />
-        <ButtonAtomicComponent name="Search" />
+        <ButtonAtomicComponent name="Искать" />
       </div>
     </div>
   )
 
   const showRecommendContainer = () => (
     <div className={styles.recommendContainer}>
-      <h1>Our recommends</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem error molestiae, sequi distinctio quas recusandae ratione modi sed quae harum.</p>
+      <div className={styles.recommendContainerTitle}>
+        <div className={styles.brainSvgContainer}>
+          <BrainSvg />
+        </div>
+        <h1>Наши рекомендации по изучению слов</h1>
+      </div>
+      <div className={styles.recommendContent}>
+        <ul>
+          <li>Объединяйте слова по тематике</li>
+          <li>Используйте ассоциации и персонализацию</li>
+          <li>Используйте изученную лексику в речи</li>
+          <li>Регулярно тестируйте свои знания</li>
+          <li>Выполняйте свой ежедневный план</li>
+          <li>Пользуйтесь развлекательными методами обучения</li>
+          <li>Развивайте свою память</li>
+          <li><b>И немного удачи</b></li>
+        </ul>
+      </div>
     </div>
   )
 

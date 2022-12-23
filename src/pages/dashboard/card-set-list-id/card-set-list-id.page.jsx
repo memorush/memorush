@@ -28,9 +28,9 @@ const CardSetListIdPage = () => {
           <h1>{name}</h1>
         </div>
         <div className={styles.mainInfo}>
-          <p>Is favorite? <i className="fas fa-heart" style={{ color: isFavorite ? 'red' : '' }}></i></p>
-          <p>Create Date: <span>{createdAt}</span></p>
-          <p>Update Date: {updatedAt}</p>
+          <p>Любимый набор? <i className="fas fa-heart" style={{ color: isFavorite ? 'red' : '' }}></i></p>
+          <p>Дата создания: <span>{createdAt}</span></p>
+          <p>Дата обновления: {updatedAt}</p>
         </div>
       </div>
       <div className={styles.actionButtons}>

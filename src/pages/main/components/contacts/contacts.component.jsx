@@ -19,18 +19,18 @@ const ContactsComponent = () => {
             </div>
             <div className={style.contactItem}>
               <i className="fas fa-phone"></i>
-              <h4>Phone</h4>
+              <h4>Телефон</h4>
               <p>-</p>
             </div>
             <div className={style.contactItem}>
               <i className="fas fa-envelope-open"></i>
               <h4>Почта</h4>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p>y.dubovitsky@gmail.com</p>
             </div>
             <div className={style.contactItem}>
               <i className="fab fa-internet-explorer"></i>
               <h4>Вебсайт</h4>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p>www.y-dubovitsky.ru</p>
             </div>
           </div>
         </Slide>

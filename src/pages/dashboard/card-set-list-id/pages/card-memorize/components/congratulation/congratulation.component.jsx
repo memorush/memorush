@@ -13,7 +13,7 @@ const CongratulationComponent = ({ setInitStateHandler }) => {
         <h1>Поздравляю! Вы выучили все слова!</h1>
         <ButtonAtomicComponent
           name="Повторить"
-          color="#00FFA9"
+          color="#39CA6C"
           handler={setInitStateHandler}
         />
         <ButtonAtomicComponent

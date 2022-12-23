@@ -61,7 +61,7 @@
   align-items: center;
 }
 
-.createContainerSvg {
+.booksContainerSvg {
   grid-area: createContainerSvg;
   width: 70px;
   height: 70px;
@@ -116,6 +116,11 @@
   justify-items: start
 }
 
+.svgContainer {
+  width: 70px;
+  height: 70px;
+}
+
 .findSvg {
   grid-area: findSvg;
 }
@@ -167,8 +172,28 @@
 
 .recommendContainer {
   display: grid;
-  gap: 20px;
-  padding: 5%;
   background-color: #F9F8F8;
   border-radius: 10px;
+}
+
+.recommendContainerTitle {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 5%;
+  border-bottom: 1px solid #DDD;
+}
+
+.brainSvgContainer {
+  width: 70px;
+  height: 70px;
+}
+
+.recommendContent {
+  padding: 5%;
+  background-color: white;
+}
+
+.recommendContainer ul li {
+  list-style: decimal;
 }

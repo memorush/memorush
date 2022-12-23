@@ -46,10 +46,10 @@ const CardListPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.containerTitle}>
-        <h3><span>{flashCardArray.length}</span> Cards in this Set</h3>
+        <h3><span>{flashCardArray.length}</span> карточек в этом наборе</h3>
       </div>
       <div className={styles.actionsButtons}>
-        <p>Press on a card for turning on</p>
+        <p>Нажмите на карточку, чтобы ее перевернуть</p>
         <div className={styles.buttons}>
           <i className="fas fa-edit" onClick={navigateToEditFormHandler}> Edit</i>
           <i className="fas fa-print" onClick={printHandler}> Print</i>
