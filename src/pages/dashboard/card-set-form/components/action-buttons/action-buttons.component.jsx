@@ -25,7 +25,7 @@ const ActionButtonsComponent = (
       <div className={styles.title}>
         <h1>Закончить и создать набор</h1>
       </div>
-      <div className={styles.actionsButtons}>
+      <div className={styles.buttonsContainer}>
         {cardSetId ?
           <>
             <ButtonAtomicComponent

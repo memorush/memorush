@@ -8,9 +8,9 @@
   border-bottom: 1px solid #DDD;
 }
 
-.actionsButtons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+.buttonsContainer {
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 5%;
   background-color: white;
