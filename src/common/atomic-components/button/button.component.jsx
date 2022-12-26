@@ -4,7 +4,7 @@ const ButtonAtomicComponent = ({ name, style, color, handler, children }) => {
   return (
     <div data-testid="button-atomic-component"
       className={styles.container}
-      style={{ backgroundColor: color, ...style }}
+      style={{ background: color, ...style }}
       onClick={handler}
     ><p>{name}</p>
     </div>
