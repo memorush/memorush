@@ -37,6 +37,7 @@ const CardSetListPage = () => {
           updatedAt,
           flashCardArray,
           folder,
+          categoryName,
           isFavorite } = cardSet;
         return (
           <tr key={idx} className={styles.tr}>
@@ -51,7 +52,7 @@ const CardSetListPage = () => {
             <td>{updatedAt}</td>
             <td>{flashCardArray.length}</td>
             <td>{folder}</td>
-            <td>{isFavorite}</td>
+            <td>{categoryName}</td>
             <td className={styles.toolsContainer}>
               <i className="fas fa-edit"
                 onClick={() => navigate(`/dashboard/card-set-edit?id=${id}`)}
@@ -116,7 +117,7 @@ const CardSetListPage = () => {
                   <th>Обновлен</th>
                   <th>Количество карт</th>
                   <th>Папка</th>
-                  <th>Любимый</th>
+                  <th>Категория</th>
                   <th>Действия</th>
                 </tr>
                 {showCardSetTable()}

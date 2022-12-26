@@ -13,6 +13,7 @@ import { ReactComponent as PenSvg } from './svg/pen-svgrepo-com.svg';
 const INIT_CARD_SET_STATE = {
   name: "",
   tags: "",
+  categoryName: "",
   description: "",
   flashCardArray: {
     0: {}
@@ -36,6 +37,7 @@ const CardSetFormPage = () => {
       setCardSetEntity({
         name: cardSetById.name,
         tags: cardSetById.tags,
+        categoryName: cardSetById.categoryName,
         description: cardSetById.description,
         flashCardArray: { ...cardSetById.flashCardArray }
       })
@@ -75,13 +77,23 @@ const CardSetFormPage = () => {
             <input
               type="text"
               name="name"
+              placeholder="Придумайте название набора"
               onChange={cardSetEntityHandler}
               value={cardSetEntity.name}
             />
-            <label htmlFor='tags'>Ключевые слова(Опционально)</label>
+            <label htmlFor='category'>Категория</label>
+            <input
+              type="text"
+              name="categoryName"
+              placeholder="Введите название категории"
+              onChange={cardSetEntityHandler}
+              value={cardSetEntity.categoryName}
+            />
+            <label htmlFor='tags'>Ключевые слова(Опционально) через запятую</label>
             <input
               type="text"
               name="tags"
+              placeholder="медицина, хирургия, pill, срочно, время"
               onChange={cardSetEntityHandler}
               value={cardSetEntity.tags}
             />
@@ -91,13 +103,14 @@ const CardSetFormPage = () => {
             <textarea
               name="description"
               onChange={cardSetEntityHandler}
+              placeholder="Добавьте краткое описание"
               value={cardSetEntity.description}
             >
             </textarea>
           </div>
         </div>
       </div>
-      <ImportCardDataComponent setCardSetEntity={setCardSetEntity} cardSetEntity={cardSetEntity}/>
+      <ImportCardDataComponent setCardSetEntity={setCardSetEntity} cardSetEntity={cardSetEntity} />
       <FlashCardFormComponent
         cardSetEntity={cardSetEntity}
         setCardSetEntity={setCardSetEntity}
