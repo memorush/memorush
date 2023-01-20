@@ -87,8 +87,17 @@ const ImportCardDataComponent = ({ setCardSetEntity, cardSetEntity }) => {
         </SyntaxHighlighter>
         <p>Остальные поля в импортируемом файле игнорируются! Вложенность не имеет значения.</p>
         <div className={styles.inputContainer}>
-          <input type="text" name="cardSetName" onChange={onCardSetNameInputChangeHandler} placeholder='Введите название набора карточек в вашем json файле' />
-          <input type="file" onChange={onFileChangeHandler} />
+          <input
+            type="text"
+            name="cardSetName"
+            onChange={onCardSetNameInputChangeHandler}
+            placeholder='Введите название набора карточек в вашем json файле'
+          />
+          <input
+            type="file"
+            onChange={onFileChangeHandler}
+            disabled={cardSetNameInput ? false : true}
+          />
         </div>
       </div>
     </div>
