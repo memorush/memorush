@@ -1,0 +1,15 @@
+.container {
+  background: #FFFFFF;
+  padding: 5%;
+  display: grid;
+  gap: 20px;
+}
+
+.cardSetListItem {
+  border-bottom: 1px solid silver;
+  padding: 5%;
+}
+
+.cardSetListItem a {
+  text-decoration: none;
+}

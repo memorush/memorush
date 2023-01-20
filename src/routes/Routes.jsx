@@ -12,6 +12,8 @@ import MainPage from "../pages/main/main.page";
 import NotFoundPage from "../pages/not-found/not-found.page";
 import RequireAuthRoute from "../wrapper/RequireAuthRoute";
 import InfoPage from "../pages/dashboard/info/info.page";
+import SearchPage from "../pages/dashboard/search/search.page";
+import FoundCardSetDetailsPage from "../pages/dashboard/found-card-set-details/found-card-set-details.page";
 
 const ApplicationRoutes = () => (
   <Routes>
@@ -26,6 +28,9 @@ const ApplicationRoutes = () => (
       <Route element={<RequireAuthRoute />}>
         <Route path="dashboard" element={<DashboardPage />}>
           <Route path="info" element={<InfoPage />} />
+          <Route path="search" element={<SearchPage />} />
+          <Route path="found-card-set-details/:id" element={<FoundCardSetDetailsPage />} />
+          <Route path="found-card-set" element={<SearchPage />} />
           <Route path="card-set-list" element={<CardSetListPage />} />
           <Route path="card-set-list/:cardSetId" element={<CardSetListIdPage />}>
             <Route path="card-list" element={<CardListPage />} />

@@ -1,6 +1,7 @@
 import styles from './info.module.css';
 import ButtonAtomicComponent from '../../../common/atomic-components/button/button.component';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { ReactComponent as FindSvg } from './svg/loupe-search-svgrepo-com.svg';
 import { ReactComponent as BooksSvg } from './svg/books-svgrepo-com.svg'
 import { ReactComponent as AppleSvg } from './svg/apple-files-ios-svgrepo-com.svg'
@@ -10,6 +11,20 @@ import { ReactComponent as BrainSvg } from './svg/brain-svgrepo-com (1).svg'
 const InfoPage = () => {
 
   const navigate = useNavigate();
+
+  const [searchString, setSearchString] = useState('');
+
+  const onSearchStringChangeHandler = (event) => {
+    setSearchString(event.target.value);
+  }
+
+  const navigateToSearchPageHandler = () => (
+    navigate(`/dashboard/search?search=${searchString}`)
+  )
+
+  const navigateToCardSetListHandler = () => (
+    navigate("/dashboard/card-set-list")
+  )
 
   const showCategoriesListElement = () => {
     return (
@@ -35,11 +50,16 @@ const InfoPage = () => {
           <FindSvg />
         </div>
         <h1 className={styles.inputContainerTitle}>Найди готовые флеш-карточки</h1>
-        <input className={styles.inputContainerInput} type="text" />
+        <input
+          className={styles.inputContainerInput}
+          placeholder="Введите клечевое слово"
+          onChange={onSearchStringChangeHandler}
+          type="text"
+        />
         <div className={styles.inputContainerButton}>
-          {/* //TODO Дописать логику */}
-          <ButtonAtomicComponent name="Искать"
-            handler={() => navigate("/dashboard/card-set-list")}
+          <ButtonAtomicComponent
+            name="Искать"
+            clickFunction={navigateToSearchPageHandler}
           />
         </div>
       </div>
@@ -51,8 +71,9 @@ const InfoPage = () => {
           <BooksSvg />
         </div>
         <div className={styles.createContainerButton}>
-          <ButtonAtomicComponent name="Создать флеш-карточки"
-            handler={() => navigate("/dashboard/card-set-list")}
+          <ButtonAtomicComponent
+            name="Создать флеш-карточки"
+            clickFunction={navigateToCardSetListHandler}
           />
         </div>
         <h1 className={styles.createContainerTitle}>Создай свои собственные</h1>
@@ -123,8 +144,14 @@ const InfoPage = () => {
     <div className={styles.searchExamplesContainer}>
       <h1>Найдите уже готовые наборы по ключевым словам</h1>
       <div className={styles.inputExamplesContainer}>
-        <input type="text" />
-        <ButtonAtomicComponent name="Искать" />
+        <input
+          type="text"
+          placeholder='Введите название набора или категории'
+          onChange={onSearchStringChangeHandler}
+        />
+        <ButtonAtomicComponent
+          name="Искать"
+          clickFunction={navigateToSearchPageHandler} />
       </div>
     </div>
   )

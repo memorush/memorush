@@ -42,7 +42,7 @@ const RegisterFormComponent = () => {
     })
   }
 
-  const onRegisterFormHandler = () => {
+  const registerNewUserHandler = () => {
     if (isFormDataValidHandler() === true) {
       dispatch(registration(formData));
     }
@@ -110,7 +110,10 @@ const RegisterFormComponent = () => {
           placeholder='email' />
         {validationError !== null ? showValidationElement() : null}
       </div>
-      <ButtonAtomicComponent handler={onRegisterFormHandler} name="Register" />
+      <ButtonAtomicComponent
+        name="Зарегистрироваться"
+        clickFunction={registerNewUserHandler}
+      />
     </div>
   )
 }

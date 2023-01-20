@@ -18,6 +18,18 @@ const CardSetListIdPage = () => {
     isFavorite
   } = useSelector(state => cardSetByIdSelector(state, cardSetId));
 
+  const onNavigateToCardListHandler = () => (
+    navigate(`card-list`)
+  )
+
+  const onNavigateToCardMemorizeHandler = () => (
+    navigate(`card-memorize`)
+  )
+
+  const onNavigateToMainMenuHandler = () => (
+    navigate(`/dashboard/card-set-list`)
+  )
+
   return (
     <div className={styles.container}>
       <div className={styles.containerHeader}>
@@ -34,9 +46,18 @@ const CardSetListIdPage = () => {
         </div>
       </div>
       <div className={styles.actionButtons}>
-        <ButtonAtomicComponent name="Карточки" handler={() => navigate(`card-list`)} />
-        <ButtonAtomicComponent name="Учить!" handler={() => navigate(`card-memorize`)} />
-        <ButtonAtomicComponent name="Главное меню" handler={() => navigate(`/dashboard/card-set-list`)} />
+        <ButtonAtomicComponent
+          name="Карточки"
+          clickFunction={onNavigateToCardListHandler}
+        />
+        <ButtonAtomicComponent
+          name="Учить!"
+          clickFunction={onNavigateToCardMemorizeHandler}
+        />
+        <ButtonAtomicComponent
+          name="Главное меню"
+          clickFunction={onNavigateToMainMenuHandler}
+        />
       </div>
       <div className={styles.content}>
         <Outlet />

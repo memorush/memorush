@@ -2,6 +2,11 @@ import styles from './tip.module.css';
 import ButtonAtomicComponent from '../../../../../../../common/atomic-components/button/button.component';
 
 const TipComponent = ({ setIsStarted }) => {
+
+  const beginToLearnHandler = () => (
+    setIsStarted(true)
+  )
+
   return (
     <div className={styles.container}>
       <h1>Как это работает?</h1>
@@ -11,7 +16,10 @@ const TipComponent = ({ setIsStarted }) => {
         <li>Когда вы выучите все карточки вам будет предложено перейти в главное меню или начать заново</li>
         <li>Советуем вам переодически повторять изученные слова</li>
       </ul>
-      <ButtonAtomicComponent name="Начать учить слова" handler={() => setIsStarted(true)} />
+      <ButtonAtomicComponent
+        name="Начать учить слова"
+        clickFunction={beginToLearnHandler}
+      />
     </div>
   )
 }

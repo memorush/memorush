@@ -28,7 +28,7 @@ const LoginFormComponent = () => {
     })
   }
 
-  const onLoginFormHandler = () => {
+  const loginHandler = () => {
     dispatch(login(formData));
   }
 
@@ -50,7 +50,10 @@ const LoginFormComponent = () => {
           onChange={formInputHandler}
           placeholder='password' />
       </div>
-      <ButtonAtomicComponent handler={onLoginFormHandler} name="Log In" />
+      <ButtonAtomicComponent
+        name="Войти"
+        clickFunction={loginHandler}
+      />
       <div className={styles.forgotPassword}>
         <p>Forgot Password?</p>
       </div>

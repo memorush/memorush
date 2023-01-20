@@ -24,7 +24,7 @@ export const getAllCardSets = createAsyncThunk('card-set/getAllCardSets', async 
 export const createNewCardSet = createAsyncThunk('card-set/create', async (arg, { getState }) => {
   const state = getState();
   const token = state.auth.authEntity.token;
-
+  console.log(arg);
   const payload = {
     method: 'POST',
     url: `${BASE_URL}/api/v1/card-set/add`,

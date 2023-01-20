@@ -7,6 +7,10 @@ const CongratulationComponent = ({ setInitStateHandler }) => {
 
   const navigate = useNavigate();
 
+  const navigateToCardSetListPageHandler = () => (
+    navigate(`/dashboard/card-set-list`)
+  )
+
   return (
     <div className={styles.congratulationContainer}>
       <div className={styles.congratulationActions}>
@@ -14,14 +18,14 @@ const CongratulationComponent = ({ setInitStateHandler }) => {
         <ButtonAtomicComponent
           name="Повторить"
           color="#39CA6C"
-          handler={setInitStateHandler}
+          clickFunction={setInitStateHandler}
         />
         <ButtonAtomicComponent
           name="Перейти в главное меню"
-          handler={() => navigate(`/dashboard/card-set-list`)}
+          clickFunction={navigateToCardSetListPageHandler}
         />
       </div>
-      <img className={styles.congratulationImg} src={congratulationImg} alt=""/>
+      <img className={styles.congratulationImg} src={congratulationImg} alt="" />
     </div>
   )
 }

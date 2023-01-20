@@ -99,13 +99,13 @@ const CardSetListPage = () => {
             <Link to={"/dashboard/card-set-create"}>
               <ButtonAtomicComponent name="Создать набор" />
             </Link>
-            {/* //TODO Добавить логику */}
+            {/* //TODO Добавить логику
             <Link to={"/dashboard/card-set-folders"}>
               <ButtonAtomicComponent name="Папки" />
             </Link>
             <Link to={"/dashboard/card-set-favorites"}>
               <ButtonAtomicComponent name="Избранные" />
-            </Link>
+            </Link> */}
           </div>
           <div className={styles.tableContainer}>
             <table>

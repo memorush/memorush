@@ -19,9 +19,13 @@ const SettingsPage = () => {
     })
   }
 
-  const onUpdateDataHandler = () => {
-    dispatch(updateUserData(userData));
-  }
+  const updateUserDataHandler = () => (
+    dispatch(updateUserData(userData))
+  )
+
+  const navigateToMainMenuHandler = () => (
+    navigate(`/dashboard/card-set-list`)
+  )
 
   return (
     <div className={styles.container}>
@@ -51,8 +55,14 @@ const SettingsPage = () => {
           onChange={onInputDataChangedHandler}
         />
         <div className={styles.actionButtons}>
-          <ButtonAtomicComponent name="Обновить данные пользователя" handler={onUpdateDataHandler} />
-          <ButtonAtomicComponent name="Главное меню" handler={() => navigate(`/dashboard/card-set-list`)} />
+          <ButtonAtomicComponent
+            name="Обновить данные пользователя"
+            clickFunction={updateUserDataHandler}
+          />
+          <ButtonAtomicComponent
+            name="Главное меню"
+            clickFunction={navigateToMainMenuHandler}
+          />
         </div>
       </div>
     </div >

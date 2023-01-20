@@ -22,9 +22,9 @@ const CardMemorizePage = () => {
   const flashCardArrayFromCardSetWithId = useSelector(state => flashCardArrayFromCardSetWithIdSelector(state, cardSetId));
   const [cards, setCards] = useState(flashCardArrayFromCardSetWithId);
 
-  const nextCardHandler = () => {
-    currentPosition < (cards.length - 1) ? setCurrentPosition(currentPosition + 1) : setCurrentPosition(0);
-  }
+  const nextCardHandler = () => (
+    currentPosition < (cards.length - 1) ? setCurrentPosition(currentPosition + 1) : setCurrentPosition(0)
+  )
 
   // Обнулить все значение!
   const setInitStateHandler = () => {
@@ -57,13 +57,13 @@ const CardMemorizePage = () => {
       <div className={styles.buttonsContainer}>
         <ButtonAtomicComponent
           name="Знаю это слово!"
-          handler={knowCardActionHandler}
           color="#5CB85C"
+          clickFunction={knowCardActionHandler}
         />
         <ButtonAtomicComponent
           name="Не знаю"
-          handler={nextCardHandler}
           color="#D9534F"
+          clickFunction={nextCardHandler}
         />
       </div>
     </div>

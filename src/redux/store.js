@@ -4,6 +4,7 @@ import { loadState, saveState } from '../service/localStorageService';
 import authReducer from './features/auth/auth-slice';
 import cardSetReducer from './features/card-set/card-set.slice';
 import popupReducer from './features/popup/popup-slice';
+import searchReducer from './features/search/search.slice';
 
 const persistedState = loadState('auth');
 
@@ -11,7 +12,8 @@ const store = configureStore({
   reducer: {
     auth: authReducer,
     cardSet: cardSetReducer,
-    popup: popupReducer
+    popup: popupReducer,
+    search: searchReducer
   },
   preloadedState: {
     auth: persistedState

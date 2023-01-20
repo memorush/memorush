@@ -1,0 +1,57 @@
+.container {
+  display: grid;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.formSearchContainer {
+  display: grid;
+  gap: 10px;
+  padding: 2% 5%;
+  align-items: center;
+  background-color: #F9F8F8;
+  grid-template-areas: 
+  "svg h1"
+  "svg inputExamplesContainer";
+  border-bottom: 1px solid #DDD;
+}
+
+.formSearchContainer h1 {
+  grid-area: h1;
+}
+
+.formSearchContainer .svgContainer {
+  grid-area: svg;
+  width: 70px;
+  height: 70px;
+}
+
+.formSearchContainer .findSvg {
+  grid-area: findSvg;
+}
+
+.formInputContainer {
+  display: grid;
+  grid-area: inputExamplesContainer;
+  grid-template-columns: 5fr 1fr;
+  gap: 20px;
+}
+
+.formInputContainer input {
+  padding: 5px 10px;
+  color: #8F908F;
+  text-shadow: none;
+  background: #FFFFFF;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  transition: all .2s ease-in-out;
+}
+
+.contentContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardSetListContainer {
+  flex: 5;
+}
