@@ -1,0 +1,18 @@
+# Run it: docker-compose up -d
+# Run only one service: docker-compose up -d stolovaya51-react-dev
+
+version: '3'
+services:
+  # You can rename this service special for docker-hub like: ydubovitsky/stolovaya51 
+  memorush-react-dev:
+    container_name: memorush-react-dev
+    build:
+      dockerfile: ./docker/dev/Dockerfile
+    ports:
+     - "80:3000"
+  memorush-react-production:
+    container_name: memorush-react-production
+    build: 
+      dockerfile: ./docker/production/Dockerfile
+    ports:
+      - "80:80"
