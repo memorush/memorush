@@ -1,5 +1,5 @@
 import styles from './developer.module.css';
-import Slide from 'react-reveal/Slide';
+import { Slide } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 
 const DeveloperComponent = () => {

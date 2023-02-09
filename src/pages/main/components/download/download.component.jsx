@@ -1,6 +1,6 @@
 import styles from './download.module.css';
 import ButtonAtomicComponent from '../../../../common/atomic-components/button/button.component';
-import Slide from 'react-reveal/Slide';
+import { Slide } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 
 const DownloadComponent = () => {

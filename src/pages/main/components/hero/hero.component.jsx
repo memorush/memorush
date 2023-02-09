@@ -1,7 +1,7 @@
 import ButtonAtomicComponent from '../../../../common/atomic-components/button/button.component';
 import styles from './hero.module.css';
 import backgroundImage from "./images/linus-mimietz-gvptKmonylk-unsplash.jpg";
-import { Fade } from 'react-reveal';
+import { Fade } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 
 const HeroComponent = () => {

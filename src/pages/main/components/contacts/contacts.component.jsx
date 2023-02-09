@@ -1,7 +1,7 @@
 import style from './contacts.module.css';
 import ButtonAtomicComponent from '../../../../common/atomic-components/button/button.component';
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
-import Slide from 'react-reveal/Slide';
+import { Slide } from "react-awesome-reveal";
 
 const ContactsComponent = () => {
   return (

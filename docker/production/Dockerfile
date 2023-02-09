@@ -3,7 +3,7 @@
 # docker build . -t ydubovitsky/memorush:0.0.1 -f docker/production/Dockerfile
 
 # build environment
-FROM node:14.15.1-alpine as build
+FROM node:18.14.0-alpine as build
 LABEL author="y.dubovitsky"
 LABEL type="production"
 WORKDIR /react-app

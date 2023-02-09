@@ -1,6 +1,6 @@
 import styles from './testimonial.module.css';
 import CommentCardComponent from './comment-card/comment-card.component';
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 
 const TestimonialComponent = () => {
   return (

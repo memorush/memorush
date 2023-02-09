@@ -1,7 +1,7 @@
 import styles from './gallery.module.css';
 import cn from 'classnames'
 import slide1 from './images/slide1.png';
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 
 const GalleryComponent = () => {

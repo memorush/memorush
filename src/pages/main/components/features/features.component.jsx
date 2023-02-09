@@ -1,7 +1,7 @@
 import styles from './features.module.css';
 import cn from 'classnames';
 import phoneImage from "./images/ipad-hand.png";
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 
 const FeaturesComponent = () =>  {

@@ -1,6 +1,6 @@
 import styles from './screenshots.module.css';
 import phone from '../gallery/images/slide1.png';
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 
 const ScreenshotsComponent = () => {
   return (
