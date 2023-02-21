@@ -16,12 +16,12 @@
 .scrolled {
   padding: 5px 0;
   background-color: #232323;
-  box-shadow: 0 1px 2px rgba(192, 192, 192, 0.4);
+  opacity: 0.8;
 }
 
 .navItemContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   gap: 10px;
   align-items: center;
   justify-items: left;
@@ -35,4 +35,10 @@
 
 .navItem:hover {
   color: #18BBF1
+}
+
+@media (width < 990px) {
+  .container {
+    display: none;
+  }
 }

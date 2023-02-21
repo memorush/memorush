@@ -1,9 +1,11 @@
 .container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 20px;
+	align-items: center;
+	justify-items: center;
 	padding: 50px;
-	color: white;
-	background-color: #161616;
+	background-color: white;
 }
 
 .column {
@@ -17,6 +19,10 @@
 .column.info {
 	display: grid;
 	grid-template-rows: min-content auto;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+	text-align: center;
 }
 
 .header {
@@ -25,25 +31,18 @@
 }
 
 .header .line {
-	width: 50%;
+	width: 80%;
 	height: 1px;
 	background-color: #008ed6;
-}
-
-.column h1 {
-	font-size: 4rem;
 }
 
 .points {
 	display: grid;
 	width: 100%;
+
 }
 
 .point {
-	display: grid;
-	grid-template-columns: min-content max-content;
-	gap: 5px;
-	align-items: center;
-	justify-items: center;
-	font-size: 1.2rem;
+	display: flex;
+	word-break: break-all;
 }

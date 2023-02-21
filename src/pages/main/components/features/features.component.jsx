@@ -1,95 +1,67 @@
-import styles from './features.module.css';
-import cn from 'classnames';
-import phoneImage from "./images/ipad-hand.png";
-import { Fade } from "react-awesome-reveal";
+import { Slide, Fade } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
+import styles from './features.module.css';
 
-const FeaturesComponent = () =>  {
+const features = [
+  {
+    class: "fas fa-users-cog",
+    title: "Совместимость",
+    text: "Удобно работать с различными типами смартфонов/ планшетов"
+  },
+  {
+    class: "fas fa-hands-helping",
+    title: "Поддержка, обслуживание",
+    text: "Регулярные обновления и обратная связь"
+  },
+  {
+    class: "fas fa-mobile-alt",
+    title: "Адаптивность",
+    text: "Размеры приложение адаптируется под ваше персональное устойство"
+  },
+  {
+    class: "fas fa-cloud-upload-alt",
+    title: "Облачное хранение данных",
+    text: "Все ваши данные хранятся в облаке и вы их никогда не потеряете"
+  },
+  {
+    class: "far fa-smile-wink",
+    title: "Интуитивно понятный интерфейс",
+    text: "Ничего лишнего. Ничто не будет вас отвлекать от учебы!"
+  },
+]
+
+const FeaturesComponent = () => {
+
+  const showFeaturesEl = () => {
+    return features.map(el => (
+      <div className={styles.featureContainer}>
+        <div className={styles.featureIcon}>
+          <i className={el.class}></i>
+        </div>
+        <div className={styles.featureHeader}>
+          <p>{el.title}</p>
+        </div>
+        <div className={styles.featureDescription}>
+          <p>{el.text}</p>
+        </div>
+      </div>
+    ))
+  }
+
   return (
     <div id="features" className={styles.container}>
-      <Fade bottom cascade>
-        <div className={styles.header}>
+      <div className={styles.header}>
+        <Fade>
           <TitleAtomicComponent name="Потрясающие особенности приложения" />
-          <div className={styles.line} />
           <p>Основные преимущества при использовании данного сервиса</p>
           <div className={styles.line} />
-        </div>
-        <div className={styles.features}>
-          <div className={cn(styles.column, styles.start)}>
-            <div className={styles.featureContainer}>
-              <div className={styles.featureHeader}>
-                <p>Совместимость</p>
-              </div>
-              <div className={styles.featureIcon}>
-                <i className="fas fa-sync"></i>
-              </div>
-              <div className={styles.featureDescription}>
-                <p>Удобно работать с различными типами смартфонов/ планшетов.</p>
-              </div>
-            </div>
-            <div className={styles.featureContainer}>
-              <div className={styles.featureHeader}>
-                <p>Поддержка, обслуживание</p>
-              </div>
-              <div className={styles.featureIcon}>
-                <i className="fas fa-sync"></i>
-              </div>
-              <div className={styles.featureDescription}>
-                <p>Регулярные обновления и обратная связь</p>
-              </div>
-            </div>
-            <div className={styles.featureContainer}>
-              <div className={styles.featureHeader}>
-                <p>Адаптивность</p>
-              </div>
-              <div className={styles.featureIcon}>
-                <i className="fas fa-sync"></i>
-              </div>
-              <div className={styles.featureDescription}>
-                <p>Приложение адаптируется под ваше персональное устойство</p>
-              </div>
-            </div>
-          </div>
-          <div className={cn(styles.column, styles.middle)}>
-            <img src={phoneImage} alt=""/>
-          </div>
-          <div className={cn(styles.column, styles.end)}>
-            <div className={styles.featureContainer}>
-              <div className={styles.featureHeader}>
-                <p>Облачное хранение данных</p>
-              </div>
-              <div className={styles.featureIcon}>
-                <i className="fas fa-sync"></i>
-              </div>
-              <div className={styles.featureDescription}>
-                <p>Все ваши данные хранятся в облаке и вы их никогда не потеряете</p>
-              </div>
-            </div>
-            <div className={styles.featureContainer}>
-              <div className={styles.featureHeader}>
-                <p>Автономный доступ</p>
-              </div>
-              <div className={styles.featureIcon}>
-                <i className="fas fa-sync"></i>
-              </div>
-              <div className={styles.featureDescription}>
-                <p>Работает без выхода в интернет</p>
-              </div>
-            </div>
-            <div className={styles.featureContainer}>
-              <div className={styles.featureHeader}>
-                <p>Интуитивно понятный интерфейс</p>
-              </div>
-              <div className={styles.featureIcon}>
-                <i className="fas fa-sync"></i>
-              </div>
-              <div className={styles.featureDescription}>
-                <p>Ничего лишнего. Ничто не будет вас отвлекать от учебы!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Fade>
+        </Fade>
+      </div>
+      <div className={styles.features}>
+        <Fade cascade={true}>
+          {showFeaturesEl()}
+        </Fade>
+      </div>
     </div>
   )
 };

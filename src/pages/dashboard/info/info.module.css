@@ -5,8 +5,7 @@
 
 .findContainer {
   display: grid;
-  /* FIXME */
-  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   gap: 20px;
   align-items: center;
 }
@@ -82,7 +81,7 @@
 
 .descriptionContainer {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
@@ -156,8 +155,9 @@
 
 .inputExamplesContainer {
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
+  width: 100%;
 }
 
 .inputExamplesContainer input {

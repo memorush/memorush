@@ -1,12 +1,12 @@
 import styles from './download.module.css';
 import ButtonAtomicComponent from '../../../../common/atomic-components/button/button.component';
-import { Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 
 const DownloadComponent = () => {
   return (
     <div id="download" className={styles.container}>
-      <Slide bottom>
+      <Fade>
         <div className={styles.header}>
           <TitleAtomicComponent name="Установите приложение" />
           <div className={styles.line} />
@@ -17,7 +17,7 @@ const DownloadComponent = () => {
           <ButtonAtomicComponent name={"Play Market"} />
           <ButtonAtomicComponent name={"App Store"} />
         </div>
-      </Slide>
+      </Fade>
       <div className={styles.downloadIcon}>
         <div className={styles.innerCircle}>
           <i className="fas fa-download"></i>

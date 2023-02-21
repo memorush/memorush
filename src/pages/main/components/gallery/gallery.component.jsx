@@ -1,19 +1,14 @@
 import styles from './gallery.module.css';
 import cn from 'classnames'
 import slide1 from './images/slide1.png';
-import { Fade } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 
 const GalleryComponent = () => {
 
   return (
     <div id="gallery" className={styles.container}>
-      <Fade cascade left>
-        <div className={styles.column}>
-          <img src={slide1} alt=""/>
-        </div>
-      </Fade>
-      <Fade cascade right>
+      <Slide cascade={true} direction='right'>
         <div className={cn(styles.column, styles.info)}>
           <div className={styles.header}>
             <TitleAtomicComponent name="Объясняем, почему это приложение лучшее!" />
@@ -24,12 +19,17 @@ const GalleryComponent = () => {
             <div className={styles.line}></div>
           </div>
           <div className={styles.points}>
-            <p>Вы ни за что не платите</p>
-            <p>Поддерживает большинство устройств</p>
-            <p>Учитесь через сайт или приложение</p>
+            <p className={styles.point}>Вы ни за что не платите</p>
+            <p className={styles.point}>Поддерживает большинство устройств</p>
+            <p className={styles.point}>Учитесь через сайт или приложение</p>
           </div>
         </div>
-      </Fade>
+      </Slide>
+      <Slide cascade={true} direction='left'>
+        <div className={styles.column}>
+          <img src={slide1} alt="no image, sorry" />
+        </div>
+      </Slide>
     </div>
   )
 }

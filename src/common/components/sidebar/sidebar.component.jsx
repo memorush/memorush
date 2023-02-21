@@ -28,6 +28,9 @@ const SidebarComponent = () => {
   return (
     <div className={styles.container}>
       <div className={cn(styles.sidebar, isOpen ? styles.open : null)}>
+        <div className={styles.toggle} onClick={toggleSidebarHandler}>
+          <i className={cn("fas fa-hand-pointer", styles.pointer)}></i>
+        </div>
         <div className={styles.menu}>
           <Link
             to="/main"
@@ -50,13 +53,13 @@ const SidebarComponent = () => {
             <i className="fas fa-sign-out-alt"></i>
             <p>Выйти</p>
           </div>
-          <div onClick={toggleSidebarHandler} className={styles.row}>
+          <div className={styles.row}>
             <i className="fas fa-toggle-on"></i>
-            <p>{isOpen ? "Закрыть" : "Открыть"}</p>
+            <p>{isOpen ? "Открыто" : "Закрыто"}</p>
           </div>
           <div className={cn(styles.row, styles.account)}>
             <i className="fas fa-user-circle"></i>
-            <p>{username !== null  ? username : 'Аккаунт'}</p>
+            <p>{username !== null ? username : 'Аккаунт'}</p>
           </div>
         </div>
       </div>

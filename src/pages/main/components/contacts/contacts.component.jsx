@@ -1,27 +1,17 @@
 import style from './contacts.module.css';
 import ButtonAtomicComponent from '../../../../common/atomic-components/button/button.component';
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
-import { Slide } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const ContactsComponent = () => {
   return (
     <div id="contacts" className={style.container}>
-      <Slide bottom>
+      <Fade>
         <TitleAtomicComponent name="Обратная связь" style={{ textAlign: 'center', color: "white" }} />
-      </Slide>
+      </Fade>
       <div className={style.info}>
-        <Slide left cascade>
+        <Slide direction='left'>
           <div className={style.contactContainer}>
-            <div className={style.contactItem}>
-              <i className="fas fa-map-marker-alt"></i>
-              <h4>Адрес</h4>
-              <p>Россия, Москва</p>
-            </div>
-            <div className={style.contactItem}>
-              <i className="fas fa-phone"></i>
-              <h4>Телефон</h4>
-              <p>-</p>
-            </div>
             <div className={style.contactItem}>
               <i className="fas fa-envelope-open"></i>
               <h4>Почта</h4>
@@ -30,11 +20,11 @@ const ContactsComponent = () => {
             <div className={style.contactItem}>
               <i className="fab fa-internet-explorer"></i>
               <h4>Вебсайт</h4>
-              <p>www.y-dubovitsky.ru</p>
+              <p>www.ydubovitsky.ru</p>
             </div>
           </div>
         </Slide>
-        <Slide right>
+        <Slide direction='right'>
           <div className={style.formContainer}>
             <input type="text" placeholder="Ваше имя"></input>
             <input type="text" placeholder="Ваша почта"></input>

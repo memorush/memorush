@@ -1,13 +1,13 @@
 .container {
-  background: #FFFFFF;
-  padding: 5%;
   display: grid;
   gap: 20px;
+  padding: 5%;
+  background: #FFFFFF;
 }
 
 .cardSetListItem {
-  border-bottom: 1px solid silver;
   padding: 5%;
+  border-bottom: 1px solid silver;
 }
 
 .cardSetListItem a {

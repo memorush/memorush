@@ -63,9 +63,6 @@ const InfoPage = () => {
           />
         </div>
       </div>
-      <div className={styles.separatorContainer}>
-        <h1>или</h1>
-      </div>
       <div className={styles.createContainer}>
         <div className={styles.booksContainerSvg}>
           <BooksSvg />

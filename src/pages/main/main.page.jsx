@@ -22,7 +22,6 @@ const MainPage = () => {
       <GalleryComponent />
       <ScreenshotsComponent />
       <DownloadComponent />
-      <DeveloperComponent />
       <Contacts />
     </div>
   )
