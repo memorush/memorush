@@ -24,12 +24,12 @@ export const getAllCardSets = createAsyncThunk('card-set/getAllCardSets', async 
 export const createNewCardSet = createAsyncThunk('card-set/create', async (arg, { getState }) => {
   const state = getState();
   const token = state.auth.authEntity.token;
-  console.log(arg);
   const payload = {
     method: 'POST',
     url: `${BASE_URL}/api/v1/card-set/add`,
     data: {
       ...arg,
+      tags: arg.tags.split(","),
       flashCardArray: Object.values(arg.flashCardArray)
     },
     headers: {
@@ -50,8 +50,10 @@ export const updateCardSet = createAsyncThunk('card-set/update', async (arg, { g
   const payload = {
     method: 'PUT',
     url: `${BASE_URL}/api/v1/card-set/update/${cardSetId}`,
+    //! Вынести в отдельный метод формирование data
     data: {
       ...cardSetEntity,
+      tags: cardSetEntity.tags.split(","), // Строка тэгов разбивается по символу ',' на массив 
       flashCardArray: Object.values(cardSetEntity.flashCardArray)
     },
     headers: {
