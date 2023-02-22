@@ -27,18 +27,21 @@
 }
 
 .contentContainer {
-	display: grid;
-	grid-template-columns: 1fr 5fr;
+	display: flex;
+	flex-wrap: wrap;
 	gap: 20px;
+	justify-content: center;
 }
 
 .menuContainer {
+	flex: 1;
 	padding: 5%;
 	background-color: #F9F8F8;
 	border-right: 1px solid #DDD;
 }
 
 .dashboardContainer {
+	flex: 7;
 	display: grid;
 	gap: 20px;
 	margin: 2%;
@@ -66,50 +69,4 @@
 
 .tableContainer {
 	padding: 2%;
-}
-
-.container table {
-	width: 100%;
-	margin-bottom: 20px;
-	font-size: 1.2rem;
-	text-align: center;
-	border-collapse: collapse;
-	border: 1px solid #DDD;
-}
-
-table th {
-	padding: 5px;
-	font-weight: bold;
-	background: #efefef;
-	border: 1px solid #ddd;
-}
-
-table td {
-	padding: 5px;
-	border: 1px solid #ddd;
-}
-
-.cardSetTitle {
-	font-size: 1.5rem;
-	font-weight: bold;
-	cursor: pointer;
-}
-
-.toolsContainer {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-}
-
-.toolsContainer i {
-	font-size: 1.2rem;
-	transition: 0.3s ease-in;
-}
-
-.toolsContainer i:hover {
-	color: red;
-}
-
-.tr {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
 }
