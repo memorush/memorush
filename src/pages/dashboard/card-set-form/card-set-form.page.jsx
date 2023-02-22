@@ -9,6 +9,7 @@ import ActionButtonsComponent from './components/action-buttons/action-buttons.c
 import FlashCardFormComponent from './components/flash-card-form/flash-card-form.component';
 import ImportCardDataComponent from './components/import-card-data/import-card-data.component';
 import { ReactComponent as PenSvg } from './svg/pen-svgrepo-com.svg';
+import TitleAtomicComponent from '../../../common/atomic-components/title/title.component';
 
 const INIT_CARD_SET_STATE = {
   name: "",

@@ -35,6 +35,9 @@ const HeroComponent = () => {
         <Fade direction='up' delay={2000}>
           <h1 className={styles.logo}>Memo<span className={styles.r}>R</span>ush</h1>
         </Fade>
+        <Slide direction='down'>
+          <h2>Интерактивный тренажер для запоминания слов!</h2>
+        </Slide>
         <h3>{heroText}</h3>
       </div>
       <div className={cn(styles.column, styles.right)}
