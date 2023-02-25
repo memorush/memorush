@@ -1,6 +1,6 @@
 import styles from './gallery.module.css';
 import cn from 'classnames'
-import slide1 from './images/slide1.png';
+import screen5 from './images/screen5.png';
 import { Slide } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 
@@ -27,7 +27,7 @@ const GalleryComponent = () => {
       </Slide>
       <Slide cascade={true} direction='left'>
         <div className={styles.column}>
-          <img src={slide1} alt="no image, sorry" />
+          <img src={screen5} alt="no image, sorry" />
         </div>
       </Slide>
     </div>
