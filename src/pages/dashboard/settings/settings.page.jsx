@@ -56,7 +56,7 @@ const SettingsPage = () => {
         />
         <div className={styles.actionButtons}>
           <ButtonAtomicComponent
-            name="Обновить данные пользователя"
+            name="Обновить данные"
             clickFunction={updateUserDataHandler}
           />
           <ButtonAtomicComponent
