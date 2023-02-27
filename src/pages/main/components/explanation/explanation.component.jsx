@@ -1,17 +1,17 @@
-import styles from './gallery.module.css';
+import styles from './explanation.module.css';
 import cn from 'classnames'
 import screen5 from './images/screen5.png';
 import { Slide } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 
-const GalleryComponent = () => {
+const ExplanationsComponent = () => {
 
   return (
-    <div id="gallery" className={styles.container}>
+    <div id="explanation" className={styles.container}>
       <Slide cascade={true} direction='right'>
         <div className={cn(styles.column, styles.info)}>
           <div className={styles.header}>
-            <TitleAtomicComponent name="Объясняем, почему это приложение лучшее!" />
+            <TitleAtomicComponent name="Почему стоит выбрать именно это приложение?" />
             <div className={styles.line}></div>
             <div className={styles.description}>
               <p>Наряду с основными особенностями...</p>
@@ -27,11 +27,11 @@ const GalleryComponent = () => {
       </Slide>
       <Slide cascade={true} direction='left'>
         <div className={styles.column}>
-          <img src={screen5} alt="no image, sorry" />
+          <img className={styles.screen} src={screen5} alt=""/>
         </div>
       </Slide>
     </div>
   )
 }
 
-export default GalleryComponent;
+export default ExplanationsComponent;

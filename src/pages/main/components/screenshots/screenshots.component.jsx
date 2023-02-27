@@ -6,6 +6,13 @@ import screen4 from './images/screen4.png'
 import { Slide } from "react-awesome-reveal";
 
 const ScreenshotsComponent = () => {
+
+  const showScreensElements = () => {
+    return Array.of(screen1, screen2, screen3, screen4).map(screen => (
+      <img className={styles.screen} src={screen} alt="" />
+    ))
+  }
+
   return (
     <div className={styles.container}>
       <Slide cascade={true} direction='right'>
@@ -15,11 +22,8 @@ const ScreenshotsComponent = () => {
           <p>Красивый и современный дизайн</p>
           <div className={styles.line} />
         </div>
-        <div className={styles.slides}>
-          <img src={screen1} alt=""/>
-          <img src={screen2} alt=""/>
-          <img src={screen3} alt=""/>
-          <img src={screen4} alt=""/>
+        <div className={styles.screensContainer}>
+          {showScreensElements()}
         </div>
       </Slide>
     </div>

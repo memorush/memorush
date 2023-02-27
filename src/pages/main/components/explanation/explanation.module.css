@@ -39,10 +39,14 @@
 .points {
 	display: grid;
 	width: 100%;
-
 }
 
 .point {
 	display: flex;
 	word-break: break-all;
+}
+
+.screen {
+	width: 250px;
+	height: auto;
 }
