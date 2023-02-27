@@ -14,11 +14,14 @@
 }
 
 .containerTitle {
-  display: grid;
-  grid-template-columns: min-content min-content;
-  gap: 20px;
-  align-items: center;
-  white-space: nowrap;
+	display: grid;
+	grid-template-columns: min-content auto;
+	gap: 20px;
+	align-items: center;
+}
+
+.containerTitle h1 {
+  word-wrap: break-word;
 }
 
 .svgContainer {

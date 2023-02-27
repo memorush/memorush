@@ -17,7 +17,7 @@ const TipComponent = ({ setIsStarted }) => {
         <li>Советуем вам переодически повторять изученные слова</li>
       </ul>
       <ButtonAtomicComponent
-        name="Начать учить слова"
+        name="Учить слова"
         clickFunction={beginToLearnHandler}
       />
     </div>

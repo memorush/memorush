@@ -9,9 +9,7 @@
 }
 
 .buttonsContainer {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 20px;
-  align-items: center;
-  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }

@@ -15,23 +15,24 @@
 
 .cardsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   gap: 20px;
 }
 
 .actionsButtons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
 }
 
 .buttons {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 20px;
-  justify-content: end;
 }
 
 .buttons i {
+  width: 100px;
   padding: 5px 20px;
   color: #1E96CB;
   cursor: pointer;

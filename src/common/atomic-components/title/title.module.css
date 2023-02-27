@@ -1,12 +1,10 @@
 .container {
 	line-height: 1.1;
 	text-align: center;
-	word-break: break-all;
 }
 
 .textSize {
 	font-size: 4rem;
-	word-break: break-all;
 }
 
 @media (width < 900px) {

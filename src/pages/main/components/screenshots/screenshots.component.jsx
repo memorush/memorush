@@ -4,6 +4,7 @@ import screen2 from './images/screen2.png'
 import screen3 from './images/screen3.png'
 import screen4 from './images/screen4.png'
 import { Slide } from "react-awesome-reveal";
+import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 
 const ScreenshotsComponent = () => {
 
@@ -17,7 +18,7 @@ const ScreenshotsComponent = () => {
     <div className={styles.container}>
       <Slide cascade={true} direction='right'>
         <div className={styles.header}>
-          <h1>Скриншоты</h1>
+          <TitleAtomicComponent name="Дизайн приложения"/>
           <div className={styles.line} />
           <p>Красивый и современный дизайн</p>
           <div className={styles.line} />

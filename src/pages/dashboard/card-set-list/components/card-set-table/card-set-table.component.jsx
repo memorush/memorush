@@ -33,7 +33,6 @@ const CardSetTableComponent = () => {
         <th scope="col">Создан</th>
         <th scope="col">Обновлен</th>
         <th scope="col">Количество карт</th>
-        <th scope="col">Папка</th>
         <th scope="col">Категория</th>
         <th scope="col">Действия</th>
       </tr>
@@ -52,7 +51,6 @@ const CardSetTableComponent = () => {
             <td data-label="Создан">{cardSet.createdAt}</td>
             <td data-label="Обновлен">{cardSet.updatedAt}</td>
             <td data-label="Количество карточек">{cardSet.flashCardArray.length}</td>
-            <td data-label="Папка">{cardSet.folder}</td>
             <td data-label="Категория">{cardSet.categoryName}</td>
             <td data-label="Действие">
               <i className="fas fa-edit"

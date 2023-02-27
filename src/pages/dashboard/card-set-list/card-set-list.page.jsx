@@ -30,6 +30,7 @@ const CardSetListPage = () => {
             <Link to={"/dashboard/card-set-create"}>
               <ButtonAtomicComponent name="Создать набор" />
             </Link>
+            <p className={styles.hint}>Нажмите на название набора, чтобы приступить к изучению слов</p>
           </div>
           <div className={styles.tableContainer}>
             <CardSetTableComponent/>

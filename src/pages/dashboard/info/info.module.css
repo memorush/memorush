@@ -39,6 +39,7 @@
 .inputContainerInput {
   grid-area: inputContainerInput;
   height: 100%;
+  padding: 0 5%;
   color: #8F908F;
   text-shadow: none;
   background: #FFFFFF;

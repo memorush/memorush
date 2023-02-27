@@ -33,7 +33,7 @@
 .formInputContainer {
   display: grid;
   grid-area: inputExamplesContainer;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
 

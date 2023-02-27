@@ -52,7 +52,7 @@ const InfoPage = () => {
         <h1 className={styles.inputContainerTitle}>Найди готовые флеш-карточки</h1>
         <input
           className={styles.inputContainerInput}
-          placeholder="Введите клечевое слово"
+          placeholder="Введите ключевое слово"
           onChange={onSearchStringChangeHandler}
           type="text"
         />
