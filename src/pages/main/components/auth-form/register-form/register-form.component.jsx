@@ -53,14 +53,6 @@ const RegisterFormComponent = () => {
    * Валидируем данные формы
    */
   const isFormDataValidHandler = () => {
-    // if ((formData.username != false) && (formData.password != false) && (formData.password2 != false) && (formData.email != false)) {
-    //   setValidationError("Please fill in the data fields");
-    //   return false;
-    // }
-    if (formData.username.length < 6) {
-      setValidationError("Sorry, but password length must be greater than 6");
-      return false;
-    }
     if (formData.password.length < 6) {
       setValidationError("Sorry, but password length must be greater than 6");
       return false;
