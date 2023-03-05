@@ -1,0 +1,4 @@
+[submodule "memorush-spring"]
+	path = memorush-spring
+	url = https://github.com/ydubovitsky/memorush-spring.git
+	branch = master
