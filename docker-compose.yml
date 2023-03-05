@@ -1,18 +1,69 @@
-# Run it: docker-compose up -d
-# Run only one service: docker-compose up -d stolovaya51-react-dev
+# How to use it?
+# docker compose -f docker-compose-prod.yml up
 
 version: '3'
 services:
-  # You can rename this service special for docker-hub like: ydubovitsky/stolovaya51 
-  memorush-react-dev:
-    container_name: memorush-react-dev
+  # You can rename this service special for docker-hub like: ydubovitsky/memorush
+  memorush-spring:
     build:
-      dockerfile: ./docker/dev/Dockerfile
-    ports:
-     - "80:3000"
-  memorush-react-production:
-    container_name: memorush-react-production
-    build: 
+      context: ./memorush-spring
       dockerfile: ./docker/production/Dockerfile
+    environment:
+      PROFILE_ACTIVE: postgres
+      ADMIN_NAME: admin
+      ADMIN_PASSWORD: password
+      POSTGRES_URL: jdbc:postgresql://memorush-db:5432/postgres
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DDL_AUTO: update
+    depends_on:
+      - memorush-db
+      - memorush-pgadmin
+    networks:
+      - memorush
+
+  memorush-react:
+    build:
+      dockerfile: ./docker/production/Dockerfile
+      args:
+        # Change me!
+        - REACT_APP_BACKEND_URL=http://api.memorush.ru
+    networks:
+     - memorush
+
+  memorush-db:
+    image: postgres:alpine3.17
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: changeme
+      PGDATA: /data/postgres
+    volumes:
+      - memorush-db:/data/postgres
+    networks:
+      - memorush
+    restart: unless-stopped
+
+  memorush-pgadmin:
+    container_name: memorush-pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - memorush-pgadmin:/var/lib/pgadmin
+    depends_on:
+      - memorush-db
     ports:
-      - "80:80"
+      - "${PGADMIN_PORT:-5050}:80"
+    networks:
+      - memorush
+    restart: unless-stopped
+
+networks:
+  memorush:
+    driver: bridge
+
+volumes:
+  memorush-db:
+  memorush-pgadmin:
