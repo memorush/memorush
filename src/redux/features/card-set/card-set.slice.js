@@ -29,7 +29,7 @@ export const createNewCardSet = createAsyncThunk('card-set/create', async (arg, 
     url: `${BASE_URL}/api/v1/card-set/add`,
     data: {
       ...arg,
-      tags: arg.tags.split(","),
+      tags: argToArrayBySplitter(arg.tags, ","),
       flashCardArray: Object.values(arg.flashCardArray)
     },
     headers: {
@@ -46,14 +46,13 @@ export const updateCardSet = createAsyncThunk('card-set/update', async (arg, { g
   const state = getState();
   const token = state.auth.authEntity.token;
   const { cardSetId, cardSetEntity } = arg;
-
   const payload = {
     method: 'PUT',
     url: `${BASE_URL}/api/v1/card-set/update/${cardSetId}`,
     //! Вынести в отдельный метод формирование data
     data: {
       ...cardSetEntity,
-      tags: cardSetEntity.tags.split(","), // Строка тэгов разбивается по символу ',' на массив 
+      tags: argToArrayBySplitter(cardSetEntity.tags, ","),
       flashCardArray: Object.values(cardSetEntity.flashCardArray)
     },
     headers: {
@@ -163,8 +162,21 @@ export default cardSetSlice.reducer;
 
 export const cardSetEntitiesSelector = state => state.cardSet.cardSetEntities;
 export const cardSetByIdSelector = (state, id) => state.cardSet.cardSetEntities.find(card => id == card.id);
-export const flashCardArrayFromCardSetWithIdSelector = (state, id) => cardSetByIdSelector(state,id).flashCardArray; 
+export const flashCardArrayFromCardSetWithIdSelector = (state, id) => cardSetByIdSelector(state, id).flashCardArray;
 
+
+//------------------------------------ Utils ------------------------------------
+
+//! Проблема этого метода в том, что аргумент может быть как массивом, так и строкой! Нужно переработать структуру данных
+const argToArrayBySplitter = (string, splitter) => {
+  if(Array.isArray(string)) {
+    return string;
+  }
+  if(string != undefined && string != "") {
+    return string.split(splitter);
+  }
+  return Array.of("");
+}
 
 //------------------------------------ Методы ниже не используются ------------------------------------
 //TODO Переделать! Сделать мемоизированным и механизм фильтрации изменить!
@@ -192,3 +204,5 @@ export const getSortedCardByCardSetSelector = state => {
 
   return sorted;
 }
+
+
