@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import styles from './trainer.module.css';
 import { useParams } from "react-router-dom";
@@ -10,37 +10,79 @@ import { flashCardArrayFromCardSetWithIdSelector } from "../../../../../redux/fe
 const TrainerPage = () => {
 
   const { cardSetId } = useParams();
-  const [currentPosition, setCurrentPosition] = useState(0);
   const flashCardArrayFromCardSetWithId = useSelector(state => flashCardArrayFromCardSetWithIdSelector(state, cardSetId));
-  const [cards, setCards] = useState(flashCardArrayFromCardSetWithId);
+  const [maxRounds, setMaxRounds] = useState(3);
+  const [position, setPosition] = useState(0);
+
+  const initState = {
+    init: flashCardArrayFromCardSetWithId,
+    learned: [],
+    round: 0
+  }
+
+  const [cardSet, setCardSet] = useState(initState);
 
   // Обнулить все значение!
   const setInitStateHandler = () => {
-    setCards(flashCardArrayFromCardSetWithId);
+    setCardSet(initState);
   }
+
+  const setMaxRoundsNumber = (e) => {
+    // Заглушка/валидатор
+    if (e.target.value <= 0) {
+      setMaxRounds(1);
+    } else {
+      setMaxRounds(e.target.value);
+    }
+  }
+
+  useEffect(() => {
+    if (cardSet.init.length === 0) {
+      setCardSet({
+        ...cardSet,
+        init: cardSet.learned,
+        learned: [],
+        round: cardSet.round + 1
+      });
+    }
+  }, [cardSet])
 
   /**
    * Логика метода, если пользователь знает карточку, то эта карточка вычитается из массива
    * неизученных карточек, тем самым сокращаются размеры массива, пока он не станет равным 0
    */
   const knowCardHandler = () => {
-    if (cards.length > 0) {
-      setCards((prev) => prev.filter(card => card.id !== cards[currentPosition].id));
-    }
-    setCurrentPosition(0);
+    setCardSet({
+      ...cardSet,
+      learned: [cardSet.init[position], ...cardSet.learned],
+      init: cardSet.init.filter(card => card.id !== cardSet.init[position].id)
+    })
+    setPosition(0);
   }
 
-  const dontKnowCardHandler = () => (
-    currentPosition < (cards.length - 1) ? setCurrentPosition(currentPosition + 1) : setCurrentPosition(0)
-  )
+  const dontKnowCardHandler = () => {
+    if (position < cardSet.init.length - 1) {
+      setPosition((prevPosition) => prevPosition + 1)
+    } else {
+      setPosition(0);
+    }
+  }
+
+  const getCurrentCard = () => {
+    return cardSet.init[position];
+  }
 
   return (
     <div className={styles.container}>
-      {cards.length !== 0
-        ?
-        <CardItemComponent card={cards[currentPosition]} />
+      <div className={styles.roundsContainer}>
+        <label htmlFor="rounds">Укажите количество кругов повторения для закрепления слов</label>
+        <input className={styles.roundForm} type="text" name="rounds" placeholder="3" onChange={setMaxRoundsNumber} />
+        <p>Текущий круг: </p>
+        <span className={styles.currentRound}>{cardSet.round}</span>
+      </div>
+      {cardSet.round >= maxRounds ? <CongratulationComponent setInitStateHandler={setInitStateHandler} />
         :
-        <CongratulationComponent setInitStateHandler={setInitStateHandler} />
+        <CardItemComponent card={getCurrentCard()} />
       }
       <div className={styles.buttonsContainer}>
         <ButtonAtomicComponent

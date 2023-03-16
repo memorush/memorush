@@ -3,6 +3,26 @@
   gap: 20px;
 }
 
+.roundsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.roundForm {
+  border: 1px solid silver;
+  border-radius: 5px;
+  width: 50px;
+  padding: 10px;
+}
+
+.currentRound {
+  color: rgb(43, 214, 66);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
 .buttonsContainer {
   display: grid;
   gap: 20px;
