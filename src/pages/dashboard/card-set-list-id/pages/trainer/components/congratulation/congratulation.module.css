@@ -37,6 +37,11 @@
   text-shadow: 2px 2px 2px black;
 }
 
+.buttonsContainer {
+  display: flex;
+  gap: 20px;
+}
+
 .congratulationButton {
   z-index: 1000;
   padding: 5% 10%;

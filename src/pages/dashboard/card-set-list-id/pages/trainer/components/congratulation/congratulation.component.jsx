@@ -15,15 +15,17 @@ const CongratulationComponent = ({ setInitStateHandler }) => {
     <div className={styles.congratulationContainer}>
       <div className={styles.congratulationActions}>
         <h1>Поздравляю! Вы выучили все слова!</h1>
-        <ButtonAtomicComponent
-          name="Повторить"
-          color="#39CA6C"
-          clickFunction={setInitStateHandler}
-        />
-        <ButtonAtomicComponent
-          name="Перейти в главное меню"
-          clickFunction={navigateToCardSetListPageHandler}
-        />
+        <div className={styles.buttonsContainer}>
+          <ButtonAtomicComponent
+            name="Повторить"
+            color="#39CA6C"
+            clickFunction={setInitStateHandler}
+          />
+          <ButtonAtomicComponent
+            name="Перейти в главное меню"
+            clickFunction={navigateToCardSetListPageHandler}
+          />
+        </div>
       </div>
       <img className={styles.congratulationImg} src={congratulationImg} alt="" />
     </div>

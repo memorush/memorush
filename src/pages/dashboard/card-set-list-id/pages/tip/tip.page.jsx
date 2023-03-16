@@ -1,11 +1,20 @@
 import styles from './tip.module.css';
-import ButtonAtomicComponent from '../../../../../../../common/atomic-components/button/button.component';
+import { useNavigate, useLocation } from 'react-router-dom';
+import ButtonAtomicComponent from '../../../../../common/atomic-components/button/button.component';
 
-const TipComponent = ({ setIsStarted }) => {
+const TipPage = () => {
 
-  const beginToLearnHandler = () => (
-    setIsStarted(true)
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Эта функция читает текущий путь и генерирует новый
+  const getTrainerUrlFromLocation = () => (
+    location.pathname.replace("tip", "trainer")
   )
+
+  const navigateToTrainer = () => {
+    navigate(getTrainerUrlFromLocation());
+  }
 
   return (
     <div className={styles.container}>
@@ -18,10 +27,10 @@ const TipComponent = ({ setIsStarted }) => {
       </ul>
       <ButtonAtomicComponent
         name="Учить слова"
-        clickFunction={beginToLearnHandler}
+        clickFunction={navigateToTrainer}
       />
     </div>
   )
 }
 
-export default TipComponent;
+export default TipPage;

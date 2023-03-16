@@ -2,7 +2,6 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import MainLayout from "../layouts/main/main.layout";
 import CardSetFormPage from "../pages/dashboard/card-set-form/card-set-form.page";
 import CardSetListPage from "../pages/dashboard/card-set-list/card-set-list.page";
-import CardMemorizePage from "../pages/dashboard/card-set-list-id/pages/card-memorize/card-memorize.page";
 import CardSetListIdPage from "../pages/dashboard/card-set-list-id/card-set-list-id.page";
 import CardListPage from "../pages/dashboard/card-set-list-id/pages/card-list/card-list.page";
 import SettingsPage from "../pages/dashboard/settings/settings.page";
@@ -14,6 +13,8 @@ import RequireAuthRoute from "../wrapper/RequireAuthRoute";
 import InfoPage from "../pages/dashboard/info/info.page";
 import SearchPage from "../pages/dashboard/search/search.page";
 import FoundCardSetDetailsPage from "../pages/dashboard/found-card-set-details/found-card-set-details.page";
+import TipPage from "../pages/dashboard/card-set-list-id/pages/tip/tip.page";
+import TrainerPage from "../pages/dashboard/card-set-list-id/pages/trainer/trainer.page";
 
 const ApplicationRoutes = () => (
   <Routes>
@@ -34,7 +35,8 @@ const ApplicationRoutes = () => (
           <Route path="card-set-list" element={<CardSetListPage />} />
           <Route path="card-set-list/:cardSetId" element={<CardSetListIdPage />}>
             <Route path="card-list" element={<CardListPage />} />
-            <Route path="card-memorize" element={<CardMemorizePage />} />
+            <Route path="tip" element={<TipPage />} />
+            <Route path="trainer" element={<TrainerPage />} />
           </Route>
           <Route path="card-set-create" element={<CardSetFormPage />} />
           <Route path="card-set-edit" element={<CardSetFormPage />} />

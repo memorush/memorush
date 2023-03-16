@@ -23,7 +23,7 @@ const CardSetListIdPage = () => {
   )
 
   const onNavigateToCardMemorizeHandler = () => (
-    navigate(`card-memorize`)
+    navigate(`tip`)
   )
 
   const onNavigateToMainMenuHandler = () => (
