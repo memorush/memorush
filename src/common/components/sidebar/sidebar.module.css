@@ -20,9 +20,6 @@
   width: 60px;
   height: 60px;
   background-color: #232323;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
   border-radius: 20px 0 0 20px;
   transform: translateY(-50%) translateX(-100%);
 }
@@ -33,29 +30,10 @@
   left: 50%;
   transition: 0.3s ease;
   transform: translateX(-50%) translateY(-50%);
-  animation-name: slidein;
-  animation-duration: 3s;
 }
 
 .pointer:hover {
   color: red;
-}
-
-@keyframes slidein {
-  from {
-    left: -200px;
-    color: red;
-    transform: scale(10);
-  }
-  50% {
-    color: red;
-  }
-  to {
-    top: 50%;
-    left: 50%;
-    color: white;
-    transform: translateX(-50%) translateY(-50%) scale(1);
-  }
 }
 
 .open {
