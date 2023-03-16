@@ -27,9 +27,7 @@ const NavigationComponent = () => {
         <div className={styles.navItem} onClick={() => scrollToElementIdHandler("features")}>Особенности</div>
         <div className={styles.navItem} onClick={() => scrollToElementIdHandler("explanation")}>Почему это приложение?</div>
         <div className={styles.navItem} onClick={() => scrollToElementIdHandler("contacts")}>Обратная связь</div>
-        <div className={styles.navItem} onClick={() => scrollToElementIdHandler("developer")}>Технологии</div>
         <div className={styles.navItem} onClick={() => scrollToElementIdHandler("download")}>Скачать</div>
-        <div className={styles.navItem} onClick={() => scrollToElementIdHandler("testimonial")}>Отзывы</div>
       </div>
     </div>
   )
