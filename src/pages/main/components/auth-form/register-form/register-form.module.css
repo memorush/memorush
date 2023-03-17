@@ -20,6 +20,24 @@
   border-radius: 10px;
 }
 
+.privacyContainer {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.privacyLabel {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
 .validationContainer p {
   color: rgb(255, 0, 0);
 }

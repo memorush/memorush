@@ -1,5 +1,6 @@
 import styles from './register-form.module.css';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ButtonAtomicComponent from '../../../../../common/atomic-components/button/button.component';
@@ -20,6 +21,8 @@ const RegisterFormComponent = () => {
 
   // Серверная ошибка
   const authError = useSelector(authErrorSelector);
+
+  const [isPolicyAgree, setIsPolicyAgree] = useState(false);
 
   /**
    * Если сервер вернул ошибку, эта ошибка будет установлена в поле ошибок валидации данных!
@@ -94,16 +97,25 @@ const RegisterFormComponent = () => {
           name="password2"
           onChange={formInputHandler}
           placeholder='confirm password' />
-        <input
-          className={styles.input}
-          type="text"
-          name="email"
-          onChange={formInputHandler}
-          placeholder='email' />
+        <div className={styles.privacyContainer}>
+          <label className={styles.privacyLabel} htmlFor="privacy-checkbox">Используя сервис или сайты, вы соглашаетесь с Правилами использования, которые включают в себя настоящую Политику конфиденциальности.
+          </label>
+          <div className={styles.checkboxContainer}>
+            <input
+              type="checkbox"
+              name=""
+              id="privacy-checkbox" 
+              defaultChecked={isPolicyAgree}
+              onChange={() => setIsPolicyAgree(!isPolicyAgree)}
+              />
+            <Link to={"/privacy-policy"}>Политика конфиденциальности</Link>
+          </div>
+        </div>
         {validationError !== null ? showValidationElement() : null}
       </div>
       <ButtonAtomicComponent
         name="Зарегистрироваться"
+        disable={!isPolicyAgree}
         clickFunction={registerNewUserHandler}
       />
     </div>

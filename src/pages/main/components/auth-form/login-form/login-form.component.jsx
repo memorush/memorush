@@ -54,9 +54,6 @@ const LoginFormComponent = () => {
         name="Войти"
         clickFunction={loginHandler}
       />
-      <div className={styles.forgotPassword}>
-        <p>Forgot Password?</p>
-      </div>
     </div>
   )
 }
