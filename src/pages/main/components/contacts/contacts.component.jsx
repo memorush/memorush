@@ -1,5 +1,4 @@
 import styles from './contacts.module.css';
-import ButtonAtomicComponent from '../../../../common/atomic-components/button/button.component';
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 import { Fade, Slide } from "react-awesome-reveal";
 
@@ -28,7 +27,6 @@ const ContactsComponent = () => {
           <div className={styles.formContainer}>
             <form action="mailto:y.dubovitsky@gmail.com">
               <input type="text" placeholder="Ваше имя"></input>
-              <input type="text" placeholder="Ваша почта"></input>
               <input type="text" placeholder="Тема письма"></input>
               <input type="textarea" placeholder="Ваше сообщение"></input>
               <div className={styles.buttons}>
