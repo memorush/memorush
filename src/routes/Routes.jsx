@@ -17,6 +17,7 @@ import TipPage from "../pages/dashboard/card-set-list-id/pages/tip/tip.page";
 import TrainerPage from "../pages/dashboard/card-set-list-id/pages/trainer/trainer.page";
 import PrivacyPolicyPage from "../pages/privacy-policy/privacy-policy.page";
 import TermOfUsePage from "../pages/term-of-use/term-of-use.page";
+import FaqPage from "../pages/faq/faq.page";
 
 const ApplicationRoutes = () => (
   <Routes>
@@ -50,6 +51,7 @@ const ApplicationRoutes = () => (
           <Route path="*" element={<Navigate to="page-not-found" replace />} />
         </Route>
       </Route>
+      <Route path="faq" element={<FaqPage />} />
       <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
       <Route path="term-of-use" element={<TermOfUsePage />} />
       <Route path="page-not-found" element={<NotFoundPage />} />

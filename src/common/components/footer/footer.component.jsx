@@ -23,7 +23,7 @@ const FooterComponent = () => {
         <div className={cn(style.links)}>
           <ul>
             <li><h3>О проекте</h3></li>
-            <li>FAQ</li>
+            <li><Link to={"/faq"}>FAQ</Link></li>
             <li>
               <Link to={"/term-of-use"}>Пользовательское соглашение</Link>
             </li>
