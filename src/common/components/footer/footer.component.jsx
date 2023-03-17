@@ -1,10 +1,12 @@
 import cn from 'classnames';
+import { Link } from 'react-router-dom';
 import { scrollToElementIdHandler } from '../../../service/utilsService';
 import { ReactComponent as CloverSvg } from './svg/clover-svgrepo-com.svg';
 
 import style from './footer.module.css';
 
 const FooterComponent = () => {
+
   return (
     <div className={cn(style.container)}>
       <div className={cn(style.upper)}>
@@ -18,12 +20,16 @@ const FooterComponent = () => {
             <li onClick={() => scrollToElementIdHandler("hero")}>Мобильное приложение</li>
           </ul>
         </div>
-        <div className={cn(style.hosting)}>
+        <div className={cn(style.links)}>
           <ul>
             <li><h3>О проекте</h3></li>
-            <li>О технологии разработки</li>
             <li>FAQ</li>
-            <li>Политика конфиденциальности</li>
+            <li>
+              <Link to={"/term-of-use"}>Пользовательское соглашение</Link>
+            </li>
+            <li>
+              <Link to={"/privacy-policy"}>Политика конфиденциальности</Link>
+            </li>
           </ul>
         </div>
       </div>

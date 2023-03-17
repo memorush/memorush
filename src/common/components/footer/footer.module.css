@@ -15,6 +15,12 @@
 	padding: 50px;
 }
 
+.links ul a {
+	cursor: pointer;
+	color: black;
+	text-decoration: none;
+}
+
 .svgContainer {
 	width: 100px;
 	height: 100px;

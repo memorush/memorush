@@ -18,6 +18,9 @@ https://medium.com/@stasonmars/%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82
 ### GIF
 https://gifer.com/ru/XVo7
 
+### Пользовательское соглашение
+https://praville.ru/generator/a_gen.php
+
 ### Free 3d icons
 https://icons8.com/icon/set/popular/3d-fluency
 
