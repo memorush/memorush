@@ -37,3 +37,7 @@
 .left {
 	background-color: white;
 }
+
+.heroText {
+	min-height: 2rem;
+}

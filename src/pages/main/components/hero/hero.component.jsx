@@ -1,9 +1,7 @@
-import ButtonAtomicComponent from '../../../../common/atomic-components/button/button.component';
-import styles from './hero.module.css';
-import { useState, useEffect } from 'react';
-import repeatImage from "./images/hardik-sharma-CrPAvN29Nhs-unsplash.jpg";
+import { useEffect, useState } from 'react';
 import { Fade, Slide } from "react-awesome-reveal";
-import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
+import styles from './hero.module.css';
+import repeatImage from "./images/hardik-sharma-CrPAvN29Nhs-unsplash.jpg";
 
 import cn from 'classnames';
 
@@ -38,7 +36,7 @@ const HeroComponent = () => {
         <Slide direction='down'>
           <h2>Интерактивный тренажер для запоминания слов!</h2>
         </Slide>
-        <h3>{heroText}</h3>
+        <h3 className={styles.heroText}>{heroText}</h3>
       </div>
       <div className={cn(styles.column, styles.right)}
         style={{ backgroundImage: `url(${repeatImage})` }}>
