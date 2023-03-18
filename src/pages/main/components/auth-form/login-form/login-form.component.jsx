@@ -42,13 +42,13 @@ const LoginFormComponent = () => {
           type="text"
           name="username"
           onChange={formInputHandler}
-          placeholder='login' />
+          placeholder='Имя пользователя' />
         <input
           className={styles.input}
           type="password"
           name="password"
           onChange={formInputHandler}
-          placeholder='password' />
+          placeholder='Пароль' />
       </div>
       <ButtonAtomicComponent
         name="Войти"

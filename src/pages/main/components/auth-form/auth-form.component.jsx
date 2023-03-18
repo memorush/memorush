@@ -20,12 +20,12 @@ const AuthFormComponent = () => {
         <p
           onClick={() => setIsLoginForm(true)}
           className={cn(isLoginForm ? styles.line : null)}
-        >SignIn
+        >Войти
         </p>
         <p
           onClick={() => setIsLoginForm(false)}
           className={cn(!isLoginForm ? styles.line : null)}
-        >Registration
+        >Зарегистрироваться
         </p>
       </div>
       <div className={styles.content}>

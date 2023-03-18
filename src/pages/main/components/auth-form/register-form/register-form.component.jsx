@@ -84,19 +84,19 @@ const RegisterFormComponent = () => {
           type="text"
           name="username"
           onChange={formInputHandler}
-          placeholder='username' />
+          placeholder='Имя пользователя' />
         <input
           className={styles.input}
           type="password"
           name="password"
           onChange={formInputHandler}
-          placeholder='password' />
+          placeholder='Пароль' />
         <input
           className={styles.input}
           type="password"
           name="password2"
           onChange={formInputHandler}
-          placeholder='confirm password' />
+          placeholder='Подтвердите пароль' />
         <div className={styles.privacyContainer}>
           <label className={styles.privacyLabel} htmlFor="privacy-checkbox">Используя сервис или сайты, вы соглашаетесь с Правилами использования, которые включают в себя настоящую Политику конфиденциальности.
           </label>
