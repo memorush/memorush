@@ -24,7 +24,8 @@ services:
 
   memorush-react:
     build:
-      dockerfile: ./docker/production/Dockerfile
+      context: .
+      dockerfile: ./docker/static-server/Dockerfile
       args:
         # Change me!
         - REACT_APP_BACKEND_URL=http://api.memorush.ru
