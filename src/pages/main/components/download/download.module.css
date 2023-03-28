@@ -23,6 +23,11 @@
 	font-size: 1.5rem;
 }
 
+.header .avaliableText {
+	font-size: 1rem;
+	font-style: italic;
+}
+
 .header .line {
 	width: 50%;
 	height: 1px;
@@ -34,6 +39,15 @@
 	gap: 10%;
 	align-items: center;
 	justify-items: center;
+	margin-bottom: 20px;
+}
+
+.buttonContainer a {
+	text-decoration: none;
+}
+
+.qrConde {
+	max-width: 200px;
 }
 
 .downloadIcon {
