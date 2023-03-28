@@ -1,15 +1,18 @@
 .registerForm {
   display: grid;
+  max-height: 100vh;
   gap: 20px;
   align-items: center;
   justify-items: center;
 }
 
 .inputContainer {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
 }
 
 .input {
