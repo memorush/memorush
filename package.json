@@ -2,6 +2,7 @@
   "name": "flashcards-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://memorush.ru",
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
     "@testing-library/jest-dom": "^5.11.4",
