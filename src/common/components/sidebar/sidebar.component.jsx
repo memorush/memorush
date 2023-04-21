@@ -17,6 +17,8 @@ const SidebarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { username } = useSelector(authEntitySelector);
 
+  console.log(username);
+
   const toggleSidebarHandler = () => {
     setIsOpen(!isOpen);
   }
@@ -91,7 +93,7 @@ const SidebarComponent = () => {
           </div>
           <div className={cn(styles.row, styles.account)}>
             <i className="fas fa-user-circle"></i>
-            <p>{username !== null ? username : 'Аккаунт'}</p>
+            <p>{username !== undefined ? username : 'Гость'}</p>
           </div>
         </div>
       </div>
