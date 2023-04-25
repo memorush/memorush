@@ -9,16 +9,17 @@ import TitleAtomicComponent from '../../../../common/atomic-components/title/tit
 const ScreenshotsComponent = () => {
 
   const showScreensElements = () => {
-    return Array.of(screen1, screen2, screen3, screen4).map(screen => (
-      <img className={styles.screen} src={screen} alt="" />
-    ))
+    return Array.of({ id: 1, screen: screen1 }, { id: 2, screen: screen2 }, { id: 3, screen: screen3 }, { id: 4, screen: screen4 }).map(item => {
+      const { id, screen } = item;
+      return <img key={id} className={styles.screen} src={screen} alt="" />
+    })
   }
 
   return (
     <div className={styles.container}>
       <Slide cascade={true} direction='right'>
         <div className={styles.header}>
-          <TitleAtomicComponent name="Дизайн приложения"/>
+          <TitleAtomicComponent name="Дизайн приложения" />
           <div className={styles.line} />
           <p>Красивый и современный дизайн</p>
           <div className={styles.line} />

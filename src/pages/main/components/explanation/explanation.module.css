@@ -43,7 +43,6 @@
 
 .point {
 	display: flex;
-	word-break: break-all;
 }
 
 .screen {

@@ -34,7 +34,7 @@ const FeaturesComponent = () => {
 
   const showFeaturesEl = () => {
     return features.map(el => (
-      <div className={styles.featureContainer}>
+      <div className={styles.featureContainer} key={el.text}>
         <div className={styles.featureIcon}>
           <i className={el.class}></i>
         </div>

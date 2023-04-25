@@ -30,13 +30,13 @@ const HeroComponent = () => {
         <Slide direction='left'>
           <h1>Учитесь просто, быстро и эффективно вместе с </h1>
         </Slide>
-        <Fade direction='up' delay={2000}>
+        <Fade direction='up' delay={1000}>
           <h1 className={styles.logo}>Memo<span className={styles.r}>R</span>ush</h1>
         </Fade>
         <Slide direction='down'>
           <h2>Интерактивный тренажер для запоминания слов!</h2>
         </Slide>
-        <h3 className={styles.heroText}>{heroText}</h3>
+        <h4 className={styles.heroText}>{heroText}</h4>
       </div>
       <div className={cn(styles.column, styles.right)}
         style={{ backgroundImage: `url(${repeatImage})` }}>
