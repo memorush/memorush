@@ -67,7 +67,7 @@ const SidebarComponent = () => {
       >
         <div
           className={styles.toggle}
-          data-testId="hand-pointer-div"
+          data-testid="hand-pointer-div"
           onClick={() => toggleSidebarHandler(isOpen)}>
           <i className={cn("fas fa-hand-pointer", styles.pointer)}></i>
         </div>
