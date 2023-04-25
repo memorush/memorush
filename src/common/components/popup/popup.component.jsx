@@ -13,14 +13,19 @@ const PopupComponent = () => {
 
   useEffect(() => {
     if (isVisible === true) {
-      setTimeout(() => {
-        dispatch(hidePopup())
-      }, SHOW_TIME_POPUP)
+      hidePopupHandler();
     }
   }, [isVisible])
 
+  const hidePopupHandler = () => {
+    setTimeout(() => {
+      dispatch(hidePopup())
+    }, SHOW_TIME_POPUP)
+  }
+
   return (
     <div
+      data-testid="popup-component"
       className={cn(styles.container, isVisible ? styles.active : null)}
       style={popupEntity.styles}
     >

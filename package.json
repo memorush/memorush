@@ -7,11 +7,12 @@
     "@reduxjs/toolkit": "^1.7.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "@testing-library/user-event": "^14.4.3",
     "axios": "^0.24.0",
     "classname": "0.0.0",
     "classnames": "^2.3.1",
     "dotenv": "^16.0.3",
+    "history": "^5.3.0",
     "react": "^17.0.2",
     "react-awesome-reveal": "4.2.3",
     "react-dom": "^17.0.2",
@@ -33,6 +34,13 @@
     "react-error-overlay": "6.0.9"
   },
   "eslintConfig": {
+    "plugins": ["testing-library"],
+    "rules": {
+      "testing-library/await-async-query": "error",
+      "testing-library/no-await-sync-query": "error",
+      "testing-library/no-debugging-utils": "warn",
+      "testing-library/no-dom-import": "off"
+    },
     "extends": [
       "react-app",
       "react-app/jest"

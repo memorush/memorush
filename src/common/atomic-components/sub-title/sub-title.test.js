@@ -1,12 +1,21 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import SubTitleAtomicComponent from './sub-title.component';
+import {screen, render} from "@testing-library/react";
 
 describe("SubTitleAtomicComponent", () => {
-  test.concurrent('should render', () => {
-    const containerEl = document.createElement('div');
-    ReactDom.render(<SubTitleAtomicComponent name="Subtitle name" />, containerEl);
+  it("should render", () => {
+    render(<SubTitleAtomicComponent/>);
+    expect(screen.getByTestId("subtitle-atomic-component")).toBeInTheDocument();
+  });
 
-    expect(containerEl).toHaveTextContent("Subtitle name");
+  it("should render name inside", () => {
+    render(<SubTitleAtomicComponent name="text inside"/>);
+    expect(screen.getByText(/text inside/i)).toBeInTheDocument();
+  });
+
+  it("should have the container class", () => {
+    render(<SubTitleAtomicComponent/>);
+    expect(screen.getByTestId("subtitle-atomic-component")).toHaveClass("container");
   })
-});
+})
+

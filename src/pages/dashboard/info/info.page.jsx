@@ -5,8 +5,8 @@ import { useState } from 'react';
 import { ReactComponent as FindSvg } from './svg/loupe-search-svgrepo-com.svg';
 import { ReactComponent as BooksSvg } from './svg/books-svgrepo-com.svg'
 import { ReactComponent as AppleSvg } from './svg/apple-files-ios-svgrepo-com.svg'
-import { ReactComponent as AndroidSvg } from './svg/android-svgrepo-com (1).svg'
-import { ReactComponent as BrainSvg } from './svg/brain-svgrepo-com (1).svg'
+import { ReactComponent as AndroidSvg } from './svg/android-svgrepo-com-1.svg'
+import { ReactComponent as BrainSvg } from './svg/brain-svgrepo-com-1.svg'
 
 const InfoPage = () => {
 

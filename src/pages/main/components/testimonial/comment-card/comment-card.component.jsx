@@ -12,7 +12,6 @@ const CommentCardComponent = ({ id, style }) => {
 
   return (
     <div className={styles.container} style={style}>
-      {console.log(user)}
       <img className={styles.image} src={user?.photo} alt="" />
       <p>{user?.comment}</p>
       <div className={styles.user}>

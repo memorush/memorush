@@ -17,13 +17,11 @@ const SidebarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { username } = useSelector(authEntitySelector);
 
-  console.log(username);
-
-  const toggleSidebarHandler = () => {
+  const toggleSidebarHandler = (isOpen) => {
     setIsOpen(!isOpen);
   }
 
-  const onLogoutHandler = () => {
+  const onLogoutHandler = (username) => {
     if (username !== null || username.length > 0) {
       dispatch(invalidateLoggedInUser());
       navigate('main');
@@ -58,11 +56,19 @@ const SidebarComponent = () => {
   };
 
   return (
-    <div className={styles.container}
-      onTouchMove={handleTouchMove}
-      onTouchStart={handleTouchStart}>
-      <div className={cn(styles.sidebar, isOpen ? styles.open : null)}>
-        <div className={styles.toggle} onClick={toggleSidebarHandler}>
+    <div
+      className={styles.container}
+      data-testid="sidebar-component"
+      onTouchMove={(event) => handleTouchMove(event)}
+      onTouchStart={(event) => handleTouchStart(event)}>
+      <div
+        className={cn(styles.sidebar, isOpen ? styles.open : null)}
+        data-testid="sidebar"
+      >
+        <div
+          className={styles.toggle}
+          data-testId="hand-pointer-div"
+          onClick={() => toggleSidebarHandler(isOpen)}>
           <i className={cn("fas fa-hand-pointer", styles.pointer)}></i>
         </div>
         <div className={styles.menu}>
@@ -81,7 +87,7 @@ const SidebarComponent = () => {
             <p>Войти</p>
           </Link>
           <div
-            onClick={onLogoutHandler}
+            onClick={() => onLogoutHandler(username)}
             className={styles.row}
           >
             <i className="fas fa-sign-out-alt"></i>

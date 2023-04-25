@@ -1,9 +1,15 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import {screen, render} from "@testing-library/react";
 import HrAtomicComponent from './hr.component';
 
-//TODO fixme!
-it('should render', () => {
-  const containerEl = document.createElement('div');
-  ReactDom.render(<HrAtomicComponent />, containerEl);
+describe("HrAtomicComponent", () => {
+  it("should render", () => {
+    render(<HrAtomicComponent/>);
+    expect(screen.getByTestId("hr-atomic-component")).toBeInTheDocument();
+  });
+
+  it("should have the container class", () => {
+    render(<HrAtomicComponent/>);
+    expect(screen.getByTestId("hr-atomic-component")).toHaveClass("container");
+  })
 })

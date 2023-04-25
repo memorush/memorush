@@ -8,7 +8,7 @@ import style from './footer.module.css';
 const FooterComponent = () => {
 
   return (
-    <div className={cn(style.container)}>
+    <div className={cn(style.container)} data-testid="footer-component">
       <div className={cn(style.upper)}>
         <div className={style.svgContainer}>
           <CloverSvg />
@@ -28,7 +28,7 @@ const FooterComponent = () => {
               <Link to={"/term-of-use"}>Пользовательское соглашение</Link>
             </li>
             <li>
-              <Link to={"/privacy-policy"}>Политика конфиденциальности</Link>
+              <Link to={"/privacy-policy"} data-testid="privacy-policy-link">Политика конфиденциальности</Link>
             </li>
           </ul>
         </div>

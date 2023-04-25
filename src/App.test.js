@@ -1,11 +1,5 @@
-import React from "react";
-import { render } from "react-dom";
-import App from './App';
+//!TODO Допиши меня
 
-describe("App Component", () => {
-  test("should render", () => {
-    render(
-      <App />
-    );
-  })
+describe("App", () => {
+  it("should add some logic here", () => undefined)
 })

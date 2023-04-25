@@ -1,38 +1,44 @@
-import React from "react";
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
-import * as ReactRedux from 'react-redux'
+import '@testing-library/jest-dom';
+import { screen, render } from '@testing-library/react';
+import * as ReactRedux from 'react-redux';
+import PopupComponent from './popup.component';
+import styles from './popup.module.css';
 
-import PopupComponent from "./popup.component";
+describe("PopupComponent", () => {
+  const useSelectorMock = jest.spyOn(ReactRedux, 'useSelector');
+  const useDispatchMock = jest.spyOn(ReactRedux, 'useDispatch');
 
+  beforeEach(() => {
+    useSelectorMock.mockReturnValue({
+      popupEntity: {
+        message: null,
+        color: null,
+      },
+      isVisible: false
+    })
+  })
 
-let container = null;
-beforeEach(() => {
-  // setup a DOM element as a render target
-  container = document.createElement("div");
-  document.body.appendChild(container);
-});
+  afterEach(() => {
+    useSelectorMock.mockClear()
+    useDispatchMock.mockClear()
+  })
 
-afterEach(() => {
-  // cleanup on exiting
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
-});
-
-it("should select null after timing out", () => {
-
-  const mockXXXFn = jest.fn()
-  const spyOnUseDispatch = jest
-    .spyOn(ReactRedux, 'useDispatch')
-    .mockReturnValue({ xxxFn: mockXXXFn })
-
-  const spyOnUseSelector = jest
-    .spyOn(ReactRedux, 'useSelector')
-    .mockReturnValue({ isVisible: true, popupEntity: {} })
-
-  act(() => {
-    render(<PopupComponent />, container);
+  it("should be rendered", async () => {
+    render(<PopupComponent/>);
+    // Assertion
+    expect(screen.getByTestId("popup-component")).toBeInTheDocument();
   });
 
-});
+  it("useEffect should be called once when component mounts", () => {
+    render(<PopupComponent/>);
+    // Assertion
+    expect(useDispatchMock).toBeCalledTimes(1);
+  });
+
+  it("should not have active class when props isVisible is true", () => {
+    render(<PopupComponent/>);
+    // Assertion
+    expect(screen.getByTestId("popup-component")).not.toHaveClass(styles.active);
+  });
+})
+
