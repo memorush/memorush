@@ -1,11 +1,12 @@
-/* @font-face {
-  font-family: 'Cormorant Garamond';
-  src: local('Cormorant Garamond Regular'), url(./fonts/CormorantGaramond-Regular.ttf) format('truetype');
-} */
 
 @font-face {
-  font-family: 'Ramona-Bold';
-  src: local('Ramona-Bold'), url(./fonts/Ramona-Light.ttf) format('truetype');
+  font-family: 'Raleway-Black';
+  src: local('Raleway-Black'), url(./fonts/Raleway-Black.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Golos-Text';
+  src: local('Golos-Text'), url(./fonts/GolosText-Regular.ttf) format('truetype');
 }
 
 * {
@@ -21,12 +22,17 @@
 	--third-text-color: #95a5a6;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Raleway-Black', sans-serif;
+}
+
+p {
+	font-family: 'Golos Text', sans-serif;
+}
+
 body {
 	padding: 0;
 	margin: 0;
-	font-family:
-		"Ramona-Bold",
-		serif;
 	background-color: var(--secondary-bg-color);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
