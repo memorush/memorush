@@ -9,12 +9,13 @@ services:
       context: ./memorush-spring
       dockerfile: ./docker/production/Dockerfile
     environment:
-      PROFILE_ACTIVE: postgres
-      ADMIN_NAME: admin
-      ADMIN_PASSWORD: password
+      PROFILE_ACTIVE: h2
+      ADMIN_NAME: ${ADMIN_NAME:-admin}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-password}
       POSTGRES_URL: jdbc:postgresql://memorush-db:5432/postgres
-      POSTGRES_USERNAME: postgres
-      POSTGRES_PASSWORD: changeme
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      ALLOWED_ORIGINS_ARRAY: ${ALLOWED_ORIGINS_ARRAY:-http://localhost:3000}
       POSTGRES_DDL_AUTO: update
     depends_on:
       - memorush-db
@@ -25,18 +26,18 @@ services:
   memorush-react:
     build:
       context: .
-      dockerfile: ./docker/static-server/Dockerfile
+      dockerfile: ./docker/dev/Dockerfile
       args:
         # Change me!
-        - REACT_APP_BACKEND_URL=http://api.memorush.ru
+        - REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL:-http://localhost:8080}
     networks:
      - memorush
 
   memorush-db:
     image: postgres:alpine3.17
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: changeme
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
       PGDATA: /data/postgres
     volumes:
       - memorush-db:/data/postgres

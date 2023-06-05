@@ -1,0 +1,47 @@
+# How to init submodule
+# git submodule update --init --recursive
+# git submodule update --remote --merge
+
+# How to use it?
+# docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+version: '3'
+services:
+  # You can rename this service special for docker-hub like: ydubovitsky/memorush
+  memorush-spring:
+    build:
+      context: ./memorush-spring
+      dockerfile: ./docker/production/Dockerfile
+    environment:
+      PROFILE_ACTIVE: ${PROFILE_ACTIVE:-postgres}
+      ALLOWED_ORIGINS_ARRAY: ${ALLOWED_ORIGINS_ARRAY:-http://localhost:3000}
+      POSTGRES_DDL_AUTO: ${POSTGRES_DDL_AUTO:-update}
+    networks:
+      - nginx-proxy-manager_default
+
+  memorush-react:
+    build:
+      context: .
+      dockerfile: ./docker/production/Dockerfile
+      args:
+        # Change me!
+        - REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
+    networks:
+      - nginx-proxy-manager_default
+
+  memorush-db:
+    networks:
+      - nginx-proxy-manager_default
+
+  memorush-pgadmin:
+    networks:
+      - nginx-proxy-manager_default
+    restart: unless-stopped
+
+networks:
+  nginx-proxy-manager_default:
+    external: true
+
+volumes:
+  memorush-db:
+  memorush-pgadmin:
