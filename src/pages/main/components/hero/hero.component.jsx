@@ -27,10 +27,10 @@ const HeroComponent = () => {
   return (
     <div id="hero" className={styles.container}>
       <div className={cn(styles.column, styles.left)}>
-        <Slide direction='left'>
+        <Fade>
           <h1>Учитесь просто, быстро и эффективно вместе с </h1>
-        </Slide>
-        <Fade direction='up' delay={1000}>
+        </Fade>
+        <Fade>
           <h1 className={styles.logo}>Memo<span className={styles.r}>R</span>ush</h1>
         </Fade>
         <Slide direction='down'>

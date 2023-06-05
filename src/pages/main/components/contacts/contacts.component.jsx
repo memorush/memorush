@@ -19,7 +19,7 @@ const ContactsComponent = () => {
             <div className={styles.contactItem}>
               <i className="fab fa-internet-explorer"></i>
               <h4>Вебсайт</h4>
-              <p>www.ydubovitsky.ru</p>
+              <p>https://ydubovitsky.ru</p>
             </div>
           </div>
         </Slide>
