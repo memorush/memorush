@@ -5,6 +5,7 @@
   "homepage": "https://memorush.ru",
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
+    "@splinetool/react-spline": "^2.2.6",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^14.4.3",
@@ -34,7 +35,9 @@
     "react-error-overlay": "6.0.9"
   },
   "eslintConfig": {
-    "plugins": ["testing-library"],
+    "plugins": [
+      "testing-library"
+    ],
     "rules": {
       "testing-library/await-async-query": "error",
       "testing-library/no-await-sync-query": "error",
