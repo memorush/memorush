@@ -5,7 +5,7 @@ const HeroComponent = () => {
 
   return (
     <div id="hero" className={styles.container}>
-      <Spline scene="https://prod.spline.design/Fyi3nNUHeBsQH62V/scene.splinecode" />
+      <Spline scene="https://prod.spline.design/r6xOu7erAOZchYCR/scene.splinecode" />
     </div>
   )
 }
