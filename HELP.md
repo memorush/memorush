@@ -25,3 +25,12 @@ https://praville.ru/generator/a_gen.php
 https://icons8.com/icon/set/popular/3d-fluency
 
 https://www.svgrepo.com/vectors/books/
+
+### React testing library -> good article
+https://www.freecodecamp.org/news/how-to-write-unit-tests-in-react-redux/
+
+### Disallow the use of render in testing frameworks setup functions (testing-library/no-render-in-setup)
+https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-render-in-setup.md
+
+### Avoid Nesting when you're Testing
+https://kentcdodds.com/blog/avoid-nesting-when-youre-testing
