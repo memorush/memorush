@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.title {
+  padding: 2%;
+  background-color: #F9F8F8;
+  border-bottom: 1px solid #DDD;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 2% 5%;
+  background-color: white;
+}
+
+.imgContainer img {
+  width: 100%;
+}

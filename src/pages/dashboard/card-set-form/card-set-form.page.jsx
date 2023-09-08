@@ -9,6 +9,7 @@ import ActionButtonsComponent from './components/action-buttons/action-buttons.c
 import FlashCardFormComponent from './components/flash-card-form/flash-card-form.component';
 import ImportCardDataComponent from './components/import-card-data/import-card-data.component';
 import { ReactComponent as PenSvg } from './svg/pen-svgrepo-com.svg';
+import ImageToCardComponent from './components/image-to-card/image-to-card.component';
 
 const INIT_CARD_SET_STATE = {
   name: "",
@@ -111,6 +112,7 @@ const CardSetFormPage = () => {
         </div>
       </div>
       <ImportCardDataComponent setCardSetEntity={setCardSetEntity} cardSetEntity={cardSetEntity} />
+      <ImageToCardComponent setCardSetEntity={setCardSetEntity} cardSetEntity={cardSetEntity} />
       <FlashCardFormComponent
         cardSetEntity={cardSetEntity}
         setCardSetEntity={setCardSetEntity}
