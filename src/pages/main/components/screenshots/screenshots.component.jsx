@@ -17,7 +17,7 @@ const ScreenshotsComponent = () => {
 
   return (
     <div className={styles.container}>
-      <Slide cascade={true} direction='right'>
+      <Slide cascade={true} direction='right' triggerOnce>
         <div className={styles.header}>
           <TitleAtomicComponent name="Дизайн приложения" />
           <div className={styles.line} />

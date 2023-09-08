@@ -1,12 +1,12 @@
 import styles from './developer.module.css';
-import { Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 
 const DeveloperComponent = () => {
 
   return (
     <div id="developer" className={styles.container}>
-      <Slide bottom>
+      <Fade triggerOnce>
         <div className={styles.header}>
           <TitleAtomicComponent name="О технологии разработки" />
           <div className={styles.line} />
@@ -27,7 +27,7 @@ const DeveloperComponent = () => {
             <p>Мобильное приложение написано с использованием React Native</p>
           </div>
         </div>
-      </Slide>
+      </Fade>
     </div>
   )
 }

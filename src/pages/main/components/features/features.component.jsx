@@ -51,14 +51,14 @@ const FeaturesComponent = () => {
   return (
     <div id="features" className={styles.container}>
       <div className={styles.header}>
-        <Fade>
+        <Fade triggerOnce>
           <TitleAtomicComponent name="Потрясающие особенности приложения" />
           <p>Основные преимущества при использовании данного сервиса</p>
           <div className={styles.line} />
         </Fade>
       </div>
       <div className={styles.features}>
-        <Fade cascade={true}>
+        <Fade cascade={true} triggerOnce>
           {showFeaturesEl()}
         </Fade>
       </div>

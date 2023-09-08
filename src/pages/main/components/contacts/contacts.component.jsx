@@ -1,15 +1,13 @@
-import styles from './contacts.module.css';
+import { Fade } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
-import { Fade, Slide } from "react-awesome-reveal";
+import styles from './contacts.module.css';
 
 const ContactsComponent = () => {
   return (
     <div id="contacts" className={styles.container}>
-      <Fade>
+      <Fade triggerOnce>
         <TitleAtomicComponent name="Обратная связь" style={{ textAlign: 'center', color: "white" }} />
-      </Fade>
-      <div className={styles.info}>
-        <Slide direction='left'>
+        <div className={styles.info}>
           <div className={styles.contactContainer}>
             <div className={styles.contactItem}>
               <i className="fas fa-envelope-open"></i>
@@ -22,8 +20,6 @@ const ContactsComponent = () => {
               <p>https://ydubovitsky.ru</p>
             </div>
           </div>
-        </Slide>
-        <Slide direction='right'>
           <div className={styles.formContainer}>
             <form action="mailto:y.dubovitsky@gmail.com">
               <input type="text" placeholder="Ваше имя"></input>
@@ -35,8 +31,8 @@ const ContactsComponent = () => {
               </div>
             </form>
           </div>
-        </Slide>
-      </div>
+        </div>
+      </Fade>
     </div>
   )
 };
