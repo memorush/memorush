@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+# Memorush [![buddy pipeline](https://eu.buddy.works/ydubovitsky/memorush-react/pipelines/pipeline/188131/badge.svg?token=eb9bde3273fe291b8d3d8f32dce5ba03049f2abf1010251014b349a243c60a3f "buddy pipeline")](https://eu.buddy.works/ydubovitsky/memorush-react/pipelines/pipeline/188131)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Это приложение предназначено для изучения английских слов посредством метода карточек. Оно помогает пользователям улучшить свой словарный запас, запоминая новые слова и повышая уверенность в их использовании.
 
-## Available Scripts
+![Alt text](src/assets/screens/preview-video.gif)
 
-In the project directory, you can run:
+Основные возможности приложения включают:
+1. Коллекция слов: В приложении доступен широкий выбор слов и фраз на английском языке из различных тематик. Пользователь может выбрать тему или создать собственную коллекцию слов.
+2. Карточки: Каждое слово представлено на карточке, где на одной стороне отображено слово на английском, а на другой - его перевод или определение. Пользователь может переворачивать карточки, чтобы проверить свои знания.
+3. Интерактивные упражнения: Приложение предлагает различные типы упражнений, такие как выбор правильного перевода, составление предложений с использованием слов, сопоставление слов с определениями и другие. Это помогает пользователям закрепить новые слова и применить их в контексте.
+4. Отслеживание прогресса: Приложение сохраняет результаты и прогресс пользователя, позволяя отслеживать свои достижения и улучшаться с каждым уроком. Оно также предоставляет статистику, показывающую, какие слова пользователь знает лучше всего и где есть потребность в дополнительном обучении.
+5. Дополнительные материалы: Помимо карточек с словами, приложение может предлагать пользователю дополнительные материалы для изучения, такие как аудио-и видеоматериалы, статьи и игры, связанные с изучением английского языка.
 
-### `yarn start`
+![Alt text](src/assets/screens/screen1.JPG)
+![Alt text](src/assets/screens/screen2.JPG)
+![Alt text](src/assets/screens/screen3.JPG)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Это приложение является удобным инструментом для эффективного изучения английского языка посредством карточек, с целью расширения словарного запаса и освоения новых слов и фраз.
