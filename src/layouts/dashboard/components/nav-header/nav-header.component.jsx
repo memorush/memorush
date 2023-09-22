@@ -1,7 +1,7 @@
-import styles from './nav-header.module.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { invalidateLoggedInUser } from '../../../../redux/features/auth/auth-slice';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { invalidateLoggedInUser } from '../../../../redux/features/auth/auth-slice';
+import styles from './nav-header.module.css';
 
 const NavHeaderComponent = () => {
 
@@ -17,7 +17,7 @@ const NavHeaderComponent = () => {
         <Link to={"/"}><i className="fas fa-brain"></i> Memorush</Link>
       </div>
       <div className={styles.userContainer}>
-        <i className="fas fa-sign-out-alt" onClick={logout}></i>
+        <i className="fas fa-sign-out-alt" onClick={logout} role="button"></i>
       </div>
     </div>
   )
