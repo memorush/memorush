@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 const TestimonialComponent = () => {
   return (
     <div id="testimonial" className={styles.container}>
-      <Fade cascade bottom triggerOnce>
+      <Fade cascade={true} bottom triggerOnce={true}>
         <div className={styles.header}>
           <h1>Что о нас говорят люди?</h1>
         </div>

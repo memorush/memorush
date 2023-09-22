@@ -8,7 +8,7 @@ const ExplanationsComponent = () => {
 
   return (
     <div id="explanation" className={styles.container}>
-      <Slide cascade={true} direction='right' triggerOnce>
+      <Slide cascade={true} direction='right' triggerOnce={true}>
         <div className={cn(styles.column, styles.info)}>
           <div className={styles.header}>
             <TitleAtomicComponent name="Почему стоит выбрать именно это приложение?" />
@@ -25,7 +25,7 @@ const ExplanationsComponent = () => {
           </div>
         </div>
       </Slide>
-      <Slide cascade={true} direction='left' triggerOnce>
+      <Slide cascade={true} direction='left' triggerOnce={true}>
         <div className={styles.column}>
           <img className={styles.screen} src={screen5} alt=""/>
         </div>

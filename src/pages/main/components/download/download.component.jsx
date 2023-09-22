@@ -8,7 +8,7 @@ import qrConde from './images/qr-code.png'
 const DownloadComponent = () => {
   return (
     <div id="download" className={styles.container}>
-      <Fade triggerOnce>
+      <Fade triggerOnce={true}>
         <div className={styles.header}>
           <TitleAtomicComponent name="Установите приложение" />
           <div className={styles.line} />

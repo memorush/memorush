@@ -1,23 +1,30 @@
 import { Fade } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 import styles from './contacts.module.css';
 
+const EMAIL = "y.dubovitsky@gmail.com"
+
 const ContactsComponent = () => {
+
+  const sendEmailHandler = (e) => {
+    window.location = `mailto:${EMAIL}`
+    e.preventDefault();
+  }
+
   return (
     <div id="contacts" className={styles.container}>
-      <Fade triggerOnce>
+      <Fade triggerOnce={true}>
         <TitleAtomicComponent name="Обратная связь" style={{ textAlign: 'center', color: "white" }} />
         <div className={styles.info}>
           <div className={styles.contactContainer}>
             <div className={styles.contactItem}>
               <i className="fas fa-envelope-open"></i>
-              <h4>Почта</h4>
-              <p>y.dubovitsky@gmail.com</p>
+              <h4 onClick={sendEmailHandler}>Связаться по почте</h4>
             </div>
             <div className={styles.contactItem}>
               <i className="fab fa-internet-explorer"></i>
-              <h4>Вебсайт</h4>
-              <p>https://ydubovitsky.ru</p>
+              <a href={"https://ydubovitsky.ru"} target='_blank' rel='noreferrer'><h4>Перейти на сайт разработчика</h4></a>
             </div>
           </div>
           <div className={styles.formContainer}>

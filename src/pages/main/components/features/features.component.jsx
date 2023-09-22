@@ -1,4 +1,4 @@
-import { Slide, Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 import styles from './features.module.css';
 
@@ -51,14 +51,14 @@ const FeaturesComponent = () => {
   return (
     <div id="features" className={styles.container}>
       <div className={styles.header}>
-        <Fade triggerOnce>
+        <Fade triggerOnce={true}>
           <TitleAtomicComponent name="Потрясающие особенности приложения" />
           <p>Основные преимущества при использовании данного сервиса</p>
           <div className={styles.line} />
         </Fade>
       </div>
       <div className={styles.features}>
-        <Fade cascade={true} triggerOnce>
+        <Fade cascade={true} triggerOnce={true}>
           {showFeaturesEl()}
         </Fade>
       </div>

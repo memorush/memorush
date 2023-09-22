@@ -6,7 +6,7 @@ const DeveloperComponent = () => {
 
   return (
     <div id="developer" className={styles.container}>
-      <Fade triggerOnce>
+      <Fade triggerOnce={true}>
         <div className={styles.header}>
           <TitleAtomicComponent name="О технологии разработки" />
           <div className={styles.line} />

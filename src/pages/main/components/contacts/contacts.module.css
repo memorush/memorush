@@ -37,8 +37,15 @@
 
 .contactItem h4 {
 	grid-area: h4;
-	color: silver;
-	text-transform: uppercase;
+	color: white;
+	cursor: pointer;
+	text-transform: capitalize;
+	transition: 0.3s ease;
+	text-decoration: none;
+}
+
+.contactItem h4:hover {
+	color: #C95FFF;
 }
 
 .contactItem p {
