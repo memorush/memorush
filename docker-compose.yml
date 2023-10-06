@@ -9,14 +9,14 @@ services:
       context: ./memorush-spring
       dockerfile: ./docker/production/Dockerfile
     environment:
-      PROFILE_ACTIVE: h2
+      PROFILE_ACTIVE: ${PROFILE_ACTIVE:-h2}
       ADMIN_NAME: ${ADMIN_NAME:-admin}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD:-password}
       POSTGRES_URL: jdbc:postgresql://memorush-db:5432/postgres
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
       ALLOWED_ORIGINS_ARRAY: ${ALLOWED_ORIGINS_ARRAY:-http://localhost:3000}
-      POSTGRES_DDL_AUTO: update
+      POSTGRES_DDL_AUTO: ${POSTGRES_DDL_AUTO:-update}
     depends_on:
       - memorush-db
       - memorush-pgadmin
