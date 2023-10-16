@@ -5,7 +5,7 @@ const HeroComponent = () => {
 
   return (
     <div id="hero" className={styles.hero} data-testid="hero">
-      {/* <MobileApp3dComponent/> */}
+      <MobileApp3dComponent/>
     </div>
   )
 }
