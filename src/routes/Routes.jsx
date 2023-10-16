@@ -1,12 +1,12 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import MainLayout from "../layouts/main/main.layout";
-import CardSetFormPage from "../pages/dashboard/card-set-form/card-set-form.page";
+import CardSetPage from "../pages/dashboard/card-set/card-set.page";
 import CardSetListPage from "../pages/dashboard/card-set-list/card-set-list.page";
 import CardSetListIdPage from "../pages/dashboard/card-set-list-id/card-set-list-id.page";
 import CardListPage from "../pages/dashboard/card-set-list-id/pages/card-list/card-list.page";
 import SettingsPage from "../pages/dashboard/settings/settings.page";
 import DashboardPage from "../layouts/dashboard/dashboard.layout";
-import AuthFormComponent from "../pages/main/components/auth-form/auth-form.component";
+import AuthPopupComponent from "../pages/main/components/auth-popup/auth-popup.component";
 import MainPage from "../pages/main/main.page";
 import NotFoundPage from "../pages/not-found/not-found.page";
 import RequireAuthRoute from "../wrapper/RequireAuthRoute";
@@ -18,6 +18,7 @@ import TrainerPage from "../pages/dashboard/card-set-list-id/pages/trainer/train
 import PrivacyPolicyPage from "../pages/privacy-policy/privacy-policy.page";
 import TermOfUsePage from "../pages/term-of-use/term-of-use.page";
 import FaqPage from "../pages/faq/faq.page";
+import DictionaryPage from "../pages/dashboard/dictionary/dictionary.page";
 
 const ApplicationRoutes = () => (
   <Routes>
@@ -25,7 +26,7 @@ const ApplicationRoutes = () => (
       {/* TODO Переделать тут роутинг */}
       <Route index element={<MainPage />} />
       <Route path="main" element={<MainPage />}>
-        <Route path="auth" element={<AuthFormComponent />} />
+        <Route path="auth" element={<AuthPopupComponent />} />
         <Route path="page-not-found" element={<NotFoundPage />} />
         <Route path="*" element={<Navigate to="page-not-found" replace />} />
       </Route>
@@ -33,6 +34,7 @@ const ApplicationRoutes = () => (
         <Route path="dashboard" element={<DashboardPage />}>
           <Route path="info" element={<InfoPage />} />
           <Route path="search" element={<SearchPage />} />
+          <Route path="dictionary" element={<DictionaryPage />} />
           <Route path="found-card-set-details/:id" element={<FoundCardSetDetailsPage />} />
           <Route path="found-card-set" element={<SearchPage />} />
           <Route path="card-set-list" element={<CardSetListPage />} />
@@ -41,11 +43,11 @@ const ApplicationRoutes = () => (
             <Route path="tip" element={<TipPage />} />
             <Route path="trainer" element={<TrainerPage />} />
           </Route>
-          <Route path="card-set-create" element={<CardSetFormPage />} />
-          <Route path="card-set-edit" element={<CardSetFormPage />} />
-          <Route path="card-set-folders" element={<CardSetFormPage />} />
-          <Route path="card-set-favorites" element={<CardSetFormPage />} />
-          <Route path="card-set-recently" element={<CardSetFormPage />} />
+          <Route path="card-set-create" element={<CardSetPage />} />
+          <Route path="card-set-edit" element={<CardSetPage />} />
+          <Route path="card-set-folders" element={<CardSetPage />} />
+          <Route path="card-set-favorites" element={<CardSetPage />} />
+          <Route path="card-set-recently" element={<CardSetPage />} />
           <Route path="settings" element={<SettingsPage />} />
           <Route path="page-not-found" element={<NotFoundPage />} />
           <Route path="*" element={<Navigate to="page-not-found" replace />} />

@@ -5,6 +5,7 @@ import authReducer from './features/auth/auth-slice';
 import cardSetReducer from './features/card-set/card-set.slice';
 import popupReducer from './features/popup/popup-slice';
 import searchReducer from './features/search/search.slice';
+import { dictionaryApi } from './features/dictionary/dictionary.rtk';
 
 const persistedState = loadState('auth');
 
@@ -13,12 +14,14 @@ const store = configureStore({
     auth: authReducer,
     cardSet: cardSetReducer,
     popup: popupReducer,
-    search: searchReducer
+    search: searchReducer,
+    dictionaryApi: dictionaryApi.reducer
   },
   preloadedState: {
     auth: persistedState
   },
-  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(PopupMiddleware)
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(dictionaryApi.middleware, PopupMiddleware)
 })
 
 

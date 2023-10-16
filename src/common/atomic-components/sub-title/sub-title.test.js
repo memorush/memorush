@@ -15,7 +15,7 @@ describe("SubTitleAtomicComponent", () => {
 
   it("should have the container class", () => {
     render(<SubTitleAtomicComponent/>);
-    expect(screen.getByTestId("subtitle-atomic-component")).toHaveClass("container");
+    expect(screen.getByTestId("subtitle-atomic-component")).toHaveClass("subtitle");
   })
 })
 

@@ -7,8 +7,8 @@ import { ReactComponent as UserSvg } from './svg/user-svgrepo-com.svg';
 const CardSetListPage = () => {
 
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
+    <div className={styles.container} data-testid="card-set-list-page">
+      <div className={styles.headerContainer}>
         <div className={styles.userSvgContainer}>
           <UserSvg />
         </div>
@@ -27,7 +27,7 @@ const CardSetListPage = () => {
         </div>
         <div className={styles.dashboardContainer}>
           <div className={styles.navigation}>
-            <Link to={"/dashboard/card-set-create"}>
+            <Link to={"/dashboard/card-set-create"} data-testid="create-page">
               <ButtonAtomicComponent name="Создать набор" />
             </Link>
             <p className={styles.hint}>Нажмите на название набора, чтобы приступить к изучению слов</p>

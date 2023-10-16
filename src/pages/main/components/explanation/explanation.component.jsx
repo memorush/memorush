@@ -7,27 +7,27 @@ import TitleAtomicComponent from '../../../../common/atomic-components/title/tit
 const ExplanationsComponent = () => {
 
   return (
-    <div id="explanation" className={styles.container}>
+    <div id="explanation" className={styles.explanations} data-testId="explanations">
       <Slide cascade={true} direction='right' triggerOnce={true}>
-        <div className={cn(styles.column, styles.info)}>
-          <div className={styles.header}>
+        <div className={cn(styles.explanations__column, styles.info)}>
+          <div className={styles.info__title}>
             <TitleAtomicComponent name="Почему стоит выбрать именно это приложение?" />
-            <div className={styles.line}></div>
-            <div className={styles.description}>
+            <div className={styles.info__line}></div>
+            <div className={styles.info__subtitle}>
               <p>Наряду с основными особенностями...</p>
             </div>
-            <div className={styles.line}></div>
+            <div className={styles.info__line}></div>
           </div>
-          <div className={styles.points}>
-            <p className={styles.point}>Вы ни за что не платите</p>
-            <p className={styles.point}>Поддерживает большинство устройств</p>
-            <p className={styles.point}>Учитесь через сайт или приложение</p>
+          <div className={styles.info__items}>
+            <p className={styles.info__items_item}>Вы ни за что не платите</p>
+            <p className={styles.info__items_item}>Поддерживает большинство устройств</p>
+            <p className={styles.info__items_item}>Учитесь через сайт или приложение</p>
           </div>
         </div>
       </Slide>
       <Slide cascade={true} direction='left' triggerOnce={true}>
-        <div className={styles.column}>
-          <img className={styles.screen} src={screen5} alt=""/>
+        <div className={styles.explanations__column}>
+          <img className={styles.explanations__column_img} src={screen5} alt="" />
         </div>
       </Slide>
     </div>

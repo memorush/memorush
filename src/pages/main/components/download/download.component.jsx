@@ -7,24 +7,24 @@ import qrConde from './images/qr-code.png'
 
 const DownloadComponent = () => {
   return (
-    <div id="download" className={styles.container}>
+    <div id="download" className={styles.download} data-testId="download">
       <Fade triggerOnce={true}>
-        <div className={styles.header}>
+        <div className={styles.download__header}>
           <TitleAtomicComponent name="Установите приложение" />
-          <div className={styles.line} />
+          <div className={styles.download__header_line} />
           <p>Установите наше приложение и начните учиться прямо сейчас!</p>
-          <p className={styles.avaliableText}>«Приложение временно доступно только на Android устройствах...»</p>
-          <div className={styles.line} />
+          <p className={styles.download__header_availableText}>«Приложение временно доступно только на Android устройствах...»</p>
+          <div className={styles.download__header_line} />
         </div>
-        <div className={styles.buttonContainer}>
-          <img className={styles.qrConde} src={qrConde} alt="" />
-          <Link to={process.env.REACT_APP_APPGALLERY_LINK} target="_blank">
+        <div className={styles.download__buttons}>
+          <img className={styles.download__buttons_qrConde} src={qrConde} alt="" />
+          <Link className={styles.download__buttons_link} to={process.env.REACT_APP_APPGALLERY_LINK} target="_blank">
             <ButtonAtomicComponent name={"App Gallery"} />
           </Link>
         </div>
       </Fade>
-      <div className={styles.downloadIcon}>
-        <div className={styles.innerCircle}>
+      <div className={styles.download__iconContainer}>
+        <div className={styles.download__iconContainer_circle}>
           <i className="fas fa-download"></i>
         </div>
       </div>

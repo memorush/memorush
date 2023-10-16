@@ -1,9 +1,3 @@
-.container {
-	overflow: hidden;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
-}
-
 .cardSetFormContainer {
 	background-color: white;
 }
@@ -14,6 +8,12 @@
 	border-bottom: 1px solid #DDD;
 }
 
+.svgContainer {
+	width: 70px;
+	height: 70px;
+}
+
+
 .cardSetFormTitle {
 	display: grid;
 	grid-template-columns: min-content auto;
@@ -23,11 +23,6 @@
 
 .cardSetFormTitle h1 {
 	word-wrap: normal;
-}
-
-.svgContainer {
-	width: 70px;
-	height: 70px;
 }
 
 .cardSetFormColumns {
@@ -68,17 +63,4 @@
 
 .cardSetFormColumns label {
 	font-size: 1.2rem;
-}
-
-.importCardsDataFormContainer {
-	display: grid;
-	gap: 20px;
-	background-color: white;
-}
-
-.importCardsDataForm {
-	display: grid;
-	gap: 20px;
-	padding: 2% 5%;
-	background-color: white;
 }

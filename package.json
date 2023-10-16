@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://memorush.ru",
   "dependencies": {
+    "@pbe/react-yandex-maps": "^1.2.5",
     "@reduxjs/toolkit": "^1.7.1",
     "@splinetool/react-spline": "^2.2.6",
     "@testing-library/jest-dom": "^5.11.4",
@@ -67,6 +68,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.1",
     "jest": "^27.5.1",
+    "sass": "^1.69.0",
     "stylelint": "^14.9.1",
     "stylelint-config-recess-order": "^3.0.0"
   }

@@ -1,4 +1,4 @@
-.container {
+.button {
 	position: relative;
 	display: block;
 	height: min-content;
@@ -11,11 +11,12 @@
 	text-transform: uppercase;
 	white-space: nowrap;
 	background: linear-gradient(to right, #7474BF 0%, #348AC7 51%, #7474BF 100%);
+	border: none;
 	border-radius: 5px;
 	transition: 1s all ease;
 }
 
-.container::before {
+.button::before {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -26,25 +27,25 @@
 	transform: translate(-50%, -50%);
 }
 
-.container::before {
+.button::before {
 	width: 0%;
 	height: 100%;
 }
 
-.container:hover::before {
+.button:hover::before {
 	width: 100%;
 }
 
-.container p {
+.button__name {
 	text-decoration: none;
 }
 
-.container:hover {
+.button:hover {
 	color: black;
 	text-shadow: none;
 	opacity: 0.95;
 }
 
-.container:active {
+.button:active {
 	transform: scale(0.9);
 }

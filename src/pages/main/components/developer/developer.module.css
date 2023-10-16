@@ -1,4 +1,4 @@
-.container {
+.developer {
 	display: grid;
 	gap: 50px;
 	justify-items: center;
@@ -8,31 +8,31 @@
 	background-color: #161616;
 }
 
-.header {
+.developer__header {
 	display: grid;
 	gap: 20px;
 	justify-items: center;
 	text-align: center;
 }
 
-.header .line {
+.developer__header_line {
 	width: 50%;
 	height: 1px;
 	background-color: #008ed6;
 }
 
-.skills {
+.developer__skills {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.skill {
+.developer__skills_item {
 	display: grid;
 	gap: 20px;
 	justify-items: center;
 	text-align: center;
 }
 
-.skill i {
+.developer__skills_item i {
 	font-size: 5rem;
 }

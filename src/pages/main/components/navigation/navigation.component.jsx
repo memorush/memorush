@@ -19,15 +19,24 @@ const NavigationComponent = () => {
     }
   }
 
+  const showLinksItems = () => {
+    const values = [
+      ["hero", "Домой"],
+      ["features", "Особенности"],
+      ["explanation", "Почему это приложение?"],
+      ["contacts", "Обратная связь"],
+      ["download", "Скачать"]
+    ]
+    return values.map(element => (
+      <div className={styles.links__item} onClick={() => scrollToElementIdHandler(element[0])}>{element[1]}</div>
+    ))
+  }
+
   return (
-    <div className={cn(styles.container, isScrolled ? styles.scrolled : null)}>
+    <div className={cn(styles.navigation, isScrolled ? styles.scrolled : null)} data-testId="navigation">
       <div className={styles.logo}><i className="fas fa-brain"></i> Memorush</div>
-      <div className={styles.navItemContainer}>
-        <div className={styles.navItem} onClick={() => scrollToElementIdHandler("hero")}>Домой</div>
-        <div className={styles.navItem} onClick={() => scrollToElementIdHandler("features")}>Особенности</div>
-        <div className={styles.navItem} onClick={() => scrollToElementIdHandler("explanation")}>Почему это приложение?</div>
-        <div className={styles.navItem} onClick={() => scrollToElementIdHandler("contacts")}>Обратная связь</div>
-        <div className={styles.navItem} onClick={() => scrollToElementIdHandler("download")}>Скачать</div>
+      <div className={styles.links}>
+        {showLinksItems()}
       </div>
     </div>
   )

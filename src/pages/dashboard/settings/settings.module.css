@@ -25,9 +25,9 @@
 .settingsContainer {
 	display: flex;
 	flex-wrap: wrap;
-  padding: 5%;
 	gap: 20px;
 	justify-content: flex-start;
+  padding: 5%;
 }
 
 .settingsContainer input {
@@ -43,7 +43,7 @@
 
 .actionButtons {
   display: grid;
-  width: 100%;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  width: 100%;
 }

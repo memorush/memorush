@@ -70,44 +70,45 @@ const RegisterFormComponent = () => {
 
   const showValidationElement = () => {
     return (
-      <div className={styles.validationContainer}>
-        <p>{validationError}</p>
+      <div className={styles.validation}>
+        <p className={styles.validation__message}>{validationError}</p>
       </div>
     )
   }
 
   return (
-    <div className={styles.registerForm}>
-      <div className={styles.inputContainer}>
+    <form className={styles.registerForm} data-testId="register-form">
+      <div className={styles.registerForm__inputsContainer}>
         <input
-          className={styles.input}
+          className={styles.registerForm__input}
           type="text"
           name="username"
           onChange={formInputHandler}
           placeholder='Имя пользователя' />
         <input
-          className={styles.input}
+          className={styles.registerForm__input}
           type="password"
           name="password"
           onChange={formInputHandler}
           placeholder='Пароль' />
         <input
-          className={styles.input}
+          className={styles.registerForm__input}
           type="password"
           name="password2"
           onChange={formInputHandler}
           placeholder='Подтвердите пароль' />
-        <div className={styles.privacyContainer}>
-          <label className={styles.privacyLabel} htmlFor="privacy-checkbox">Используя сервис или сайты, вы соглашаетесь с Правилами использования, которые включают в себя настоящую Политику конфиденциальности.
+        <div className={[styles.registerForm__privacy, styles.privacy]}>
+          <label className={styles.privacy__label} htmlFor="privacy-checkbox">Используя сервис или сайты, вы соглашаетесь с Правилами использования, которые включают в себя настоящую Политику конфиденциальности.
           </label>
-          <div className={styles.checkboxContainer}>
+          <div className={styles.privacy__checkboxContainer}>
             <input
+              className={styles.privace__input}
               type="checkbox"
               name=""
-              id="privacy-checkbox" 
+              id="privacy-checkbox"
               defaultChecked={isPolicyAgree}
               onChange={() => setIsPolicyAgree(!isPolicyAgree)}
-              />
+            />
             <Link to={"/privacy-policy"}>Политика конфиденциальности</Link>
           </div>
         </div>
@@ -118,7 +119,7 @@ const RegisterFormComponent = () => {
         disable={!isPolicyAgree}
         clickFunction={registerNewUserHandler}
       />
-    </div>
+    </form>
   )
 }
 

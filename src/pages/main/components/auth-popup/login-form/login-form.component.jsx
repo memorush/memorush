@@ -35,16 +35,16 @@ const LoginFormComponent = () => {
   //TODO Сделать валидацию, а мб одну большую валидацию для двух компонентов и массива входных данных!
 
   return (
-    <div className={styles.signInForm}>
-      <div className={styles.inputContainer}>
+    <form className={styles.loginForm} data-testId="login-form">
+      <div className={styles.loginForm__inputsContainer}>
         <input
-          className={styles.input}
+          className={styles.loginForm__input}
           type="text"
           name="username"
           onChange={formInputHandler}
           placeholder='Имя пользователя' />
         <input
-          className={styles.input}
+          className={styles.loginForm__input}
           type="password"
           name="password"
           onChange={formInputHandler}
@@ -54,7 +54,7 @@ const LoginFormComponent = () => {
         name="Войти"
         clickFunction={loginHandler}
       />
-    </div>
+    </form>
   )
 }
 

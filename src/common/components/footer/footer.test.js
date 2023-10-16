@@ -14,7 +14,7 @@ describe("FooterComponent", () => {
 
   it("should have the container class", () => {
     render(<FooterComponent />, { wrapper: MemoryRouter })
-    expect(screen.getByTestId("footer-component")).toHaveClass("container");
+    expect(screen.getByTestId("footer-component")).toHaveClass("footer");
   });
 
   it("should have a child with text /term-of-use", async () => {

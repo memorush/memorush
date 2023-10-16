@@ -5,9 +5,9 @@ const TitleAtomicComponent = ({ name, style }) => {
     <div
       data-testid="title-atomic-component"
       style={{ ...style }}
-      className={styles.container}
+      className={styles.title}
     >
-      <h1 className={styles.textSize}>{name}</h1>
+      <h1 className={styles.title__name}>{name}</h1>
     </div>
   )
 }

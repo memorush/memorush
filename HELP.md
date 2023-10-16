@@ -34,3 +34,6 @@ https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/
 
 ### Avoid Nesting when you're Testing
 https://kentcdodds.com/blog/avoid-nesting-when-youre-testing
+
+### БЭМ, методология веб-разработки
+https://ru.bem.info/methodology/quick-start/

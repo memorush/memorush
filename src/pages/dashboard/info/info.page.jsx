@@ -26,6 +26,10 @@ const InfoPage = () => {
     navigate("/dashboard/card-set-list")
   )
 
+  const navigateToDictionaryHandler = () => (
+    navigate("/dashboard/dictionary")
+  )
+
   const showCategoriesListElement = () => {
     return (
       <ul>
@@ -64,6 +68,15 @@ const InfoPage = () => {
         </div>
       </div>
       <div className={styles.createContainer}>
+        <div className={styles.createContainerButton}>
+          <ButtonAtomicComponent
+            name="Словарь"
+            clickFunction={navigateToDictionaryHandler}
+          />
+        </div>
+        <h1 className={styles.createContainerTitle}>Воспользуйтесь нашим словарем</h1>
+      </div>
+      <div className={styles.createContainer}>
         <div className={styles.booksContainerSvg}>
           <BooksSvg />
         </div>
@@ -73,7 +86,7 @@ const InfoPage = () => {
             clickFunction={navigateToCardSetListHandler}
           />
         </div>
-        <h1 className={styles.createContainerTitle}>Создай свои собственные</h1>
+        <h1 className={styles.createContainerTitle}>Создай свои карточки</h1>
       </div>
     </div>
   )

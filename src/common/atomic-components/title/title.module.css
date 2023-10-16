@@ -1,14 +1,14 @@
-.container {
+.title {
 	line-height: 1.1;
 	text-align: center;
 }
 
-.textSize {
+.title__name {
 	font-size: 4rem;
 }
 
 @media (width < 900px) {
-	.textSize {
+	.title__name {
 		 font-size: 2rem;
 	}
 }

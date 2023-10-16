@@ -1,8 +1,10 @@
 import styles from './sub-title.module.css';
 
-const SubTitleAtomicComponent = ({name}) => {
+const SubTitleAtomicComponent = ({ name }) => {
   return (
-    <div className={styles.container} data-testid="subtitle-atomic-component">{name}</div>
+    <div className={styles.subtitle} data-testid="subtitle-atomic-component">
+      <span className={styles.subtitle__name}>{name}</span>
+    </div>
   )
 }
 

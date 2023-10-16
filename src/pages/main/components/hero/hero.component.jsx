@@ -4,8 +4,8 @@ import MobileApp3dComponent from '../../../../common/components/mobile-app3d/mob
 const HeroComponent = () => {
 
   return (
-    <div id="hero" className={styles.container}>
-      <MobileApp3dComponent/>
+    <div id="hero" className={styles.hero} data-testid="hero">
+      {/* <MobileApp3dComponent/> */}
     </div>
   )
 }

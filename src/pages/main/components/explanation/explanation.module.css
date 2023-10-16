@@ -1,4 +1,4 @@
-.container {
+.explanations {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 20px;
@@ -8,7 +8,7 @@
 	background-color: white;
 }
 
-.column {
+.explanations__column {
 	display: grid;
 	grid-template-rows: min-content min-content max-content;
 	gap: 20px;
@@ -16,36 +16,33 @@
 	justify-items: center;
 }
 
-.column.info {
-	display: grid;
+.info {
 	grid-template-rows: min-content auto;
-	align-items: center;
 	justify-content: center;
-	justify-items: center;
 	text-align: center;
 }
 
-.header {
+.info__title {
 	display: grid;
 	gap: 20px;
 }
 
-.header .line {
+.info__line {
 	width: 80%;
 	height: 1px;
 	background-color: #008ed6;
 }
 
-.points {
+.info__items {
 	display: grid;
 	width: 100%;
 }
 
-.point {
+.info__items_item {
 	display: flex;
 }
 
-.screen {
+.explanations__column_img {
 	width: 250px;
 	height: auto;
 }

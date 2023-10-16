@@ -6,25 +6,25 @@
 .roundsContainer {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   gap: 20px;
+  align-items: center;
 }
 
 .roundForm {
-  border: 1px solid silver;
-  border-radius: 5px;
   width: 50px;
   padding: 10px;
+  border: 1px solid silver;
+  border-radius: 5px;
 }
 
 .currentRound {
-  color: rgb(43, 214, 66);
   font-size: 2.5rem;
   font-weight: bold;
+  color: rgb(43, 214, 66);
 }
 
 .buttonsContainer {
   display: grid;
-  gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }

@@ -1,18 +1,18 @@
-.signInForm {
+.loginForm {
   display: grid;
   gap: 20px;
   align-items: center;
   justify-items: center;
 }
 
-.inputContainer {
+.loginForm__inputsContainer {
   display: grid;
   gap: 20px;
   align-items: center;
   justify-items: center;
 }
 
-.input {
+.loginForm__input {
   height: 50px;
   padding: 5px;
   text-align: center;

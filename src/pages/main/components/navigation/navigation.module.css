@@ -1,11 +1,11 @@
-.container {
+.navigation {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 900;
   display: grid;
-  align-items: center;
   grid-template-columns: 1fr 5fr;
+  align-items: center;
   align-items: "center";
   justify-items: center;
   width: 100%;
@@ -20,7 +20,7 @@
   opacity: 0.8;
 }
 
-.navItemContainer {
+.links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   gap: 10px;
@@ -29,17 +29,17 @@
   width: 100%;
 }
 
-.navItem {
+.links__item {
   cursor: pointer;
   transition: 0.3s;
 }
 
-.navItem:hover {
+.links__item:hover {
   color: #18BBF1
 }
 
 @media (width < 990px) {
-  .container {
+  .navigation {
     display: none;
   }
 }

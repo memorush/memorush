@@ -6,13 +6,20 @@ import styles from './button.module.css';
  * @returns 
  */
 const ButtonAtomicComponent = ({ name, style, color, clickFunction, disable = false }) => {
+
+  const onClickHandler = () => {
+    if (clickFunction) {
+      clickFunction();
+    }
+  }
+
   return (
-    <div data-testid="button-atomic-component"
-      className={styles.container}
+    <button data-testid="button-atomic-component"
+      className={styles.button}
       style={disable ? { background: 'silver' } : { background: color, ...style }}
-      onClick={disable ? null : clickFunction}
-    ><p>{name}</p>
-    </div>
+      onClick={disable ? null : onClickHandler}
+    ><p className={styles.button__name}>{name}</p>
+    </button>
   )
 }
 

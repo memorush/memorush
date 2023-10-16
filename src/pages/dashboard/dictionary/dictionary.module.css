@@ -1,0 +1,72 @@
+.dictionary {
+  display: grid;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.svgContainer {}
+
+.searchContainer {
+  display: grid;
+  grid-template-areas: 
+  "svg h1"
+  "svg inputExamplesContainer";
+  gap: 10px;
+  align-items: start;
+  padding: 2% 5%;
+  background-color: #F9F8F8;
+  border-bottom: 1px solid #DDD;
+}
+
+.dictionary__title {
+  grid-area: h1;
+}
+
+.svgContainer {
+  grid-area: svg;
+  width: 70px;
+  height: 70px;
+}
+
+.formSearchContainer .findSvg {
+  grid-area: findSvg;
+}
+
+.searchContainer__inputsContainer {
+  display: grid;
+  grid-area: inputExamplesContainer;
+}
+
+.searchContainer__input {
+  padding: 15px;
+  color: #8F908F;
+  text-shadow: none;
+  background: #FFFFFF;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  transition: all .2s ease-in-out;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.dictionaryItems {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.dictionaryItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 5%;
+  background-color: white;
+}
+
+.dictionaryItem__ru, .dictionaryItem__en, .dictionaryItem__tr {
+  width: 100%;
+  text-align: center;
+}
