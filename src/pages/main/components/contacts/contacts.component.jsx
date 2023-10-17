@@ -43,7 +43,7 @@ const ContactsComponent = () => {
             </div>
           </form>
           <YMaps>
-            <Map defaultState={defaultState} width={"100%"} height={"500px"}>
+            <Map defaultState={defaultState} width={"100%"} height={"100%"}>
               <Placemark geometry={defaultState.center} />
             </Map>
           </YMaps>
