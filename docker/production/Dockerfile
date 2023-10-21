@@ -4,7 +4,7 @@
 
 FROM node:alpine3.17 as build
 LABEL author="y.dubovitsky"
-LABEL type="dev"
+LABEL type="production"
 WORKDIR /react-app
 COPY package.json ./
 COPY package-lock.json ./
