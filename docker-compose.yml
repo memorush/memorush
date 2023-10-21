@@ -1,5 +1,5 @@
 # How to use it?
-# docker compose -f docker-compose-prod.yml up
+# docker-compose --env-file .env.local  up 
 
 version: '3'
 services:
