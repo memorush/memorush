@@ -57,7 +57,7 @@ const PrivacyPolicyPage = () => {
         Пользователь может ознакомиться с условиями Пользовательского соглашения
         по следующей ссылке:{" "}
         <span id="span_id_пользовательское_соглашение">
-          http://memorush.ru/term-of-use
+          https://memorush.ru/term-of-use
         </span>
         .
       </p>
@@ -509,9 +509,8 @@ const PrivacyPolicyPage = () => {
         Пользователи могут ознакомиться с условиями данной Политики по следующей
         ссылке:{" "}
         <span id="span_id_ссылка_политика">
-          http://memorush.ru/privacy-policy
+          https://memorush.ru/privacy-policy
         </span>
-        .
       </p>
       <p>
         Данная редакция Политики действует от{" "}

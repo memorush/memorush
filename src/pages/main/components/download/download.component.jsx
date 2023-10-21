@@ -4,10 +4,12 @@ import ButtonAtomicComponent from '../../../../common/atomic-components/button/b
 import { Fade } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 import qrConde from './images/qr-code.png'
+import backgroundImage from './images/sapan-patel-i9Q9bc-WgfE-unsplash.jpg'
+
 
 const DownloadComponent = () => {
   return (
-    <div id="download" className={styles.download} data-testId="download">
+    <div id="download" className={styles.download} data-testId="download" style={{backgroundImage: `url(${backgroundImage})`}}>
       <Fade triggerOnce={true}>
         <div className={styles.download__header}>
           <TitleAtomicComponent name="Установите приложение" />
