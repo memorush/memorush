@@ -22,8 +22,7 @@ import DictionaryPage from "../pages/dashboard/dictionary/dictionary.page";
 
 const ApplicationRoutes = () => (
   <Routes>
-    <Route path="/" element={<MainLayout />}>
-      {/* TODO Переделать тут роутинг */}
+    <Route element={<MainLayout />}>
       <Route index element={<MainPage />} />
       <Route path="main" element={<MainPage />}>
         <Route path="auth" element={<AuthPopupComponent />} />
