@@ -25,7 +25,7 @@ const ContactsComponent = () => {
       <Fade triggerOnce={true}>
         <TitleAtomicComponent name="Обратная связь" style={{ textAlign: 'center', color: "white" }} />
         <div className={styles.contacts__content}>
-          <form className={styles.sendMailForm} action={mailTo}>
+          <form className={styles.sendMailForm}>
             <label htmlFor="name">Полное имя</label>
             <input className={styles.sendMailForm__input} name="name" type="text" placeholder="Ваше имя"></input>
 
