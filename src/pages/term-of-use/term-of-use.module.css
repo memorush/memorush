@@ -1,5 +1,32 @@
-.container {
+.termOfUse {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 5%;
   background-color: white;
   border-bottom: 1px solid silver;
 }
+
+.termOfUse__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.infoBlock__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.infoBlock__item {
+  list-style: none;
+}
+
+.infoBlock__item p::first-letter {text-transform: uppercase}
