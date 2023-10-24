@@ -16,7 +16,7 @@ const FooterComponent = () => {
         <div className={styles.topSideMenu}>
           <h3 className={styles.topSideMenu__title}>Давайте приступим</h3>
           <ul className={styles.topSideMenu__listContainer}>
-            <li className={styles.topSideMenu__item}><Link to={"/sign-in"} className={styles.topSideMenu__link}>Начать</Link></li>
+            <li className={styles.topSideMenu__item}><Link to={"/"} className={styles.topSideMenu__link}>Начать</Link></li>
             <li className={styles.topSideMenu__item}><Link to={"/"} className={styles.topSideMenu__link}>Особенности</Link></li>
             <li className={styles.topSideMenu__item}><Link to={"/"} className={styles.topSideMenu__link}>Галерея</Link></li>
           </ul>
