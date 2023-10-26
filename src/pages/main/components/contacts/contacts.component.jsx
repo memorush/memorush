@@ -21,7 +21,7 @@ const ContactsComponent = () => {
   }
 
   return (
-    <div id="contacts" className={styles.contacts} data-testId="contacts">
+    <div id="contacts" className={styles.contacts} data-testid="contacts">
       <Fade triggerOnce={true}>
         <TitleAtomicComponent name="Обратная связь" style={{ textAlign: 'center', color: "white" }} />
         <div className={styles.contacts__content}>
