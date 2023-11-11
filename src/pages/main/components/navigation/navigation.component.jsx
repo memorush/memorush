@@ -27,13 +27,13 @@ const NavigationComponent = () => {
       ["contacts", "Обратная связь"],
       ["download", "Скачать"]
     ]
-    return values.map(element => (
-      <div className={styles.links__item} onClick={() => scrollToElementIdHandler(element[0])}>{element[1]}</div>
+    return values.map((element, idx) => (
+      <div className={styles.links__item} key={idx} onClick={() => scrollToElementIdHandler(element[0])}>{element[1]}</div>
     ))
   }
 
   return (
-    <div className={cn(styles.navigation, isScrolled ? styles.scrolled : null)} data-testId="navigation">
+    <div className={cn(styles.navigation, isScrolled ? styles.scrolled : null)} data-testid="navigation">
       <div className={styles.logo}><i className="fas fa-brain"></i> Memorush</div>
       <div className={styles.links}>
         {showLinksItems()}
