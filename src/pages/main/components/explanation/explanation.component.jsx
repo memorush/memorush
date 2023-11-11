@@ -7,7 +7,7 @@ import TitleAtomicComponent from '../../../../common/atomic-components/title/tit
 const ExplanationsComponent = () => {
 
   return (
-    <div id="explanation" className={styles.explanations} data-testId="explanations">
+    <div id="explanation" className={styles.explanations} data-testid="explanations">
       <Slide cascade={true} direction='right' triggerOnce={true}>
         <div className={cn(styles.explanations__column, styles.info)}>
           <div className={styles.info__title}>

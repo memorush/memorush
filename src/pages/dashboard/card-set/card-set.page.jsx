@@ -62,7 +62,7 @@ const CardSetPage = () => {
   }
 
   return (
-    <div className={styles.cardSet} data-testId="cardSet">
+    <div className={styles.cardSet} data-testid="cardSet">
       <CardSetFormComponent cardSetEntityHandler={cardSetEntityHandler} cardSetEntity={cardSetEntity} />
       <ImportCardDataComponent setCardSetEntity={setCardSetEntity} cardSetEntity={cardSetEntity} />
       <ImageToCardComponent setCardSetEntity={setCardSetEntity} cardSetEntity={cardSetEntity} />

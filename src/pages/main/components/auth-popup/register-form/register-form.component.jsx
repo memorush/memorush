@@ -77,7 +77,7 @@ const RegisterFormComponent = () => {
   }
 
   return (
-    <form className={styles.registerForm} data-testId="register-form">
+    <form className={styles.registerForm} data-testid="register-form">
       <div className={styles.registerForm__inputsContainer}>
         <input
           className={styles.registerForm__input}

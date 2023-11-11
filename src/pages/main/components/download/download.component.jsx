@@ -9,7 +9,7 @@ import backgroundImage from './images/sapan-patel-i9Q9bc-WgfE-unsplash.jpg'
 
 const DownloadComponent = () => {
   return (
-    <div id="download" className={styles.download} data-testId="download" style={{backgroundImage: `url(${backgroundImage})`}}>
+    <div id="download" className={styles.download} data-testid="download" style={{backgroundImage: `url(${backgroundImage})`}}>
       <Fade triggerOnce={true}>
         <div className={styles.download__header}>
           <TitleAtomicComponent name="Установите приложение" />

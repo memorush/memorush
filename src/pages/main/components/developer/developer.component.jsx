@@ -5,7 +5,7 @@ import TitleAtomicComponent from '../../../../common/atomic-components/title/tit
 const DeveloperComponent = () => {
 
   return (
-    <div id="developer" className={styles.developer} data-testId="developer">
+    <div id="developer" className={styles.developer} data-testid="developer">
       <Fade triggerOnce={true}>
         <div className={styles.developer__header}>
           <TitleAtomicComponent name="О технологии разработки" />
