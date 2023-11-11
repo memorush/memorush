@@ -1,25 +1,6 @@
-
-@font-face {
-  font-family: 'Raleway-Black';
-  src: local('Raleway-Black'), url(./fonts/Raleway-Black.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Golos-Text';
-  src: local('Golos-Text'), url(./fonts/GolosText-Regular.ttf) format('truetype');
-}
-
 * {
 	padding: 0;
 	margin: 0;
-}
-
-:root {
-	--primary-bg-color: #9179ba;
-	--secondary-bg-color: #f0edf5;
-	--primary-text-color: white;
-	--secondary-text-color: black;
-	--third-text-color: #95a5a6;
 }
 
 h1, h2, h3, h4, h5, h6 {
