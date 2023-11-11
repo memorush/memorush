@@ -1,4 +1,4 @@
-import styles from './info.module.css';
+import styles from './info.module.scss';
 import ButtonAtomicComponent from '../../../common/atomic-components/button/button.component';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';

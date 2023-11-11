@@ -1,4 +1,4 @@
-import style from './error-page.module.css';
+import style from './error-page.module.scss';
 
 function ErrorPage({ history }) {
   return (

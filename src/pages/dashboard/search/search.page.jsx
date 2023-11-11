@@ -1,5 +1,5 @@
 import FormSearchComponent from './components/form-search/form-search.component';
-import styles from './search.module.css';
+import styles from './search.module.scss';
 
 const SearchPage = () => {
 

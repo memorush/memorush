@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { foundCardSetEntitiesSelector } from '../../../../../redux/features/search/search.slice';
-import styles from './search-card-set-list.module.css';
+import styles from './search-card-set-list.module.scss';
 
 const SearchCardSetListComponent = () => {
 

@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { invalidateLoggedInUser } from '../../../../redux/features/auth/auth-slice';
-import styles from './nav-header.module.css';
+import styles from './nav-header.module.scss';
 
 const NavHeaderComponent = () => {
 

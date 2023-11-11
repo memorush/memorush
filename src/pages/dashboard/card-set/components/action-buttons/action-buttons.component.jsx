@@ -6,7 +6,7 @@ import {
   deleteCardSet,
   updateCardSet
 } from '../../../../../redux/features/card-set/card-set.slice';
-import styles from './action-buttons.module.css';
+import styles from './action-buttons.module.scss';
 
 const ActionButtonsComponent = (
   {

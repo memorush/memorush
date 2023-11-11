@@ -1,4 +1,4 @@
-import styles from './developer.module.css';
+import styles from './developer.module.scss';
 import { Fade } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 

@@ -1,5 +1,5 @@
 import { ReactComponent as PenSvg } from './svg/pen-svgrepo-com.svg';
-import styles from "./card-set-form.module.css";
+import styles from "./card-set-form.module.scss";
 
 const CardSetFormComponent = ({cardSetEntityHandler, cardSetEntity}) => {
   return (

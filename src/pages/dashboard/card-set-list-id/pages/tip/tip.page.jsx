@@ -1,4 +1,4 @@
-import styles from './tip.module.css';
+import styles from './tip.module.scss';
 import { useNavigate, useLocation } from 'react-router-dom';
 import ButtonAtomicComponent from '../../../../../common/atomic-components/button/button.component';
 

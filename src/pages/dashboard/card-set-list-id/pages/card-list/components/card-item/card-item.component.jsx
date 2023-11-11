@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { useState, useRef } from 'react';
 import { ReactComponent as SpeakSvg } from './svg/speak-svgrepo-com.svg';
 import textToSound from '../../../../../../../service/textToSoundService';
-import styles from './card-item.module.css';
+import styles from './card-item.module.scss';
 
 const TURN_CARD_TIMEOUT = 300;
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styles from './comment-card.module.css';
+import styles from './comment-card.module.scss';
 import { fetchFakeUserData } from '../../../../../service/fakeCommentService';
 
 const CommentCardComponent = ({ id, style }) => {

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ReactComponent as CloverSvg } from './svg/clover-svgrepo-com.svg';
 import data from "../../../assets/data/data.json";
-import styles from './footer.module.css';
+import styles from './footer.module.scss';
 
 const FooterComponent = () => {
 

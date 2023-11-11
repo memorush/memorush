@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './auth-popup.module.css';
+import styles from './auth-popup.module.scss';
 import LoginFormComponent from './login-form/login-form.component';
 import RegisterFormComponent from './register-form/register-form.component';
 

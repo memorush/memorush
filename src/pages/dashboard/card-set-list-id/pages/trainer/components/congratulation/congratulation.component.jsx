@@ -1,4 +1,4 @@
-import styles from './congratulation.module.css';
+import styles from './congratulation.module.scss';
 import { useNavigate } from 'react-router-dom';
 import ButtonAtomicComponent from '../../../../../../../common/atomic-components/button/button.component';
 import congratulationImg from "./images/congratulation.gif";

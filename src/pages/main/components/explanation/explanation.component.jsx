@@ -1,4 +1,4 @@
-import styles from './explanation.module.css';
+import styles from './explanation.module.scss';
 import cn from 'classnames'
 import screen5 from './images/screen5.png';
 import { Slide } from "react-awesome-reveal";

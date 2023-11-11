@@ -6,7 +6,7 @@ import {
 } from '../../../../../redux/features/card-set/card-set.slice';
 import { useReactToPrint } from 'react-to-print';
 import CardItemComponent from './components/card-item/card-item.component';
-import styles from "./card-list.module.css";
+import styles from "./card-list.module.scss";
 
 const CardListPage = () => {
 

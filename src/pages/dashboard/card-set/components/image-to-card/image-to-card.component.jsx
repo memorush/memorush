@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FileUploader } from "react-drag-drop-files";
 import Tesseract from 'tesseract.js';
-import styles from "./image-to-card.module.css";
+import styles from "./image-to-card.module.scss";
 import exampleImg from './images/example.GIF';
 
 const fileTypes = ["JPG", "PNG", "GIF"];

@@ -1,7 +1,7 @@
 import { Fade } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
 import data from "../../../../assets/data/data.json";
-import styles from './contacts.module.css';
+import styles from './contacts.module.scss';
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 import ButtonAtomicComponent from "../../../../common/atomic-components/button/button.component";
 

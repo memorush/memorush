@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import ButtonAtomicComponent from '../../../common/atomic-components/button/button.component';
 import { updateUserData } from '../../../redux/features/auth/auth-slice';
-import styles from './settings.module.css';
+import styles from './settings.module.scss';
 import { ReactComponent as SettingsSvg } from './svg/settings-svgrepo-com.svg';
 
 const SettingsPage = () => {

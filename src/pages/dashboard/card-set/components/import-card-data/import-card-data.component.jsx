@@ -2,7 +2,7 @@ import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 //! https://github.com/react-syntax-highlighter/react-syntax-highlighter/issues/221
 import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
-import styles from './import-card-data.module.css';
+import styles from './import-card-data.module.scss';
 
 const CARD_SET_JSON_EXAMPLE = {
   "Название набора карточек": {

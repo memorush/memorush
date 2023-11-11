@@ -1,4 +1,4 @@
-import styles from './download.module.css';
+import styles from './download.module.scss';
 import { Link } from 'react-router-dom';
 import ButtonAtomicComponent from '../../../../common/atomic-components/button/button.component';
 import { Fade } from "react-awesome-reveal";

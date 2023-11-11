@@ -1,4 +1,4 @@
-import styles from './title.module.css';
+import styles from './title.module.scss';
 
 const TitleAtomicComponent = ({ name, style }) => {
   return (

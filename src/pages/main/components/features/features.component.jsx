@@ -1,6 +1,6 @@
 import { Fade } from "react-awesome-reveal";
 import TitleAtomicComponent from '../../../../common/atomic-components/title/title.component';
-import styles from './features.module.css';
+import styles from './features.module.scss';
 
 const features = [
   {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useGetDictionaryByNameQuery } from "../../../redux/features/dictionary/dictionary.rtk";
-import styles from "./dictionary.module.css";
+import styles from "./dictionary.module.scss";
 import { ReactComponent as FindSvg } from './svg/loupe-search-svgrepo-com.svg';
 import SpinnerLoaderComponent from '../../../common/components/spinner-loader/spinner-loader.component';
 

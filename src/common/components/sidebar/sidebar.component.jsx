@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { authEntitySelector, invalidateLoggedInUser } from '../../../redux/features/auth/auth-slice';
-import styles from './sidebar.module.css';
+import styles from './sidebar.module.scss';
 
 
 const SidebarComponent = () => {

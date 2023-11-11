@@ -1,4 +1,4 @@
-import styles from './categories.module.css';
+import styles from './categories.module.scss';
 
 const CategoriesComponent = () => {
   return (

@@ -1,4 +1,4 @@
-import styles from './login-form.module.css';
+import styles from './login-form.module.scss';
 import { useNavigate } from 'react-router';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

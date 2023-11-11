@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import styles from './found-card-set-details.module.css';
+import styles from './found-card-set-details.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { createNewCardSet } from '../../../redux/features/card-set/card-set.slice';
 import { foundCardSetEntityByIdSelector } from '../../../redux/features/search/search.slice';

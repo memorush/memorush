@@ -9,7 +9,7 @@ import Features from './components/features/features.component';
 import HeroComponent from './components/hero/hero.component';
 import NavigationComponent from './components/navigation/navigation.component';
 import ScreenshotsComponent from './components/screenshots/screenshots.component';
-import styles from './main.module.css';
+import styles from './main.module.scss';
 import ExplanationsComponent from './components/explanation/explanation.component';
 
 const MainPage = () => {

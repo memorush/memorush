@@ -1,4 +1,4 @@
-import styles from './flash-card.module.css';
+import styles from './flash-card.module.scss';
 
 const FlashCardComponent = ({ cardSetEntity, setCardSetEntity, deleteCardElementHandler, id }) => {
 

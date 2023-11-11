@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import ButtonAtomicComponent from '../../../../../common/atomic-components/button/button.component';
 import { findCardSetsBySearchString } from '../../../../../redux/features/search/search.slice';
 import SearchCardSetListComponent from '../search-card-set-list/search-card-set-list.component';
-import styles from './form-search.module.css';
+import styles from './form-search.module.scss';
 import { ReactComponent as FindSvg } from './svg/loupe-search-svgrepo-com.svg';
 import { useEffect } from 'react';
 

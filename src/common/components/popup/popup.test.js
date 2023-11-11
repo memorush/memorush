@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { screen, render } from '@testing-library/react';
 import * as ReactRedux from 'react-redux';
 import PopupComponent from './popup.component';
-import styles from './popup.module.css';
+import styles from './popup.module.scss';
 
 describe("PopupComponent", () => {
   const useSelectorMock = jest.spyOn(ReactRedux, 'useSelector');

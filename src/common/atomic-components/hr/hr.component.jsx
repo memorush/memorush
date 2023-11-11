@@ -1,4 +1,4 @@
-import styles from './hr.module.css';
+import styles from './hr.module.scss';
 
 const HrAtomicComponent = () => {
   return (

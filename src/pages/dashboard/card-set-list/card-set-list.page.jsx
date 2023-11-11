@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import ButtonAtomicComponent from '../../../common/atomic-components/button/button.component';
-import styles from './card-set-list.module.css';
+import styles from './card-set-list.module.scss';
 import CardSetTableComponent from './components/card-set-table/card-set-table.component';
 import { ReactComponent as UserSvg } from './svg/user-svgrepo-com.svg';
 

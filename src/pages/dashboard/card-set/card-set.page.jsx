@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import {
   cardSetByIdSelector
 } from '../../../redux/features/card-set/card-set.slice';
-import styles from './card-set.module.css';
+import styles from './card-set.module.scss';
 import ActionButtonsComponent from './components/action-buttons/action-buttons.component';
 import FlashCardFormComponent from './components/flash-card-form/flash-card-form.component';
 import ImportCardDataComponent from './components/import-card-data/import-card-data.component';

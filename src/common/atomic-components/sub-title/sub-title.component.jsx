@@ -1,4 +1,4 @@
-import styles from './sub-title.module.css';
+import styles from './sub-title.module.scss';
 
 const SubTitleAtomicComponent = ({ name }) => {
   return (

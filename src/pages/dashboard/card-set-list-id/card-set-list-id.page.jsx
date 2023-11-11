@@ -2,7 +2,7 @@ import { Outlet, useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { cardSetByIdSelector } from '../../../redux/features/card-set/card-set.slice';
 import ButtonAtomicComponent from '../../../common/atomic-components/button/button.component';
-import styles from './card-set-list-id.module.css';
+import styles from './card-set-list-id.module.scss';
 import { ReactComponent as LearningSvg } from './svg/learning-student-svgrepo-com.svg';
 
 const CardSetListIdPage = () => {

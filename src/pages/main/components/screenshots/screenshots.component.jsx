@@ -1,4 +1,4 @@
-import styles from './screenshots.module.css';
+import styles from './screenshots.module.scss';
 import screen1 from './images/screen1.png'
 import screen2 from './images/screen2.png'
 import screen3 from './images/screen3.png'

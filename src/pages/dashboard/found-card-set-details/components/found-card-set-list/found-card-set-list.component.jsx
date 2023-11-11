@@ -1,4 +1,4 @@
-import styles from './found-card-set-list.module.css';
+import styles from './found-card-set-list.module.scss';
 
 const FoundCardSetListComponent = ({ cardList }) => {
 

@@ -7,7 +7,7 @@ import {
   setFavoriteCardSet,
   getAllCardSets
 } from '../../../../../redux/features/card-set/card-set.slice';
-import styles from './card-set-table.module.css';
+import styles from './card-set-table.module.scss';
 
 const CardSetTableComponent = () => {
 

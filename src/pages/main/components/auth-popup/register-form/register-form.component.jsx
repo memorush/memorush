@@ -1,4 +1,4 @@
-import styles from './register-form.module.css';
+import styles from './register-form.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';

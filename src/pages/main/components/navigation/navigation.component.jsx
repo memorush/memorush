@@ -1,4 +1,4 @@
-import styles from './navigation.module.css';
+import styles from './navigation.module.scss';
 import cn from 'classnames';
 import { useState } from 'react';
 import { scrollToElementIdHandler } from '../../../../service/utilsService';

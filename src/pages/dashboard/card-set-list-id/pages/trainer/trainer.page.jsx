@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import styles from './trainer.module.css';
+import styles from './trainer.module.scss';
 import { useParams } from "react-router-dom";
 import CongratulationComponent from "./components/congratulation/congratulation.component";
 import CardItemComponent from "../card-list/components/card-item/card-item.component";

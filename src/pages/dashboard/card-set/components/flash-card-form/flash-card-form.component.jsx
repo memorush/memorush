@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import styles from './flash-card-form.module.css';
+import styles from './flash-card-form.module.scss';
 import FlashCardComponent from './components/flash-card/flash-card.component';
 
 const FlashCardFormComponent = ({cardSetEntity, setCardSetEntity}) => {

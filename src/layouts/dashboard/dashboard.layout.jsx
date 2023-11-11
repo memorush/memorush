@@ -1,6 +1,6 @@
 import {Outlet} from 'react-router-dom';
 import NavHeaderComponent from './components/nav-header/nav-header.component';
-import styles from './dashboard.module.css';
+import styles from './dashboard.module.scss';
 
 const DashboardLayout = () => {
   return (

@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import FooterComponent from '../../common/components/footer/footer.component';
-import styles from './main.module.css';
+import styles from './main.module.scss';
 import SidebarComponent from '../../common/components/sidebar/sidebar.component';
 import PopupComponent from '../../common/components/popup/popup.component';
 
